@@ -99,12 +99,14 @@ nav.tabs button,.btn,.rtabs button,.mem,.period,.tag,.dk,label.f,.has,.ticks,.dn
 <main>
   <nav class="tabs">
     <button data-v="today" class="on">Hari ini</button>
+    <button data-v="ren">Renungan</button>
     <button data-v="all">Semua hari</button>
     <button data-v="family">Keluarga</button>
     <button data-v="about">Aturan & sumber</button>
   </nav>
 
   <section id="v-today"></section>
+  <section id="v-ren" class="hide"></section>
   <section id="v-all" class="hide list"></section>
   <section id="v-family" class="hide"></section>
   <section id="v-about" class="hide"></section>
@@ -339,7 +341,7 @@ const RENUNGAN = {
 1:{anak:{r:"Pernah merasa nggak cukup keren dibanding teman? Coba cek Kejadian 1:27: kamu diciptakan menurut gambar Allah. Itu bukan karena nilai rapor atau jumlah followers, tapi karena Allah sendiri yang membentukmu. Terus lihat Kejadian 3:8–10: setelah salah, Adam dan Hawa malah sembunyi. Padahal Allah datang mencari mereka, bukan untuk mengusir, tapi memanggil: \"Di manakah engkau?\"",tanya:"Kalau kamu habis berbuat salah, kamu lebih sering sembunyi atau jujur? Kenapa?",aksi:"Hari ini, kalau ada yang belum kamu akui ke orang tua, beranikan diri cerita."},
  pasangan:{r:"Kejadian 2:18 bilang tidak baik manusia seorang diri, lalu Allah menjadikan penolong yang sepadan. Tapi di Kejadian 3:12, begitu ada masalah, kalimat pertama Adam justru menyalahkan: \"perempuan yang Kauberikan…\". Pola ini masih sering terjadi di rumah tangga: begitu ada masalah, yang dicari siapa yang salah, bukan bagaimana memperbaikinya bersama.",tanya:"Dalam konflik terakhir kita, siapa yang lebih dulu menyalahkan? Apa yang sebenarnya kita butuhkan saat itu?",aksi:"Kalau minggu ini ada gesekan, ganti \"kamu sih…\" dengan \"aku merasa…\"."}},
 2:{anak:{r:"Kain iri sama adiknya, dan Kejadian 4:7 mencatat Allah sudah mengingatkan: dosa sedang mengintip di depan pintu, dan Kain harus menguasainya. Artinya, rasa iri itu wajar muncul, tapi kita yang memutuskan mau diikuti atau tidak. Waktu ditanya soal Habel, Kain malah jawab \"apakah aku penjaga adikku?\" (4:9). Padahal jawabannya: iya, kita memang dipanggil saling menjaga.",tanya:"Pernah iri sama kakak, adik, atau teman? Apa yang biasanya kamu lakukan dengan rasa itu?",aksi:"Lakukan satu hal baik untuk saudaramu hari ini tanpa disuruh."},
- pasangan:{r:"Kejadian 4:7 cocok sekali untuk suami-istri: kemarahan yang dibiarkan seperti tamu yang menunggu di depan pintu, makin lama makin berani masuk. Lalu di Kejadian 5:24 ada Henokh, satu-satunya di silsilah itu yang disebut \"hidup bergaul dengan Allah\", dan di 6:9 hal yang sama dikatakan tentang Nuh. Di tengah dunia yang makin rusak, keduanya tetap berjalan dekat dengan Tuhan.",tanya:"Kemarahan apa yang sedang \"menunggu di depan pintu\" rumah tangga kita?",aksi:"Luangkan 10 menit malam ini untuk berdoa berdua, sesederhana apa pun."}},
+ pasangan:{r:"Kejadian 4:7 cocok sekali untuk kita sebagai orang tua dan pasangan: kemarahan yang dibiarkan seperti tamu yang menunggu di depan pintu, makin lama makin berani masuk. Lalu di Kejadian 5:24 ada Henokh, satu-satunya di silsilah itu yang disebut \"hidup bergaul dengan Allah\", dan di 6:9 hal yang sama dikatakan tentang Nuh. Di tengah dunia yang makin rusak, keduanya tetap berjalan dekat dengan Tuhan.",tanya:"Kemarahan apa yang sedang \"menunggu di depan pintu\" rumah tangga kita?",aksi:"Luangkan 10 menit malam ini untuk berdoa berdua, sesederhana apa pun."}},
 3:{anak:{r:"Bayangkan disuruh bikin kapal raksasa padahal belum ada tanda-tanda hujan. Kejadian 7:5 mencatat Nuh melakukan semuanya sesuai perintah Tuhan. Lalu di 8:1 ada kalimat pendek tapi kuat: Allah mengingat Nuh. Saat kamu merasa sendirian karena memilih yang benar, Allah juga ingat kamu.",tanya:"Pernah memilih hal yang benar padahal teman-teman memilih yang lain? Rasanya gimana?",aksi:"Kalau lihat pelangi, ingat janji Allah di Kejadian 9:13, lalu ucapkan terima kasih."},
  pasangan:{r:"Ada adegan yang sering terlewat di Kejadian 9:20–23. Saat Nuh mabuk dan telanjang, Ham melihat lalu menceritakannya, sedangkan Sem dan Yafet berjalan mundur untuk menutupinya. Dalam pernikahan, kita tahu kelemahan pasangan lebih dari siapa pun. Pilihannya: mengumbar atau menutupi dengan hormat.",tanya:"Pernahkah kita (tanpa sadar) menceritakan kelemahan pasangan ke orang lain atau di media sosial?",aksi:"Minggu ini, bicarakan hal baik saja tentang pasangan di depan orang lain."}},
 4:{anak:{r:"Orang-orang di Babel membangun menara karena ingin \"mencari nama\" (Kejadian 11:4), ingin terkenal. Satu pasal kemudian, Allah memanggil Abram untuk pergi, dan justru Allah yang berjanji akan membuat namanya masyhur (12:2). Bedanya: Babel mengejar ketenaran sendiri, Abram percaya dan taat.",tanya:"Menurutmu, apa bedanya ingin terkenal dengan ingin jadi berkat buat orang lain?",aksi:"Lakukan satu kebaikan hari ini yang tidak dilihat siapa pun."},
@@ -449,13 +451,25 @@ function todayIndex(){
 let current = S.view || todayIndex();
 const $=s=>document.querySelector(s);
 
-function renHTML(d){
-  const r=RENUNGAN[d];
-  if(!r) return `<div class="card sec"><div class="h2">🙏 Renungan</div><p class="empty">Renungan untuk hari ini belum disiapkan.</p></div>`;
+let renWho="anak";
+function renderRen(){
+  const d=current, p=PLAN[d-1], r=RENUNGAN[d];
   const blk=(x)=>`<p>${esc(x.r)}</p><p><b>💬 Ngobrol:</b> ${esc(x.tanya)}</p><p><b>✅ Tindakan:</b> ${esc(x.aksi)}</p>`;
-  return `<div class="card sec ren"><div class="h2">🙏 Renungan Anak <span class="empty" style="font-size:13px">(10–15 tahun)</span></div>${blk(r.anak)}
-    <details class="couple"><summary>💑 Renungan Suami-Istri <span class="empty">(ketuk untuk buka)</span></summary>${blk(r.pasangan)}</details>
-    <p class="rnote">Renungan ditulis oleh kami berdasarkan ayat yang dirujuk. Cek ayatnya lewat tombol "Baca ayat".</p></div>`;
+  const body = r ? blk(renWho==="anak"?r.anak:r.pasangan) : `<p class="empty">Renungan untuk hari ini belum disiapkan.</p>`;
+  $("#v-ren").innerHTML=`<div class="card sec ren">
+    <div class="daytitle">Hari ${d} · ${esc(dayLabel(p))}</div>
+    <div class="rtabs" style="border:1px solid var(--line);border-radius:10px;margin:6px 0 10px">
+      <button data-w="anak" class="${renWho==="anak"?"on":""}">🧒 Anak (10–15 tahun)</button>
+      <button data-w="ortu" class="${renWho==="ortu"?"on":""}">👨‍👩‍👧 Orang Tua</button></div>
+    ${body}
+    <div class="row" style="margin-top:12px">
+      <button class="btn" id="rprev" ${d<=1?"disabled":""}>← Sebelumnya</button>
+      <button class="btn" id="rtday">Hari ini</button>
+      <button class="btn" id="rnext" ${d>=TOTAL?"disabled":""}>Berikutnya →</button></div>
+    <p class="rnote">Renungan ditulis oleh kami berdasarkan ayat yang dirujuk. Cek ayatnya lewat tombol "Baca ayat" di tab Hari ini.</p></div>`;
+  document.querySelectorAll("#v-ren [data-w]").forEach(b=>b.onclick=()=>{renWho=b.dataset.w;renderRen();});
+  const mv=(n)=>{current=Math.min(Math.max(n,1),TOTAL);S.view=current;save();renderRen();window.scrollTo(0,0);};
+  $("#rprev").onclick=()=>mv(d-1); $("#rnext").onclick=()=>mv(d+1); $("#rtday").onclick=()=>mv(todayIndex());
 }
 function renderDay(d){
   const p=PLAN[d-1], sec=SECTIONS[p.sec], doneSet=S.done[d]||[];
@@ -482,11 +496,12 @@ function renderDay(d){
     <label class="f">Sudah baca hari ini (ketuk nama):</label>
     <div class="members">${mems}</div>
   </div>
-  ${renHTML(d)}
+  <div class="card"><button class="btn primary" id="goRen" style="width:100%">🙏 Buka renungan hari ini</button></div>
   <div class="card sec">
     <div class="h2">Penjelasan 5W 1H</div>
     ${expl || `<p class="empty">Penjelasan bersumber untuk pasal-pasal ini belum disiapkan. Setiap penjelasan baru ditambahkan setelah diriset dan punya sumber.</p>`}
   </div>`;
+  $("#goRen").onclick=()=>show("ren");
   $("#prev").onclick=()=>go(d-1); $("#next").onclick=()=>go(d+1); $("#tday").onclick=()=>go(todayIndex());
   document.querySelectorAll("#v-today .rbtn").forEach(b=>b.onclick=()=>{
     const i=+b.dataset.i, slot=$("#slot"+i);
@@ -546,14 +561,14 @@ function renderAbout(){
     <li><b>Penjelasan 5W 1H</b> harus punya sumber yang bisa diklik. ${T_G} = ajaran atau catatan resmi Gereja. ${T_R} = museum, universitas, jurnal, atau ensiklopedia terpercaya.</li>
     <li><b>Tidak ada data, tidak ditulis.</b> Kalau sumber berbeda pendapat, perbedaannya ditampilkan.</li></ul></div>
   <div class="card sec"><div class="h2">Yang sudah tersedia</div>
-    <ul><li>Ringkasan pasal: ${nSum} pasal (Kejadian). Kitab lain menyusul.</li><li>Penjelasan 5W 1H: ${nEx} pasal.</li><li>Renungan anak & suami-istri: ${Object.keys(RENUNGAN).length} hari.</li>
+    <ul><li>Ringkasan pasal: ${nSum} pasal (Kejadian). Kitab lain menyusul.</li><li>Penjelasan 5W 1H: ${nEx} pasal.</li><li>Renungan anak & orang tua: ${Object.keys(RENUNGAN).length} hari.</li>
     <li>Tambahan Ester dan Tambahan Daniel memakai penomoran pasal Alkitab Deuterokanonika LAI; di tab Bahasa asli/English penomorannya bisa berbeda.</li></ul>
     <p class="srcs">📚 Urutan kitab Deuterokanonika LAI–LBI: <a href="https://www.gramedia.com/products/alkitab-deuterokanonika-tb-062-ti-dc-sl" target="_blank" rel="noopener">deskripsi Alkitab Deuterokanonika (Gramedia)</a></p></div>`;
 }
 function show(v){
-  ["today","all","family","about"].forEach(x=>$("#v-"+x).classList.toggle("hide",x!==v));
+  ["today","ren","all","family","about"].forEach(x=>$("#v-"+x).classList.toggle("hide",x!==v));
   document.querySelectorAll("nav.tabs button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
-  if(v==="all") renderAll(); if(v==="family") renderFamily(); if(v==="about") renderAbout(); if(v==="today") renderDay(current);
+  if(v==="all") renderAll(); if(v==="family") renderFamily(); if(v==="about") renderAbout(); if(v==="today") renderDay(current); if(v==="ren") renderRen();
 }
 document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(b.dataset.v));
 renderDay(current);
