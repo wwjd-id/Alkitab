@@ -1,5 +1,5 @@
 // Ganti angka versi setiap kali isi aplikasi diperbarui
-const CACHE = "alkitab-keluarga-v2";
+const CACHE = "alkitab-keluarga-v3";
 const FILES = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {

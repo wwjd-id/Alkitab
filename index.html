@@ -68,6 +68,19 @@ a{color:var(--accent)}
 label.f{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 4px}
 input.t,input[type=date]{padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
 .hide{display:none}
+.reads li{display:block}
+.rbtn{padding:5px 10px;font-size:13px}
+.reader{margin:8px 0 4px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.rtabs{display:flex;gap:4px;padding:6px;border-bottom:1px solid var(--line);overflow-x:auto}
+.rtabs button{border:0;background:transparent;color:var(--ink);font:inherit;font-size:13px;font-weight:700;padding:6px 10px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.rtabs button.on{background:var(--accent);color:#fff}
+.rbody{padding:10px 12px;max-height:70vh;overflow:auto}
+.rframe{width:100%;height:60vh;border:0;border-radius:8px;background:#fff}
+.rtext .rv{margin:4px 0;line-height:1.7}
+.rtext sup{color:var(--accent);font-weight:700;margin-right:2px}
+.rtext.rtl{direction:rtl;text-align:right;font-size:20px}
+.rch{font-weight:700;margin:10px 0 4px;color:var(--muted);font-size:13px}
+.rnote{font-size:12px;color:var(--muted);margin-top:8px}
 </style>
 </head>
 <body>
@@ -509,8 +522,6 @@ const T_G = '<span class="tag g">⛪ Gereja</span>';
 const T_R = '<span class="tag r">🔬 Penelitian</span>';
 const CONTENT = {
 1:{ covers:"Kejadian 1–2 dan Mazmur 19", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Kejadian 1: Allah menciptakan langit, bumi, dan segala isinya dalam enam hari, lalu beristirahat pada hari ketujuh. Kejadian 2: Allah membentuk manusia dari debu tanah, menempatkannya di taman Eden, lalu menciptakan perempuan. <i>(Isi ayat.)</i></p>
 <h3>🔧 BAGAIMANA caranya?</h3>
 <p>${T_G} Di Kejadian 1, menurut catatan Alkitab resmi para uskup (NABRE), Allah menghadirkan alam semesta yang teratur dari kekacauan awal hanya dengan bersabda. Di Kejadian 2, Allah digambarkan seperti tukang periuk yang membentuk tubuh manusia dari tanah, lalu mengembuskan napas ke hidungnya.</p>
 <h3>👤 SIAPA manusia itu?</h3>
@@ -533,8 +544,6 @@ const CONTENT = {
 <li>Kenapa ya Allah bilang "tidak baik kalau manusia sendirian"?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/1">NABRE Kej 1</a> · <a href="https://bible.usccb.org/bible/genesis/2">NABRE Kej 2</a> · <a href="https://www.intratext.com/IXT/ENG0037/_P4.HTM">Dei Verbum 12</a> · <a href="https://cdli.earth/artifacts/479340">Lempeng Enuma Elish (CDLI)</a> · <a href="https://www.worldhistory.org/article/225/enuma-elish%E2%80%94the-babylonian-epic-of-creation%E2%80%94fu/">Teks Enuma Elish</a> · <a href="https://bible.usccb.org/bible/ps/19">NABRE Mzm 19</a></div>`},
 2:{ covers:"Kejadian 3–4 dan Mazmur 104", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Kejadian 3: Adam dan Hawa makan buah dari pohon yang dilarang, lalu bersembunyi dan diusir dari taman. Kejadian 4: Kain membunuh adiknya, Habel. <i>(Isi ayat.)</i></p>
 <h3>💭 MENGAPA kisah kejatuhan terasa seperti gambaran?</h3>
 <p>${T_G} Katekismus no. 390: kisah kejatuhan di Kejadian 3 memakai bahasa kiasan, tetapi menegaskan sebuah peristiwa purba, perbuatan yang terjadi di awal sejarah manusia.</p>
 <h3>💭 MENGAPA persembahan Habel diterima?</h3>
@@ -552,8 +561,6 @@ const CONTENT = {
 <li>Kain iri dan marah. Apa yang bisa kita lakukan kalau merasa iri sama saudara sendiri?</li></ul>
 <div class="srcs">📚 <a href="https://www.vatican.va/archive/ENG0015/__P1C.HTM">KGK 390</a> · <a href="https://bible.usccb.org/bible/genesis/4">NABRE Kej 4</a> · <a href="https://academic.oup.com/edited-volume/35006/chapter/298739466">Oxford Handbook of the Psalms</a></div>`},
 3:{ covers:"Kejadian 5–6 dan Mazmur 136", html:`
-<h3>❓ APA isinya?</h3>
-<p>Kejadian 5: silsilah dari Adam sampai Nuh, dengan umur yang sangat panjang. Kejadian 6: manusia makin jahat, lalu Allah menyuruh Nuh membuat bahtera. <i>(Isi ayat.)</i></p>
 <h3>💭 MENGAPA umurnya panjang sekali?</h3>
 <p>${T_G} Menurut NABRE, silsilah ini menunjukkan pengaruh sastra Mesopotamia kuno, yang punya daftar raja sebelum dan sesudah air bah. Dalam daftar itu, umur raja-raja sebelum air bah antara 18.600 sampai 36.000 tahun. Angka di Alkitab jauh lebih kecil. Angka-angka itu juga sedikit berbeda antara naskah Ibrani dan naskah Yunani.</p>
 <h3>👤 SIAPA Henokh?</h3>
@@ -570,8 +577,6 @@ const CONTENT = {
 <ul><li>Henokh "bergaul dengan Allah". Kalau kamu, gimana caranya bergaul dengan Allah setiap hari?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/5">NABRE Kej 5</a> · <a href="https://bible.usccb.org/bible/genesis/6">NABRE Kej 6</a> · <a href="https://coursebible.com/new-american-bible-revised-edition-nabre/psalm-136">NABRE Mzm 136</a></div>`},
 4:{ covers:"Kejadian 7–9 dan Mazmur 1", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Air bah datang. Nuh, keluarganya, dan binatang-binatang selamat di dalam bahtera. Setelah air surut, Allah membuat perjanjian dengan Nuh, dengan pelangi sebagai tandanya. <i>(Isi ayat.)</i></p>
 <h3>💭 MENGAPA ada detail yang terasa berbeda?</h3>
 <p>${T_G} Menurut NABRE, kisah air bah umumnya dipandang sebagai gabungan dua sumber yang dijalin jadi satu. Contohnya: di satu bagian ada sepasang dari setiap binatang, di bagian lain tujuh pasang binatang yang tahir. Di satu bagian air datang dari bawah dan atas bumi, di bagian lain dari hujan 40 hari 40 malam. Meski begitu, NABRE menganjurkan kisah ini dibaca sebagai satu cerita yang utuh.</p>
 <h3>👤 SIAPA saja yang termasuk perjanjian?</h3>
@@ -588,8 +593,6 @@ const CONTENT = {
 <ul><li>Allah juga membuat perjanjian dengan binatang. Menurutmu, apa artinya buat cara kita memperlakukan hewan peliharaan?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/6">NABRE Kej 6 (catatan air bah 6:5–8:22)</a> · <a href="https://bible.usccb.org/bible/genesis/9">NABRE Kej 9</a> · <a href="https://artsandculture.google.com/asset/the-flood-tablet-relating-part-of-the-epic-of-gilgamesh/wQGL1dmyVmXRYA">Lempeng Air Bah, British Museum</a> · <a href="https://archaeology.org/issues/online/collection/cuneiform-religion">Archaeology Magazine</a> · <a href="https://coursebible.com/new-catholic-bible-ncb/psalm-1">New Catholic Bible, Mzm 1</a></div>`},
 5:{ covers:"Kejadian 10–11 dan Mazmur 2", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Kejadian 10: daftar bangsa-bangsa keturunan anak-anak Nuh. Kejadian 11: manusia membangun menara di Babel, lalu Allah mengacaukan bahasa mereka. Bab ini ditutup dengan silsilah sampai Abram. <i>(Isi ayat.)</i></p>
 <h3>💭 MENGAPA ada daftar bangsa-bangsa?</h3>
 <p>${T_G} Menurut NABRE, Kejadian 10 penting karena menekankan bahwa <b>semua bangsa di bumi adalah satu keluarga</b>. Setiap bangsa juga diberi tanahnya oleh Allah.</p>
 <h3>📍 DI MANA menara Babel?</h3>
@@ -612,8 +615,6 @@ const CONTENT = {
 <ul><li>Semua bangsa itu satu keluarga. Gimana caranya kita memperlakukan teman yang beda suku atau beda bahasa?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/10">NABRE Kej 10</a> · <a href="https://bible.usccb.org/bible/genesis/11">NABRE Kej 11</a> · <a href="https://www.britannica.com/place/Ur">Ur (Britannica)</a> · <a href="https://www.britannica.com/contributor/Leonard-Woolley/3265">Leonard Woolley (Britannica)</a> · <a href="https://bible.usccb.org/bible/psalms/2">NABRE Mzm 2</a></div>`},
 6:{ covers:"Kejadian 12, Ayub 1–2, Amsal 1:1–7 (Kejadian 13 belum dibahas)", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Allah memanggil Abram untuk pergi ke negeri yang akan ditunjukkan-Nya, dan berjanji memberkatinya. Abram pergi ke Kanaan, lalu ke Mesir karena kelaparan. <i>(Isi ayat.)</i></p>
 <h3>💭 MENGAPA panggilan Abram penting?</h3>
 <p>${T_G} Menurut NABRE, panggilan Abraham memulai sejarah berkat yang baru. Kisah ini kebalikan dari kisah menara Babel: kalau orang Babel ingin menetap, Abraham justru pergi. NABRE juga mencatat bahwa susunan kalimat Ibraninya menunjukkan berkat itu bergantung pada kesediaan Abraham untuk pergi ke Kanaan.</p>
 <h3>📍 DI MANA?</h3>
@@ -635,8 +636,6 @@ const CONTENT = {
 <li>"Takut akan Tuhan" itu artinya hormat, bukan takut. Apa bedanya?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/12">NABRE Kej 12</a> · <a href="https://biblehub.com/nabre/job/intro.htm">Pengantar Ayub, NABRE</a> · <a href="https://www.vatican.va/archive/ENG0839/_PEM.HTM">Catatan Ayub 1, NAB (vatican.va)</a> · <a href="https://press.vatican.va/archive/ENG0839/_PJZ.HTM">Pengantar Amsal, NAB (vatican.va)</a> · <a href="https://mail.biblehub.com/nabre/proverbs/footnotes.htm">Catatan Amsal, NABRE</a></div>`},
 7:{ covers:"Kejadian 14–15, Ayub 3–4, Amsal 1:8–19", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Kejadian 14: Abram menyelamatkan Lot dalam perang raja-raja, lalu diberkati oleh Melkisedek, raja Salem. Kejadian 15: Allah membuat perjanjian dengan Abram. Abram percaya, dan hal itu diperhitungkan sebagai kebenaran. <i>(Isi ayat.)</i></p>
 <h3>👤 SIAPA raja-raja itu?</h3>
 <p>${T_G} Menurut NABRE, kebenaran sejarah peristiwa ini masih diperdebatkan. Selain Sinear (Babel), Tidal (nama raja Het, Tudhaliya), dan Elam, nama-nama dan tempat-tempatnya belum bisa dipastikan. Ceritanya mirip laporan perang dalam catatan kerajaan Babel dan Asyur.</p>
 <h3>👤 SIAPA Melkisedek?</h3>
@@ -660,8 +659,6 @@ const CONTENT = {
 <li>Allah sendiri yang menjamin janji-Nya pada Abram. Apa artinya buat kita kalau Allah berjanji?</li></ul>
 <div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/14">NABRE Kej 14</a> · <a href="https://bible.usccb.org/bible/genesis/15">NABRE Kej 15</a> · <a href="https://mail.biblehub.com/nabre/job/footnotes.htm">Catatan Ayub, NABRE</a> · <a href="https://coursebible.com/new-american-bible-revised-edition-nabre/proverbs-1">NABRE Amsal 1</a></div>`},
 313:{ covers:"Lukas 2:1–20 (Lukas 1, Lukas 2:21–52, dan Amsal belum dibahas)", html:`
-<h3>❓ APA yang terjadi?</h3>
-<p>Yusuf dan Maria pergi ke Betlehem untuk sensus (pendataan penduduk). Di sana Yesus lahir dan dibaringkan di palungan. Malaikat mengabarkannya kepada para gembala. <i>(Isi ayat.)</i></p>
 <h3>👤 SIAPA saja?</h3>
 <ul>
 <li>Yusuf, Maria, bayi Yesus, para gembala, dan malaikat <i>(dari ayat)</i>.</li>
@@ -684,8 +681,6 @@ const CONTENT = {
 <ul><li>Kaisar Agustus punya istana dan tentara, sedangkan Yesus lahir di tempat makan hewan. Kenapa ya Tuhan memilih cara seperti itu?</li></ul>
 <div class="srcs">📚 Sumber: <a href="https://bible.usccb.org/bible/lk/2">Catatan NABRE Lukas 2 (USCCB)</a> · <a href="https://www.britannica.com/biography/Augustus-Roman-emperor">Augustus (Britannica)</a> · <a href="https://www.catholic.com/audio/ddp/the-year-jesus-was-born">The Year Jesus Was Born (Catholic Answers)</a> · <a href="https://stpatricksjaffrey.com/hrf_faq/the-birth-of-jesus-christ-in-bethlehem/">Catatan NABRE soal palungan</a></div>`},
 359:{ covers:"Pengantar Kitab Wahyu & Wahyu 1 (Wahyu 2–3, 2 Timotius, dan Amsal belum dibahas)", html:`
-<h3>❓ APA isinya?</h3>
-<p>Yohanes melihat Yesus yang mulia dan menerima pesan untuk tujuh jemaat di Asia. <i>(Isi ayat.)</i></p>
 <h3>👤 SIAPA penulisnya?</h3>
 <p>${T_G} Menurut pengantar NABRE yang dimuat di situs Vatikan, penulisnya menyebut diri Yohanes dan dibuang ke Pulau Patmos karena imannya. Beberapa Bapa Gereja (Yustinus, Ireneus, Klemens dari Aleksandria, Tertulianus, Siprianus, Hipolitus) menyebutnya Rasul Yohanes, tetapi Bapa Gereja lain (Dionisius dari Aleksandria, Eusebius, Sirilus dari Yerusalem, Gregorius dari Nazianze, Yohanes Krisostomus) tidak setuju.</p>
 <h3>📍 DI MANA?</h3>
@@ -700,6 +695,102 @@ const CONTENT = {
 <ul><li>Yohanes dibuang ke pulau sepi karena imannya, tapi justru di sana dia bertemu Yesus. Pernah nggak kamu merasa Tuhan dekat waktu lagi susah?</li></ul>
 <div class="srcs">📚 Sumber: <a href="https://www.vatican.va/archive/ENG0839/_P12J.HTM">Pengantar Kitab Wahyu, NABRE (vatican.va)</a> · <a href="https://www.britannica.com/place/Patmos">Patmos (Britannica)</a></div>`}
 };
+
+/* ===== Pembaca ayat ===== */
+const BOLLS="https://bolls.life";
+const SABDA_ABBR={"Kejadian":"Kej","Keluaran":"Kel","Imamat":"Im","Bilangan":"Bil","Ulangan":"Ul","Yosua":"Yos","Hakim-hakim":"Hak","Rut":"Rut","1 Samuel":"1Sam","2 Samuel":"2Sam","1 Raja-raja":"1Raj","2 Raja-raja":"2Raj","1 Tawarikh":"1Taw","2 Tawarikh":"2Taw","Ezra":"Ezr","Nehemia":"Neh","Ester":"Est","Ayub":"Ayb","Mazmur":"Mzm","Amsal":"Ams","Pengkhotbah":"Pkh","Kidung Agung":"Kid","Yesaya":"Yes","Yeremia":"Yer","Ratapan":"Rat","Yehezkiel":"Yeh","Daniel":"Dan","Hosea":"Hos","Yoel":"Yl","Amos":"Am","Obaja":"Ob","Yunus":"Yun","Mikha":"Mi","Nahum":"Nah","Habakuk":"Hab","Zefanya":"Zef","Hagai":"Hag","Zakharia":"Za","Maleakhi":"Mal","Matius":"Mat","Markus":"Mrk","Lukas":"Luk","Yohanes":"Yoh","Kisah Para Rasul":"Kis","Roma":"Rm","1 Korintus":"1Kor","2 Korintus":"2Kor","Galatia":"Gal","Efesus":"Ef","Filipi":"Flp","Kolose":"Kol","1 Tesalonika":"1Tes","2 Tesalonika":"2Tes","1 Timotius":"1Tim","2 Timotius":"2Tim","Titus":"Tit","Filemon":"Flm","Ibrani":"Ibr","Yakobus":"Yak","1 Petrus":"1Ptr","2 Petrus":"2Ptr","1 Yohanes":"1Yoh","2 Yohanes":"2Yoh","3 Yohanes":"3Yoh","Yudas":"Yud","Wahyu":"Why"};
+const NT_EN=["Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"];
+const ALIASES={"Psalm":["psalms","psalm"],"Song of Solomon":["songofsolomon","songofsongs","canticles","song"],"Wisdom":["wisdom","wisdomofsolomon"],"Sirach":["sirach","ecclesiasticus","sira","bensira"],"Revelation":["revelation","revelationofjohn","apocalypse"]};
+function norm(s){return s.toLowerCase().replace(/^i\s/,"1 ").replace(/^ii\s/,"2 ").replace(/^iii\s/,"3 ").replace(/first\s/,"1 ").replace(/second\s/,"2 ").replace(/third\s/,"3 ").replace(/[^a-z0-9]/g,"");}
+
+/* "Kejadian 1–2" / "Amsal 1:1-7" / "Lukas 22:39–24:50" / "Ester 3, 13" / "Obaja" -> [{ch, from, to}] */
+function parseRest(rest){
+  rest=(rest||"").replace(/–/g,"-").trim();
+  if(!rest) return [{ch:1}];
+  const out=[];
+  for(let part of rest.split(",")){
+    part=part.trim(); if(!part) continue;
+    let m;
+    if((m=part.match(/^(\d+):(\d+)-(\d+):(\d+)$/))){
+      const c1=+m[1],v1=+m[2],c2=+m[3],v2=+m[4];
+      for(let c=c1;c<=c2;c++) out.push({ch:c,from:c===c1?v1:null,to:c===c2?v2:null});
+    } else if((m=part.match(/^(\d+)-(\d+):(\d+)$/))){
+      for(let c=+m[1];c<=+m[2];c++) out.push({ch:c,from:null,to:c===+m[2]?+m[3]:null});
+    } else if((m=part.match(/^(\d+):(\d+)-(\d+)$/))){ out.push({ch:+m[1],from:+m[2],to:+m[3]}); }
+    else if((m=part.match(/^(\d+)-(\d+)$/))){ for(let c=+m[1];c<=+m[2];c++) out.push({ch:c}); }
+    else if((m=part.match(/^(\d+)$/))){ out.push({ch:+m[1]}); }
+  }
+  return out;
+}
+function sabdaRef(r){
+  const idBook=r.id.slice(0, r.id.length - r.rest.length).trim();
+  const ab=SABDA_ABBR[idBook]; if(!ab) return null;
+  return (ab+" "+(r.rest||"1")).replace(/–/g,"-").replace(/\s+/g," ").trim();
+}
+
+let LANGS=null; const BOOKS_CACHE={};
+async function getJSON(u){ const r=await fetch(u); if(!r.ok) throw new Error(r.status); return r.json(); }
+async function pickTranslations(){
+  if(LANGS) return LANGS;
+  const data=await getJSON(BOLLS+"/static/bolls/app/views/languages.json");
+  const all=data.flatMap(l=>(l.translations||[]).map(t=>({code:t.short_name, name:t.full_name||t.short_name})));
+  const find=(tests)=>{ for(const t of tests){ const hit=all.find(x=>t(x)); if(hit) return hit; } return null; };
+  LANGS={
+    heb: find([x=>x.code==="WLC", x=>/leningrad/i.test(x.name)]),
+    lxx: find([x=>x.code==="LXX", x=>/septuag/i.test(x.name)]),
+    gnt: find([x=>/^SBLGNT$/i.test(x.code), x=>/tischendorf/i.test(x.name), x=>/westcott/i.test(x.name), x=>/textus receptus/i.test(x.name), x=>/byzantine/i.test(x.name)]),
+    eng: find([x=>/^WEB$/i.test(x.code), x=>/world english/i.test(x.name), x=>x.code==="KJV"])
+  };
+  return LANGS;
+}
+async function bookId(tr, enBook){
+  if(!BOOKS_CACHE[tr]) BOOKS_CACHE[tr]=await getJSON(`${BOLLS}/get-books/${tr}/`);
+  const keys=ALIASES[enBook]||[norm(enBook)];
+  const hit=BOOKS_CACHE[tr].find(b=>keys.includes(norm(b.name||"")));
+  return hit?hit.bookid:null;
+}
+function clean(t){ return String(t||"").replace(/<S>\d+<\/S>/gi,"").replace(/<sup>.*?<\/sup>/gi,"").replace(/<[^>]+>/g,"").replace(/\s+/g," ").trim(); }
+async function loadText(kind, r){
+  const L=await pickTranslations();
+  let tr;
+  if(kind==="eng") tr=L.eng;
+  else tr = NT_EN.includes(r.en) ? L.gnt : (isDK(r) ? L.lxx : L.heb);
+  if(!tr) throw new Error("Terjemahan tidak ditemukan");
+  const bid=await bookId(tr.code, r.en);
+  if(!bid) return {tr, html:`<p class="empty">Kitab ini tidak tersedia dalam ${esc(tr.name)}.</p>`};
+  const parts=parseRest(r.rest); let html="";
+  for(const p of parts){
+    let vs; try{ vs=await getJSON(`${BOLLS}/get-text/${tr.code}/${bid}/${p.ch}/`); }catch(e){ vs=[]; }
+    vs=vs.filter(v=>(p.from==null||v.verse>=p.from)&&(p.to==null||v.verse<=p.to));
+    html+=`<div class="rch">Pasal ${p.ch}</div>`;
+    html+= vs.length ? vs.map(v=>`<p class="rv"><sup>${v.verse}</sup> ${esc(clean(v.text))}</p>`).join("") : `<p class="empty">Pasal ini tidak tersedia (penomoran bisa berbeda).</p>`;
+  }
+  return {tr, html};
+}
+function readerHTML(i){
+  return `<div class="reader" id="rd${i}">
+    <div class="rtabs"><button data-k="id" class="on">🇮🇩 Indonesia (LAI)</button><button data-k="orig">Bahasa asli</button><button data-k="eng">English</button></div>
+    <div class="rbody"></div></div>`;
+}
+async function showReader(box, r, kind){
+  const body=box.querySelector(".rbody");
+  box.querySelectorAll(".rtabs button").forEach(b=>b.classList.toggle("on",b.dataset.k===kind));
+  if(kind==="id"){
+    if(isDK(r)){ body.innerHTML=`<p class="empty">Kitab Deuterokanonika tidak tersedia di Alkitab SABDA. Silakan baca dari Alkitab Deuterokanonika LAI cetak, atau pilih tab "Bahasa asli" / "English".</p>`; return; }
+    const ref=sabdaRef(r); const url=`https://alkitab.sabda.org/passage.php?passage=${encodeURIComponent(ref)}`;
+    body.innerHTML=`<iframe class="rframe" src="${url}" loading="lazy" title="Alkitab SABDA"></iframe>
+      <p class="rnote">Teks: Alkitab Terjemahan Baru © LAI, ditampilkan dari situs Alkitab SABDA. Kalau tidak tampil, <a href="${url}" target="_blank" rel="noopener">buka di sini</a>.</p>`;
+    return;
+  }
+  body.innerHTML=`<p class="empty">Memuat…</p>`;
+  try{
+    const {tr, html}=await loadText(kind==="eng"?"eng":"orig", r);
+    const rtl = kind==="orig" && tr.code===(LANGS.heb&&LANGS.heb.code);
+    body.innerHTML=`<div class="rtext ${rtl?'rtl':''}">${html}</div><p class="rnote">Teks: ${esc(tr.name)} (${esc(tr.code)}), dari bolls.life.</p>`;
+  }catch(e){
+    body.innerHTML=`<p class="empty">Gagal memuat teks. Pastikan HP terhubung internet, lalu coba lagi.</p>`;
+  }
+}
 
 /* ===== Penyimpanan (per perangkat) ===== */
 const KEY="alkitab-keluarga-v1";
@@ -722,7 +813,7 @@ function esc(t){return t.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"
 function renderDay(d){
   const p=PLAN[d-1], per=periodOf(d), c=CONTENT[d];
   const doneSet = S.done[d]||[];
-  const reads = p.reads.map(r=>`<li>📖 <b>${esc(r.id)}</b>${isDK(r)?' <span class="dk">Deuterokanonika</span>':''}</li>`).join("");
+  const reads = p.reads.map((r,i)=>`<li><div class="row" style="width:100%;justify-content:space-between"><span>📖 <b>${esc(r.id)}</b>${isDK(r)?' <span class="dk">Deuterokanonika</span>':''}</span><button class="btn rbtn" data-i="${i}">Baca ayat ▾</button></div><div class="rslot" id="slot${i}"></div></li>`).join("");
   const mems = S.members.map((m,i)=>`<div class="mem ${doneSet.includes(i)?'done':''}" data-m="${i}"><span class="box">${doneSet.includes(i)?'✓':''}</span>${esc(m)}</div>`).join("");
   $("#v-today").innerHTML = `
   <div class="card">
@@ -742,6 +833,14 @@ function renderDay(d){
     ${c ? `<p class="empty">Mencakup: ${esc(c.covers)}</p>${c.html}` :
       `<p class="empty">Penjelasan untuk hari ini belum disiapkan. Setiap penjelasan baru ditambahkan setelah diriset dan punya sumber. Sementara itu, bacalah ayat-ayatnya di Alkitab Deuterokanonika kalian.</p>`}
   </div>`;
+  document.querySelectorAll("#v-today .rbtn").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.i, slot=$("#slot"+i);
+    if(slot.innerHTML){ slot.innerHTML=""; b.textContent="Baca ayat ▾"; return; }
+    slot.innerHTML=readerHTML(i); b.textContent="Tutup ▴";
+    const box=slot.querySelector(".reader"), r=p.reads[i];
+    box.querySelectorAll(".rtabs button").forEach(t=>t.onclick=()=>showReader(box,r,t.dataset.k));
+    showReader(box,r,"id");
+  });
   $("#prev").onclick=()=>go(d-1); $("#next").onclick=()=>go(d+1); $("#tday").onclick=()=>go(todayIndex());
   document.querySelectorAll("#v-today .mem").forEach(el=>el.onclick=()=>{
     const i=+el.dataset.m; const arr=S.done[d]||[];
@@ -784,7 +883,7 @@ function renderAbout(){
   <div class="card sec">
     <div style="font-family:Fraunces,serif;font-size:19px;font-weight:700">Aturan konten</div>
     <ul>
-      <li><b>Ayat tidak diubah dan tidak ditambah.</b> Isi ayat hanya diceritakan ulang singkat. Baca teks lengkapnya di Alkitab kalian.</li>
+      <li><b>Ayat tidak diubah dan tidak ditambah.</b> Teks ayat ditampilkan langsung dari sumbernya lewat tombol "Baca ayat": Alkitab Terjemahan Baru LAI (dari situs Alkitab SABDA), teks bahasa asli Ibrani/Yunani, dan terjemahan Inggris (dari bolls.life).</li>
       <li><b>Setiap penjelasan harus punya sumber</b> yang bisa diklik.</li>
       <li>${T_G} = ajaran atau catatan resmi Gereja: Katekismus, Dei Verbum, catatan Alkitab NABRE yang disetujui para uskup.</li>
       <li>${T_R} = hasil penelitian dari museum, universitas, jurnal, atau ensiklopedia terpercaya. Bukan blog dan bukan opini pribadi.</li>
