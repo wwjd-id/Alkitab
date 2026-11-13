@@ -9,8 +9,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Alkitab Keluarga">
 <title>Alkitab Keluarga</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f7f3ec; --card:#fffdf9; --ink:#2b2622; --muted:#7a6f66; --line:#e6ddd0;
@@ -21,9 +19,9 @@
   :root{--bg:#1c1917;--card:#26221f;--ink:#efe8df;--muted:#a8998b;--line:#3a332d;--accent:#e0a37c;--accent-soft:#3a2b22;--ok:#6fc49a;--warn:#e7b26b;--warn-soft:#3a2f1f;--g1:#3d2340;--g2:#123049;}
 }
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(150deg,var(--g1) 0%,var(--g2) 100%) fixed;min-height:100vh;color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.6}
+body{margin:0;background:linear-gradient(150deg,var(--g1) 0%,var(--g2) 100%) fixed;min-height:100vh;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.55}
 header{padding:20px 16px 8px;max-width:760px;margin:0 auto}
-h1{font-family:"Source Serif 4",Georgia,serif;font-size:26px;margin:0 0 4px}
+h1{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-weight:600;font-size:26px;margin:0 0 4px}
 .sub{color:var(--muted);font-size:14px;margin:0}
 main{max-width:760px;margin:0 auto;padding:8px 16px 60px}
 nav.tabs{display:flex;gap:6px;margin:12px 0 16px;overflow-x:auto}
@@ -31,7 +29,7 @@ nav.tabs button{border:1px solid var(--line);background:var(--card);color:var(--
 nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .card{background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(60,40,30,.08);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
 .period{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;color:#fff;margin-bottom:6px}
-.daytitle{font-family:"Source Serif 4",Georgia,serif;font-size:22px;margin:2px 0 8px}
+.daytitle{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-weight:600;font-size:22px;margin:2px 0 8px}
 .reads{list-style:none;padding:0;margin:0 0 6px}
 .reads li{padding:6px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .reads li:last-child{border-bottom:0}
@@ -43,7 +41,7 @@ nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#ff
 .mem{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;user-select:none;font-weight:600;font-size:14px}
 .mem.done{background:var(--ok);border-color:var(--ok);color:#fff}
 .mem .box{width:16px;height:16px;border-radius:4px;border:2px solid currentColor;display:inline-flex;align-items:center;justify-content:center;font-size:11px}
-.sec h3{font-family:"Source Serif 4",Georgia,serif;font-size:17px;margin:16px 0 4px}
+.sec h3{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-weight:600;font-size:17px;margin:16px 0 4px}
 .sec p,.sec li{margin:4px 0}
 .sec ul{padding-left:20px;margin:4px 0}
 .tag{font-size:12px;font-weight:700;padding:1px 6px;border-radius:6px;margin-right:4px;white-space:nowrap}
@@ -84,10 +82,13 @@ input.t,input[type=date]{padding:9px 10px;border-radius:10px;border:1px solid va
 .chap{padding:10px 0;border-bottom:1px dashed var(--line);list-style:none}
 .chead{font-size:15px}.ctitle{color:var(--accent);font-weight:700}
 .csum{margin:4px 0 8px;font-size:15px}
-.h2{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:700}
+.h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-weight:600;font-size:19px;font-weight:700}
 .xblock{border-top:1px solid var(--line);margin-top:12px;padding-top:6px}.xhead{font-weight:700;color:var(--accent);font-size:14px}
-.sechead{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:17px;margin:14px 0 4px}
-nav.tabs button,.btn,.rtabs button,.mem,.period,.tag,.dk,label.f,.has,.ticks,.dnum,.rnote,.srcs{font-family:Inter,system-ui,sans-serif}
+.sechead{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-weight:600;font-weight:700;font-size:17px;margin:14px 0 4px}
+nav.tabs button,.btn,.rtabs button,.mem,.period,.tag,.dk,label.f,.has,.ticks,.dnum,.rnote,.srcs{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
+.couple{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--accent-soft)}
+.couple summary{cursor:pointer;font-weight:700;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;font-size:15px}
+.ren p{margin:6px 0}
 </style>
 </head>
 <body>
@@ -207,25 +208,25 @@ const SRC = (links)=>`<div class="srcs">📚 ${links.map(([t,u])=>`<a href="${u}
 const EXPL = {
 "Kejadian 1":`
 <h3>🔧 BAGAIMANA Allah menciptakan?</h3>
-<p>${T_G} Menurut catatan Alkitab resmi para uskup (NABRE), Allah menghadirkan alam semesta yang teratur dari kekacauan awal hanya dengan bersabda.</p>
+<p>${T_G} Allah menghadirkan alam semesta yang teratur dari kekacauan awal hanya dengan bersabda.</p>
 <h3>👤 SIAPA manusia itu?</h3>
-<p>${T_G} Kata "gambar" dan "rupa" Allah menunjukkan bahwa manusia berharga, punya nilai dalam dirinya sendiri (NABRE).</p>
+<p>${T_G} Kata "gambar" dan "rupa" Allah menunjukkan bahwa manusia berharga, punya nilai dalam dirinya sendiri.</p>
 <h3>💭 MENGAPA ceritanya ditulis begini?</h3>
-<p>${T_G} Menurut NABRE, Kejadian 1 berfungsi sebagai pembuka, seperti cerita-cerita kuno tentang asal-usul dunia. Gereja mengajarkan bahwa kita perlu memperhatikan gaya bahasa yang dipakai penulis suci sesuai budaya zamannya (Dei Verbum 12).</p>
+<p>${T_G} Kejadian 1 berfungsi sebagai pembuka, seperti cerita-cerita kuno tentang asal-usul dunia. Gereja mengajarkan bahwa kita perlu memperhatikan gaya bahasa yang dipakai penulis suci sesuai budaya zamannya (Dei Verbum 12).</p>
 <p>${T_R} Bangsa Babel punya cerita penciptaan sendiri, <i>Enuma Elish</i>. Salinan lempeng tanah liatnya ada di British Museum, dari zaman Neo-Babilonia (sekitar 626–539 SM). Di cerita itu manusia dibuat untuk melayani para dewa. Di Kejadian, manusia justru diciptakan menurut gambar Allah.</p>
 <h3>📅 KAPAN?</h3><p class="empty">Kejadian 1 tidak menyebut tahun. Kapan kitab ini ditulis belum diriset.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Dewa-dewa Babel bikin manusia jadi pelayan, Allah bikin manusia menurut gambar-Nya. Apa bedanya buat caramu memandang dirimu sendiri?</li></ul>
-${SRC([["NABRE Kej 1","https://bible.usccb.org/bible/genesis/1"],["Dei Verbum 12","https://www.intratext.com/IXT/ENG0037/_P4.HTM"],["Lempeng Enuma Elish (CDLI)","https://cdli.earth/artifacts/479340"],["Teks Enuma Elish","https://www.worldhistory.org/article/225/enuma-elish%E2%80%94the-babylonian-epic-of-creation%E2%80%94fu/"]])}`,
+${SRC([["Catatan Kej 1","https://bible.usccb.org/bible/genesis/1"],["Dei Verbum 12","https://www.intratext.com/IXT/ENG0037/_P4.HTM"],["Lempeng Enuma Elish (CDLI)","https://cdli.earth/artifacts/479340"],["Teks Enuma Elish","https://www.worldhistory.org/article/225/enuma-elish%E2%80%94the-babylonian-epic-of-creation%E2%80%94fu/"]])}`,
 "Kejadian 2":`
 <h3>👤 SIAPA Adam dan perempuan itu?</h3>
-<ul><li>${T_G} "Adam" artinya "manusia". Dalam bahasa Ibrani ada permainan kata antara <i>'adam</i> (manusia) dan <i>'adama</i> (tanah). Jadi manusia itu "si dari tanah" (NABRE).</li>
-<li>${T_G} Perempuan disebut "penolong yang sepadan". Menurut NABRE, kata "penolong" tidak berarti lebih rendah, karena Allah sendiri juga disebut penolong.</li></ul>
+<ul><li>${T_G} "Adam" artinya "manusia". Dalam bahasa Ibrani ada permainan kata antara <i>'adam</i> (manusia) dan <i>'adama</i> (tanah). Jadi manusia itu "si dari tanah".</li>
+<li>${T_G} Perempuan disebut "penolong yang sepadan". Kata "penolong" tidak berarti lebih rendah, karena Allah sendiri juga disebut penolong.</li></ul>
 <h3>📍 DI MANA taman Eden?</h3>
-<p>${T_G} Menurut NABRE, Eden mungkin nama wilayah di Mesopotamia selatan (Irak sekarang), dari kata Sumeria yang artinya "dataran subur". Tigris dan Efrat sama-sama bermuara ke Teluk Persia; letak Sungai Pison tidak diketahui.</p>
+<p>${T_G} Eden mungkin nama wilayah di Mesopotamia selatan (Irak sekarang), dari kata Sumeria yang artinya "dataran subur". Tigris dan Efrat sama-sama bermuara ke Teluk Persia; letak Sungai Pison tidak diketahui.</p>
 <h3>💭 MENGAPA ada dua cerita penciptaan?</h3>
-<p>${T_G} Menurut NABRE, Kejadian 2 berasal dari tradisi yang lebih tua (disebut tradisi "Yahwis", karena memakai nama Allah "YHWH"), lalu disusun dalam bingkai baru bersama Kejadian 1.</p>
+<p>${T_G} Kejadian 2 berasal dari tradisi yang lebih tua (disebut tradisi "Yahwis", karena memakai nama Allah "YHWH"), lalu disusun dalam bingkai baru bersama Kejadian 1.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Kenapa ya Allah bilang "tidak baik kalau manusia sendirian"?</li></ul>
-${SRC([["NABRE Kej 2","https://bible.usccb.org/bible/genesis/2"]])}`,
+${SRC([["Catatan Kej 2","https://bible.usccb.org/bible/genesis/2"]])}`,
 "Kejadian 3":`
 <h3>💭 MENGAPA kisahnya terasa seperti gambaran?</h3>
 <p>${T_G} Katekismus no. 390: kisah kejatuhan di Kejadian 3 memakai bahasa kiasan, tetapi menegaskan sebuah peristiwa purba yang terjadi di awal sejarah manusia.</p>
@@ -233,104 +234,142 @@ ${SRC([["NABRE Kej 2","https://bible.usccb.org/bible/genesis/2"]])}`,
 ${SRC([["KGK 390","https://www.vatican.va/archive/ENG0015/__P1C.HTM"]])}`,
 "Kejadian 4":`
 <h3>💭 MENGAPA persembahan Habel diterima?</h3>
-<p>${T_G} Menurut NABRE, Allah menerima persembahan Habel dan menolak persembahan Kain dengan alasan yang <b>tidak disebutkan</b> dalam teks. Kisah ini juga tidak merendahkan pekerjaan bertani.</p>
+<p>${T_G} Allah menerima persembahan Habel dan menolak persembahan Kain dengan alasan yang <b>tidak disebutkan</b> dalam teks. Kisah ini juga tidak merendahkan pekerjaan bertani.</p>
 <h3>🔧 BAGAIMANA tanda Kain?</h3>
-<p>${T_G} Menurut NABRE, tanda itu kemungkinan semacam tato yang menandai Kain sebagai orang yang dilindungi Allah; tato sebagai tanda suku sudah lama umum di kalangan suku Badui di Timur Dekat.</p>
+<p>${T_G} Tanda itu kemungkinan semacam tato yang menandai Kain sebagai orang yang dilindungi Allah; tato sebagai tanda suku sudah lama umum di kalangan suku Badui di Timur Dekat.</p>
 <h3>👤 SIAPA Lamekh?</h3>
-<p>${T_G} Lamekh adalah keturunan Kain (Kej 4:17–18). Menurut NABRE, sesumbar Lamekh (4:23–24) menunjukkan kekerasan Kain berlanjut ke keturunannya, bahkan makin parah.</p>
+<p>${T_G} Lamekh adalah keturunan Kain (Kej 4:17–18). Sesumbar Lamekh (4:23–24) menunjukkan kekerasan Kain berlanjut ke keturunannya, bahkan makin parah.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Kain iri dan marah. Apa yang bisa kita lakukan kalau merasa iri sama saudara sendiri?</li></ul>
-${SRC([["NABRE Kej 4","https://bible.usccb.org/bible/genesis/4"]])}`,
+${SRC([["Catatan Kej 4","https://bible.usccb.org/bible/genesis/4"]])}`,
 "Kejadian 5":`
 <h3>💭 MENGAPA umurnya panjang sekali?</h3>
-<p>${T_G} Menurut NABRE, silsilah ini menunjukkan pengaruh sastra Mesopotamia kuno yang punya daftar raja sebelum dan sesudah air bah. Dalam daftar itu umur raja-raja sebelum air bah antara 18.600 sampai 36.000 tahun. Angka di Alkitab jauh lebih kecil.</p>
+<p>${T_G} Silsilah ini menunjukkan pengaruh sastra Mesopotamia kuno yang punya daftar raja sebelum dan sesudah air bah. Dalam daftar itu umur raja-raja sebelum air bah antara 18.600 sampai 36.000 tahun. Angka di Alkitab jauh lebih kecil.</p>
 <h3>👤 SIAPA Henokh?</h3>
-<p>${T_G} Biasanya silsilah ditutup dengan "lalu ia mati". Untuk Henokh tertulis ia "hidup bergaul dengan Allah". Menurut NABRE, ini menyiratkan Henokh diangkat hidup-hidup kepada Allah, seperti Elia.</p>
+<p>${T_G} Biasanya silsilah ditutup dengan "lalu ia mati". Untuk Henokh tertulis ia "hidup bergaul dengan Allah". Ini menyiratkan Henokh diangkat hidup-hidup kepada Allah, seperti Elia.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Henokh "bergaul dengan Allah". Gimana caranya kamu bergaul dengan Allah setiap hari?</li></ul>
-${SRC([["NABRE Kej 5","https://bible.usccb.org/bible/genesis/5"]])}`,
+${SRC([["Catatan Kej 5","https://bible.usccb.org/bible/genesis/5"]])}`,
 "Kejadian 6":`
 <h3>👤 SIAPA "anak-anak Allah" dan Nefilim? (6:1–4)</h3>
-<p>${T_G} Menurut NABRE, bagian ini memang sulit dipahami. "Anak-anak Allah" artinya makhluk-makhluk surgawi lain, dan bagian ini tampaknya merujuk pada sebuah legenda kuno. Nefilim adalah sebutan orang Israel untuk raksasa-raksasa zaman purba.</p>
+<p>${T_G} Bagian ini memang sulit dipahami. "Anak-anak Allah" artinya makhluk-makhluk surgawi lain, dan bagian ini tampaknya merujuk pada sebuah legenda kuno. Nefilim adalah sebutan orang Israel untuk raksasa-raksasa zaman purba.</p>
 <h3>🔧 BAGAIMANA bahteranya?</h3>
-<p>${T_G} Menurut NABRE, ukurannya sekitar 134 × 22 × 13 meter (satu hasta kira-kira 45 cm). Kayu "gofir" tidak diketahui jenisnya, mungkin kayu sipres.</p>
-${SRC([["NABRE Kej 6","https://bible.usccb.org/bible/genesis/6"]])}`,
+<p>${T_G} Ukurannya sekitar 134 × 22 × 13 meter (satu hasta kira-kira 45 cm). Kayu "gofir" tidak diketahui jenisnya, mungkin kayu sipres.</p>
+${SRC([["Catatan Kej 6","https://bible.usccb.org/bible/genesis/6"]])}`,
 "Kejadian 7":`
 <h3>💭 MENGAPA ada detail yang terasa berbeda?</h3>
-<p>${T_G} Menurut NABRE, kisah air bah (6:5–8:22) umumnya dipandang sebagai gabungan dua sumber. Contohnya: sepasang dari setiap binatang di satu bagian, tujuh pasang binatang yang tahir di bagian lain. NABRE menganjurkan kisah ini dibaca sebagai satu cerita yang utuh.</p>
+<p>${T_G} Kisah air bah (6:5–8:22) umumnya dipandang sebagai gabungan dua sumber. Contohnya: sepasang dari setiap binatang di satu bagian, tujuh pasang binatang yang tahir di bagian lain. Meski begitu, kisah ini dianjurkan dibaca sebagai satu cerita yang utuh.</p>
 <h3>🏺 Cerita air bah bangsa lain</h3>
-<p>${T_G} NABRE menyebut kisah di Alkitab pada akhirnya bersumber dari tradisi Mesopotamia kuno tentang air bah besar, yang dikenal lewat kisah air bah Sumeria, lempeng ke-11 Epos Gilgamesh, dan Epos Atrahasis.</p>
+<p>${T_G} Kisah di Alkitab ini pada akhirnya bersumber dari tradisi Mesopotamia kuno tentang air bah besar, yang dikenal lewat kisah air bah Sumeria, lempeng ke-11 Epos Gilgamesh, dan Epos Atrahasis.</p>
 <p>${T_R} "Lempeng Air Bah" Epos Gilgamesh kini ada di British Museum. Lempeng ini berasal dari sekitar 700–600 SM, dikenali sebagai kisah air bah pada 1872 oleh George Smith, dan dulu milik perpustakaan Raja Asyur Ashurbanipal (memerintah 668–627 SM).</p>
-${SRC([["NABRE Kej 6 (catatan air bah)","https://bible.usccb.org/bible/genesis/6"],["Lempeng Air Bah, British Museum","https://artsandculture.google.com/asset/the-flood-tablet-relating-part-of-the-epic-of-gilgamesh/wQGL1dmyVmXRYA"],["Archaeology Magazine","https://archaeology.org/issues/online/collection/cuneiform-religion"]])}`,
+${SRC([["Catatan air bah, Kej 6","https://bible.usccb.org/bible/genesis/6"],["Lempeng Air Bah, British Museum","https://artsandculture.google.com/asset/the-flood-tablet-relating-part-of-the-epic-of-gilgamesh/wQGL1dmyVmXRYA"],["Archaeology Magazine","https://archaeology.org/issues/online/collection/cuneiform-religion"]])}`,
 "Kejadian 9":`
 <h3>👤 SIAPA saja yang termasuk perjanjian?</h3>
-<p>${T_G} Menurut NABRE, Allah membuat perjanjian dengan Nuh dan keturunannya, dan juga dengan semua binatang: dunia tidak akan lagi dihancurkan oleh air bah. Pelangi adalah tandanya.</p>
-<p>${T_G} Soal Nuh mabuk (9:18–27), NABRE menulis bahwa kesalahannya bukan pada Nuh, karena ia tidak mungkin tahu efek anggur, melainkan pada Ham yang mempermalukan ayahnya.</p>
+<p>${T_G} Allah membuat perjanjian dengan Nuh dan keturunannya, dan juga dengan semua binatang: dunia tidak akan lagi dihancurkan oleh air bah. Pelangi adalah tandanya.</p>
+<p>${T_G} Soal Nuh mabuk (9:18–27), kesalahannya bukan pada Nuh, karena ia tidak mungkin tahu efek anggur, melainkan pada Ham yang mempermalukan ayahnya.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Allah juga membuat perjanjian dengan binatang. Apa artinya buat cara kita memperlakukan hewan peliharaan?</li></ul>
-${SRC([["NABRE Kej 9","https://bible.usccb.org/bible/genesis/9"]])}`,
+${SRC([["Catatan Kej 9","https://bible.usccb.org/bible/genesis/9"]])}`,
 "Kejadian 10":`
 <h3>💭 MENGAPA ada daftar bangsa-bangsa?</h3>
-<p>${T_G} Menurut NABRE, Kejadian 10 menekankan bahwa <b>semua bangsa di bumi adalah satu keluarga</b>, dan setiap bangsa diberi tanahnya oleh Allah.</p>
-<h3>📍 DI MANA Sinear?</h3><p>${T_G} Sinear adalah tanah Babilonia kuno, meliputi Sumer dan Akkad, kini Irak selatan (NABRE).</p>
+<p>${T_G} Kejadian 10 menekankan bahwa <b>semua bangsa di bumi adalah satu keluarga</b>, dan setiap bangsa diberi tanahnya oleh Allah.</p>
+<h3>📍 DI MANA Sinear?</h3><p>${T_G} Sinear adalah tanah Babilonia kuno, meliputi Sumer dan Akkad, kini Irak selatan.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Semua bangsa itu satu keluarga. Gimana kita memperlakukan teman yang beda suku atau bahasa?</li></ul>
-${SRC([["NABRE Kej 10","https://bible.usccb.org/bible/genesis/10"]])}`,
+${SRC([["Catatan Kej 10","https://bible.usccb.org/bible/genesis/10"]])}`,
 "Kejadian 11":`
 <h3>📍 DI MANA menara Babel?</h3>
-<ul><li>${T_G} "Babel" adalah bentuk Ibrani dari "Babilon". Orang Babel mengartikan nama kotanya, <i>Bab-ili</i>, sebagai "gerbang dewa"; kata Ibrani <i>balal</i> ("Ia mengacaukan") bunyinya mirip (NABRE).</li>
+<ul><li>${T_G} "Babel" adalah bentuk Ibrani dari "Babilon". Orang Babel mengartikan nama kotanya, <i>Bab-ili</i>, sebagai "gerbang dewa"; kata Ibrani <i>balal</i> ("Ia mengacaukan") bunyinya mirip.</li>
 <li>${T_G} Menara itu <b>mungkin</b> merujuk pada zigurat (menara kuil bertingkat) utama di Babel, <i>E-sag-ila</i>, "rumah yang mengangkat tinggi kepalanya".</li></ul>
 <h3>👤 SIAPA Abram dan dari mana asalnya?</h3>
-<ul><li>${T_G} Ur adalah kota Sumeria yang sangat kuno di Mesopotamia selatan. NABRE mencatat tempat asal Abraham sebenarnya Haran, bukan Ur.</li>
+<ul><li>${T_G} Ur adalah kota Sumeria yang sangat kuno di Mesopotamia selatan. Tempat asal Abraham sebenarnya Haran, bukan Ur.</li>
 <li>${T_R} Menurut Britannica, situs Ur terletak sekitar 225 km di tenggara Babel, dan digali oleh ekspedisi British Museum dan University of Pennsylvania di bawah Leonard Woolley (1922–1934).</li></ul>
-${SRC([["NABRE Kej 11","https://bible.usccb.org/bible/genesis/11"],["Ur (Britannica)","https://www.britannica.com/place/Ur"],["Leonard Woolley (Britannica)","https://www.britannica.com/contributor/Leonard-Woolley/3265"]])}`,
+${SRC([["Catatan Kej 11","https://bible.usccb.org/bible/genesis/11"],["Ur (Britannica)","https://www.britannica.com/place/Ur"],["Leonard Woolley (Britannica)","https://www.britannica.com/contributor/Leonard-Woolley/3265"]])}`,
 "Kejadian 12":`
 <h3>💭 MENGAPA panggilan Abram penting?</h3>
-<p>${T_G} Menurut NABRE, panggilan Abraham memulai sejarah berkat yang baru, kebalikan dari kisah menara Babel: kalau orang Babel ingin menetap, Abraham justru pergi.</p>
-<h3>📍 DI MANA?</h3><p>${T_G} Menurut NABRE, perjalanan Abraham melewati Sikhem, Betel, dan Negeb adalah semacam "penaklukan simbolis" atas tanah yang dijanjikan.</p>
-<p>${T_G} ⚠️ Di Mesir Abram mengaku Sarai sebagai adiknya. NABRE menulis bahwa teks ini <b>tidak berusaha membenarkan tipu daya Abraham</b>.</p>
+<p>${T_G} Panggilan Abraham memulai sejarah berkat yang baru, kebalikan dari kisah menara Babel: kalau orang Babel ingin menetap, Abraham justru pergi.</p>
+<h3>📍 DI MANA?</h3><p>${T_G} Perjalanan Abraham melewati Sikhem, Betel, dan Negeb adalah semacam "penaklukan simbolis" atas tanah yang dijanjikan.</p>
+<p>${T_G} ⚠️ Di Mesir Abram mengaku Sarai sebagai adiknya. teks ini <b>tidak berusaha membenarkan tipu daya Abraham</b>.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Abram berani pergi ke tempat yang belum ia kenal karena percaya Tuhan. Pernah nggak kamu harus berani mencoba hal baru?</li></ul>
-${SRC([["NABRE Kej 12","https://bible.usccb.org/bible/genesis/12"]])}`,
+${SRC([["Catatan Kej 12","https://bible.usccb.org/bible/genesis/12"]])}`,
 "Kejadian 14":`
 <h3>👤 SIAPA raja-raja itu?</h3>
-<p>${T_G} Menurut NABRE, kebenaran sejarah peristiwa ini masih diperdebatkan; selain Sinear, Tidal (nama raja Het), dan Elam, nama-nama dan tempat-tempatnya belum bisa dipastikan.</p>
+<p>${T_G} Kebenaran sejarah peristiwa ini masih diperdebatkan; selain Sinear, Tidal (nama raja Het), dan Elam, nama-nama dan tempat-tempatnya belum bisa dipastikan.</p>
 <h3>👤 SIAPA Melkisedek?</h3>
-<ul><li>${T_G} Salem adalah Yerusalem (NABRE).</li><li>${T_G} Ibrani 7 memahami Melkisedek sebagai gambaran awal Kristus.</li></ul>
-${SRC([["NABRE Kej 14","https://bible.usccb.org/bible/genesis/14"]])}`,
+<ul><li>${T_G} Salem adalah Yerusalem.</li><li>${T_G} Ibrani 7 memahami Melkisedek sebagai gambaran awal Kristus.</li></ul>
+${SRC([["Catatan Kej 14","https://bible.usccb.org/bible/genesis/14"]])}`,
 "Kejadian 15":`
 <h3>🔧 BAGAIMANA perjanjian dibuat?</h3>
-<p>${T_G} Menurut NABRE, memotong binatang menjadi dua adalah cara umum membuat perjanjian di zaman kuno: siapa yang melanggar janji rela bernasib seperti binatang itu. Perapian berasap dan suluh berapi yang lewat di antara potongan itu melambangkan Allah sendiri.</p>
+<p>${T_G} Memotong binatang menjadi dua adalah cara umum membuat perjanjian di zaman kuno: siapa yang melanggar janji rela bernasib seperti binatang itu. Perapian berasap dan suluh berapi yang lewat di antara potongan itu melambangkan Allah sendiri.</p>
 <h3>💭 MENGAPA iman Abram penting?</h3>
-<p>${T_G} Menurut NABRE, iman Abraham dipandang sebagai tindakan benar yang menyatakan hubungannya dengan Allah. Santo Paulus memakai iman Abraham sebagai teladan (Roma dan Galatia).</p>
+<p>${T_G} Iman Abraham dipandang sebagai tindakan benar yang menyatakan hubungannya dengan Allah. Santo Paulus memakai iman Abraham sebagai teladan (Roma dan Galatia).</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Allah sendiri yang menjamin janji-Nya pada Abram. Apa artinya buat kita kalau Allah berjanji?</li></ul>
-${SRC([["NABRE Kej 15","https://bible.usccb.org/bible/genesis/15"]])}`,
+${SRC([["Catatan Kej 15","https://bible.usccb.org/bible/genesis/15"]])}`,
 "Ayub 1":`
 <h3>📜 Tentang Kitab Ayub</h3>
-<ul><li>${T_G} Menurut NABRE, Kitab Ayub adalah karya drama yang membahas penderitaan orang yang tidak bersalah. Penulisnya tidak diketahui, kemungkinan disusun antara abad ke-7 dan ke-5 SM.</li>
-<li>${T_G} Kitab ini tidak memberi jawaban pasti soal penderitaan orang yang tidak bersalah, tetapi menantang pembaca untuk sampai pada pemahamannya sendiri (NABRE).</li>
-<li>${T_G} Negeri Us letaknya di suatu tempat di Edom atau Arab (catatan NAB).</li></ul>
-${SRC([["Pengantar Ayub, NABRE","https://biblehub.com/nabre/job/intro.htm"],["Catatan Ayub 1, NAB","https://www.vatican.va/archive/ENG0839/_PEM.HTM"]])}`,
-"Ayub 4":`<p>${T_G} Menurut NABRE, bagian 4:12–21 menggambarkan secara dramatis betapa kecilnya manusia dibandingkan kebesaran Allah.</p>${SRC([["Catatan Ayub, NABRE","https://mail.biblehub.com/nabre/job/footnotes.htm"]])}`,
+<ul><li>${T_G} Kitab Ayub adalah karya drama yang membahas penderitaan orang yang tidak bersalah. Penulisnya tidak diketahui, kemungkinan disusun antara abad ke-7 dan ke-5 SM.</li>
+<li>${T_G} Kitab ini tidak memberi jawaban pasti soal penderitaan orang yang tidak bersalah, tetapi menantang pembaca untuk sampai pada pemahamannya sendiri.</li>
+<li>${T_G} Negeri Us letaknya di suatu tempat di Edom atau Arab.</li></ul>
+${SRC([["Pengantar Ayub","https://biblehub.com/nabre/job/intro.htm"],["Catatan Ayub 1","https://www.vatican.va/archive/ENG0839/_PEM.HTM"]])}`,
+"Ayub 4":`<p>${T_G} Bagian 4:12–21 menggambarkan secara dramatis betapa kecilnya manusia dibandingkan kebesaran Allah.</p>${SRC([["Catatan Ayub","https://mail.biblehub.com/nabre/job/footnotes.htm"]])}`,
 "Mazmur 1":`<p>${T_G} Menurut catatan New Catholic Bible, Mazmur 1 dan 2 dipandang sebagai kata pengantar seluruh Kitab Mazmur. Orang benar diibaratkan pohon yang tidak layu: seperti pohon di tanah subur, mereka sanggup bertahan menghadapi beratnya hidup.</p>${SRC([["New Catholic Bible, Mzm 1","https://coursebible.com/new-catholic-bible-ncb/psalm-1"]])}`,
-"Mazmur 2":`<p>${T_G} Menurut NABRE, ini mazmur penobatan raja. "Yang diurapi" dalam bahasa Ibrani adalah <i>mashiah</i>, dalam bahasa Yunani <i>christos</i>; dari sinilah kata Mesias dan Kristus. Perjanjian Baru memahaminya tentang Kristus.</p>${SRC([["NABRE Mzm 2","https://bible.usccb.org/bible/psalms/2"]])}`,
-"Mazmur 19":`<p>${T_G} Menurut NABRE, bagian pertama mazmur ini memuji langit sebagai tanda kuasa dan hikmat Penciptanya; bagian kedua memuji hukum Tuhan. Dalam sastra kuno lain matahari dianggap hakim dan pemberi hukum; di mazmur ini matahari hanyalah ciptaan.</p>${SRC([["NABRE Mzm 19","https://bible.usccb.org/bible/ps/19"]])}`,
+"Mazmur 2":`<p>${T_G} Ini mazmur penobatan raja. "Yang diurapi" dalam bahasa Ibrani adalah <i>mashiah</i>, dalam bahasa Yunani <i>christos</i>; dari sinilah kata Mesias dan Kristus. Perjanjian Baru memahaminya tentang Kristus.</p>${SRC([["Catatan Mzm 2","https://bible.usccb.org/bible/psalms/2"]])}`,
+"Mazmur 19":`<p>${T_G} Bagian pertama mazmur ini memuji langit sebagai tanda kuasa dan hikmat Penciptanya; bagian kedua memuji hukum Tuhan. Dalam sastra kuno lain matahari dianggap hakim dan pemberi hukum; di mazmur ini matahari hanyalah ciptaan.</p>${SRC([["Catatan Mzm 19","https://bible.usccb.org/bible/ps/19"]])}`,
 "Mazmur 104":`<p>${T_R} Menurut <i>Oxford Handbook of the Psalms</i>, Mazmur 104 sering dibandingkan dengan "Himne Agung untuk Aten" dari Mesir, yang ditemukan pada 1884 di sebuah makam di Tell el-Amarna. Para ahli masih membahas hubungan keduanya.</p>${SRC([["Oxford Handbook of the Psalms","https://academic.oup.com/edited-volume/35006/chapter/298739466"]])}`,
-"Mazmur 136":`<p>${T_G} Menurut NABRE, himne ini memuji Allah Israel ("Allah segala allah") yang menciptakan dunia tempat Israel hidup. Setiap ayatnya diulang: "kasih setia-Nya untuk selama-lamanya".</p>${SRC([["NABRE Mzm 136","https://coursebible.com/new-american-bible-revised-edition-nabre/psalm-136"]])}`,
-"Amsal 1":`<p>${T_G} Menurut pengantar NAB, seluruh ajaran Amsal berdasar pada prinsip "takut akan Tuhan adalah permulaan pengetahuan" (1:7). Menurut NABRE, "takut akan Tuhan" terutama berarti sikap hati, bukan perasaan takut: rasa hormat yang mendalam kepada Allah disertai ketaatan.</p>${SRC([["Pengantar Amsal, NAB","https://press.vatican.va/archive/ENG0839/_PJZ.HTM"],["Catatan Amsal, NABRE","https://mail.biblehub.com/nabre/proverbs/footnotes.htm"]])}`,
+"Mazmur 136":`<p>${T_G} Himne ini memuji Allah Israel ("Allah segala allah") yang menciptakan dunia tempat Israel hidup. Setiap ayatnya diulang: "kasih setia-Nya untuk selama-lamanya".</p>${SRC([["Catatan Mzm 136","https://coursebible.com/new-american-bible-revised-edition-nabre/psalm-136"]])}`,
+"Amsal 1":`<p>${T_G} seluruh ajaran Amsal berdasar pada prinsip "takut akan Tuhan adalah permulaan pengetahuan" (1:7). "takut akan Tuhan" terutama berarti sikap hati, bukan perasaan takut: rasa hormat yang mendalam kepada Allah disertai ketaatan.</p>${SRC([["Pengantar Amsal","https://press.vatican.va/archive/ENG0839/_PJZ.HTM"],["Catatan Amsal","https://mail.biblehub.com/nabre/proverbs/footnotes.htm"]])}`,
 "Lukas 2":`
 <h3>👤 SIAPA saja?</h3>
 <ul><li>${T_R} <b>Kaisar Agustus</b>: kaisar Romawi pertama, lahir 23 September 63 SM, wafat 19 Agustus 14 M (Britannica).</li>
-<li>${T_G} <b>Kirenius</b>: menurut NABRE, Sulpicius Quirinius menjadi gubernur Siria pada tahun 6–7 M, saat Yudea digabungkan ke provinsi Siria, dan saat itu diadakan sensus di Yudea.</li></ul>
+<li>${T_G} <b>Kirenius</b>: Sulpicius Quirinius menjadi gubernur Siria pada tahun 6–7 M, saat Yudea digabungkan ke provinsi Siria, dan saat itu diadakan sensus di Yudea.</li></ul>
 <h3>📅 KAPAN?</h3>
-<ul><li>${T_G} Di zaman Agustus, yang pemerintahannya biasanya dihitung 27 SM–14 M (NABRE).</li><li>Gereja tidak mengajarkan bahwa Kristus lahir pada tahun tertentu (Catholic Answers, mengutip Benediktus XVI).</li></ul>
-<div class="note">⚠️ NABRE sendiri mengakui ada persoalan sejarah soal tanggal sensus di masa Kirenius, dan upaya menyelesaikannya belum berhasil.</div>
+<ul><li>${T_G} Di zaman Agustus, yang pemerintahannya biasanya dihitung 27 SM–14 M.</li><li>Gereja tidak mengajarkan bahwa Kristus lahir pada tahun tertentu (Catholic Answers, mengutip Benediktus XVI).</li></ul>
+<div class="note">⚠️ Catatan resmi Gereja sendiri mengakui ada persoalan sejarah soal tanggal sensus di masa Kirenius, dan upaya menyelesaikannya belum berhasil.</div>
 <h3>💭 MENGAPA Lukas menyebut Kaisar Agustus?</h3>
-<p>${T_G} Menurut NABRE, bukan kebetulan: juru selamat dan pembawa damai yang sejati adalah anak yang lahir di Betlehem.</p>
+<p>${T_G} Bukan kebetulan: juru selamat dan pembawa damai yang sejati adalah anak yang lahir di Betlehem.</p>
 <h3>🗣️ Ngobrol yuk</h3><ul><li>Kaisar Agustus punya istana dan tentara, Yesus lahir di tempat makan hewan. Kenapa ya Tuhan memilih cara seperti itu?</li></ul>
-${SRC([["NABRE Lukas 2","https://bible.usccb.org/bible/lk/2"],["Augustus (Britannica)","https://www.britannica.com/biography/Augustus-Roman-emperor"],["Catholic Answers","https://www.catholic.com/audio/ddp/the-year-jesus-was-born"]])}`,
+${SRC([["Catatan Lukas 2","https://bible.usccb.org/bible/lk/2"],["Augustus (Britannica)","https://www.britannica.com/biography/Augustus-Roman-emperor"],["Catholic Answers","https://www.catholic.com/audio/ddp/the-year-jesus-was-born"]])}`,
 "Wahyu 1":`
 <h3>👤 SIAPA penulisnya?</h3>
-<p>${T_G} Menurut pengantar NABRE di situs Vatikan, penulisnya menyebut diri Yohanes dan dibuang ke Pulau Patmos karena imannya. Sebagian Bapa Gereja menyebutnya Rasul Yohanes, sebagian lain tidak setuju.</p>
+<p>${T_G} penulisnya menyebut diri Yohanes dan dibuang ke Pulau Patmos karena imannya. Sebagian Bapa Gereja menyebutnya Rasul Yohanes, sebagian lain tidak setuju.</p>
 <h3>📍 DI MANA?</h3><p>${T_R} Menurut Britannica, di bawah Romawi Patmos menjadi tempat pembuangan, dan menurut tradisi Yohanes dikirim ke sana sekitar tahun 95 M.</p>
-<h3>📅 KAPAN?</h3><p>${T_G} Kemungkinan ditulis menjelang akhir pemerintahan Kaisar Domitianus (81–96 M), seorang penganiaya orang Kristen (NABRE).</p>
+<h3>📅 KAPAN?</h3><p>${T_G} Kemungkinan ditulis menjelang akhir pemerintahan Kaisar Domitianus (81–96 M), seorang penganiaya orang Kristen.</p>
 <h3>💭 MENGAPA penuh simbol?</h3><p>${T_G} Wahyu ditulis dengan gaya apokaliptik; simbolnya tidak boleh dibaca harfiah. Empat = dunia, enam = ketidaksempurnaan, tujuh = keutuhan, dua belas = suku-suku Israel. Pesannya: harapan dan penghiburan.</p>
-${SRC([["Pengantar Wahyu, NABRE (vatican.va)","https://www.vatican.va/archive/ENG0839/_P12J.HTM"],["Patmos (Britannica)","https://www.britannica.com/place/Patmos"]])}`
+${SRC([["Pengantar Wahyu (vatican.va)","https://www.vatican.va/archive/ENG0839/_P12J.HTM"],["Patmos (Britannica)","https://www.britannica.com/place/Patmos"]])}`
+};
+
+/* ===== Renungan harian (kata-kata kami, berpijak pada ayat yang dirujuk) ===== */
+const RENUNGAN = {
+1:{anak:{r:"Pernah merasa nggak cukup keren dibanding teman? Coba cek Kejadian 1:27: kamu diciptakan menurut gambar Allah. Itu bukan karena nilai rapor atau jumlah followers, tapi karena Allah sendiri yang membentukmu. Terus lihat Kejadian 3:8–10: setelah salah, Adam dan Hawa malah sembunyi. Padahal Allah datang mencari mereka, bukan untuk mengusir, tapi memanggil: \"Di manakah engkau?\"",tanya:"Kalau kamu habis berbuat salah, kamu lebih sering sembunyi atau jujur? Kenapa?",aksi:"Hari ini, kalau ada yang belum kamu akui ke orang tua, beranikan diri cerita."},
+ pasangan:{r:"Kejadian 2:18 bilang tidak baik manusia seorang diri, lalu Allah menjadikan penolong yang sepadan. Tapi di Kejadian 3:12, begitu ada masalah, kalimat pertama Adam justru menyalahkan: \"perempuan yang Kauberikan…\". Pola ini masih sering terjadi di rumah tangga: begitu ada masalah, yang dicari siapa yang salah, bukan bagaimana memperbaikinya bersama.",tanya:"Dalam konflik terakhir kita, siapa yang lebih dulu menyalahkan? Apa yang sebenarnya kita butuhkan saat itu?",aksi:"Kalau minggu ini ada gesekan, ganti \"kamu sih…\" dengan \"aku merasa…\"."}},
+2:{anak:{r:"Kain iri sama adiknya, dan Kejadian 4:7 mencatat Allah sudah mengingatkan: dosa sedang mengintip di depan pintu, dan Kain harus menguasainya. Artinya, rasa iri itu wajar muncul, tapi kita yang memutuskan mau diikuti atau tidak. Waktu ditanya soal Habel, Kain malah jawab \"apakah aku penjaga adikku?\" (4:9). Padahal jawabannya: iya, kita memang dipanggil saling menjaga.",tanya:"Pernah iri sama kakak, adik, atau teman? Apa yang biasanya kamu lakukan dengan rasa itu?",aksi:"Lakukan satu hal baik untuk saudaramu hari ini tanpa disuruh."},
+ pasangan:{r:"Kejadian 4:7 cocok sekali untuk suami-istri: kemarahan yang dibiarkan seperti tamu yang menunggu di depan pintu, makin lama makin berani masuk. Lalu di Kejadian 5:24 ada Henokh, satu-satunya di silsilah itu yang disebut \"hidup bergaul dengan Allah\", dan di 6:9 hal yang sama dikatakan tentang Nuh. Di tengah dunia yang makin rusak, keduanya tetap berjalan dekat dengan Tuhan.",tanya:"Kemarahan apa yang sedang \"menunggu di depan pintu\" rumah tangga kita?",aksi:"Luangkan 10 menit malam ini untuk berdoa berdua, sesederhana apa pun."}},
+3:{anak:{r:"Bayangkan disuruh bikin kapal raksasa padahal belum ada tanda-tanda hujan. Kejadian 7:5 mencatat Nuh melakukan semuanya sesuai perintah Tuhan. Lalu di 8:1 ada kalimat pendek tapi kuat: Allah mengingat Nuh. Saat kamu merasa sendirian karena memilih yang benar, Allah juga ingat kamu.",tanya:"Pernah memilih hal yang benar padahal teman-teman memilih yang lain? Rasanya gimana?",aksi:"Kalau lihat pelangi, ingat janji Allah di Kejadian 9:13, lalu ucapkan terima kasih."},
+ pasangan:{r:"Ada adegan yang sering terlewat di Kejadian 9:20–23. Saat Nuh mabuk dan telanjang, Ham melihat lalu menceritakannya, sedangkan Sem dan Yafet berjalan mundur untuk menutupinya. Dalam pernikahan, kita tahu kelemahan pasangan lebih dari siapa pun. Pilihannya: mengumbar atau menutupi dengan hormat.",tanya:"Pernahkah kita (tanpa sadar) menceritakan kelemahan pasangan ke orang lain atau di media sosial?",aksi:"Minggu ini, bicarakan hal baik saja tentang pasangan di depan orang lain."}},
+4:{anak:{r:"Orang-orang di Babel membangun menara karena ingin \"mencari nama\" (Kejadian 11:4), ingin terkenal. Satu pasal kemudian, Allah memanggil Abram untuk pergi, dan justru Allah yang berjanji akan membuat namanya masyhur (12:2). Bedanya: Babel mengejar ketenaran sendiri, Abram percaya dan taat.",tanya:"Menurutmu, apa bedanya ingin terkenal dengan ingin jadi berkat buat orang lain?",aksi:"Lakukan satu kebaikan hari ini yang tidak dilihat siapa pun."},
+ pasangan:{r:"Abram dan Sarai meninggalkan semuanya bersama (Kejadian 12:4–5). Tapi di Mesir, karena takut, Abram meminta Sarai mengaku sebagai adiknya (12:11–13). Catatan resmi Gereja menegaskan teks ini tidak membenarkan tipu daya Abraham. Rasa takut bisa membuat kita melindungi diri sendiri dengan mengorbankan pasangan.",tanya:"Dalam situasi apa kita cenderung menyelamatkan diri sendiri dulu, bukan pasangan?",aksi:"Tanyakan ke pasangan: \"Kapan kamu merasa paling tidak kulindungi?\" Lalu dengarkan tanpa membela diri."}},
+5:{anak:{r:"Ternak Abram dan Lot terlalu banyak sampai gembala mereka bertengkar. Di Kejadian 13:8–9, Abram yang lebih tua justru mempersilakan Lot memilih duluan, supaya tidak ada perkelahian. Lalu di 15:5, Allah mengajak Abram keluar malam-malam dan menghitung bintang. Abram percaya, walaupun janjinya belum terlihat (15:6).",tanya:"Kapan terakhir kali kamu mengalah supaya tidak berantem?",aksi:"Malam ini lihat langit, lalu ceritakan ke Tuhan satu hal yang sedang kamu tunggu."},
+ pasangan:{r:"Kejadian 15:6 menceritakan Abram percaya kepada Tuhan, padahal sudah bertahun-tahun menunggu anak dan belum ada tanda apa-apa. Banyak pasangan juga sedang menunggu sesuatu: anak, rumah, kesembuhan, pekerjaan. Percaya bukan berarti tidak bertanya; Abram sendiri bertanya kepada Tuhan (15:2–3). Tapi ia tetap memilih percaya.",tanya:"Apa yang sedang kita tunggu berdua? Apakah kita masih membicarakannya dengan Tuhan, atau sudah lelah?",aksi:"Tulis satu doa bersama tentang hal yang kalian tunggu, lalu simpan."}},
+6:{anak:{r:"Hagar kabur ke padang gurun sendirian. Tapi di sana malaikat Tuhan menemuinya, dan Hagar menyebut Tuhan \"El-Roi\", Allah yang melihat (Kejadian 16:13). Waktu kamu merasa nggak ada yang peduli, Allah tetap melihatmu. Lalu di 18:14 ada pertanyaan keren: adakah sesuatu yang mustahil untuk Tuhan?",tanya:"Pernah merasa nggak dilihat atau nggak dianggap? Apa yang membantumu waktu itu?",aksi:"Perhatikan satu teman yang sering sendirian, lalu sapa dia."},
+ pasangan:{r:"Di Kejadian 16, Sarai punya rencana sendiri untuk \"membantu\" janji Tuhan, dan Abram mengikutinya. Hasilnya: konflik dan saling menyalahkan (16:5). Rencana yang terburu-buru, tanpa membawanya dulu kepada Tuhan, sering meninggalkan luka yang panjang dalam keluarga.",tanya:"Keputusan besar apa yang pernah kita ambil terburu-buru? Apa yang kita pelajari?",aksi:"Untuk keputusan besar berikutnya, sepakati: doakan dulu minimal tiga hari sebelum memutuskan."}},
+7:{anak:{r:"Di Kejadian 21:17, Ismael kecil menangis di padang gurun, dan Allah mendengar suara anak itu. Bukan suara orang dewasa, tapi suara anak. Doamu, sekecil apa pun, didengar. Di pasal yang sama, Sara yang dulu tertawa tidak percaya, sekarang tertawa bahagia karena Ishak lahir (21:6).",tanya:"Apa doa yang ingin kamu sampaikan ke Tuhan tapi selama ini malu atau ragu?",aksi:"Sampaikan doa itu malam ini, dengan kata-katamu sendiri."},
+ pasangan:{r:"Kejadian 20 terasa seperti mengulang pasal 12: Abraham kembali mengaku Sara sebagai adiknya. Ternyata pola lama bisa terulang, bahkan pada orang beriman. Tapi Kejadian 21:1 mencatat Tuhan tetap memperhatikan Sara sesuai janji-Nya. Kesetiaan Tuhan lebih besar dari pola kita yang berulang.",tanya:"Pola lama apa yang terus berulang di rumah tangga kita?",aksi:"Pilih satu pola itu, lalu sepakati satu langkah kecil untuk memutusnya minggu ini."}},
+8:{anak:{r:"Waktu Ishak bertanya di mana anak dombanya, Abraham menjawab bahwa Allah yang akan menyediakannya (Kejadian 22:8). Lalu di pasal 24, hamba Abraham berdoa dulu sebelum mencari istri untuk Ishak (24:12), dan doanya dijawab. Dua-duanya mengajarkan hal yang sama: percaya dan berdoa dulu.",tanya:"Hal apa yang bikin kamu khawatir minggu ini?",aksi:"Sebelum mengerjakan tugas atau ujian besok, berdoa dulu satu kalimat."},
+ pasangan:{r:"Kejadian 23:2 mencatat Abraham meratapi dan menangisi Sara. Iman tidak membuat duka jadi tidak ada. Lalu di 24:67 ada kalimat lembut: Ishak mencintai Ribka, dan karena itu ia terhibur setelah ibunya meninggal. Pasangan bisa menjadi tempat pulang saat kita kehilangan.",tanya:"Saat salah satu dari kita berduka atau lelah, apa yang paling menolong?",aksi:"Tanyakan ke pasangan: \"Apa beban yang sedang kamu bawa diam-diam?\""}},
+9:{anak:{r:"Esau pulang kelaparan, lalu menjual hak kesulungannya demi semangkuk makanan (Kejadian 25:29–34). Hak kesulungan itu sangat berharga, tapi ditukar demi keinginan sesaat. Kadang kita juga begitu: menukar hal berharga, seperti kejujuran atau waktu belajar, demi kesenangan sebentar.",tanya:"Hal berharga apa yang kadang kamu tukar demi kesenangan sesaat?",aksi:"Hari ini, tunda satu keinginan sampai tugas pentingmu selesai."},
+ pasangan:{r:"Kejadian 25:28 mencatat Ishak lebih sayang Esau, sedangkan Ribka lebih sayang Yakub. Di pasal 27, pilih kasih itu berbuah tipu daya dan keluarga yang terpecah. Anak-anak sangat peka terhadap siapa yang \"lebih disayang\".",tanya:"Apakah anak-anak kita pernah merasa ada yang lebih disayang? Apa yang mungkin membuat mereka merasa begitu?",aksi:"Minggu ini, jadwalkan waktu berdua dengan masing-masing anak secara bergantian."}},
+10:{anak:{r:"Yakub sedang kabur, tidur beralaskan batu, lalu bermimpi tangga ke langit. Saat bangun, ia sadar Tuhan ada di tempat itu dan ia tidak mengetahuinya (Kejadian 28:16). Tuhan juga hadir di sekolahmu, kamarmu, bahkan saat kamu sedang di jalan yang salah.",tanya:"Di mana saja kamu pernah merasa Tuhan dekat?",aksi:"Hari ini, setiap pindah tempat, ingatkan dirimu: Tuhan ada di sini."},
+ pasangan:{r:"Kejadian 29:20 mencatat tujuh tahun bekerja terasa seperti beberapa hari saja bagi Yakub, karena cintanya kepada Rahel. Tapi pasal 29–30 juga memperlihatkan sisi lain: Lea berharap suaminya mencintainya lewat setiap anak yang lahir (29:32–34), dan dua bersaudara itu saling bersaing. Merasa tidak dicintai di dalam pernikahan adalah luka yang nyata.",tanya:"Kapan kamu paling merasa dicintai olehku? Kapan paling tidak?",aksi:"Lakukan satu hal yang menurut pasanganmu (bukan menurutmu) terasa sebagai cinta."}},
+11:{anak:{r:"Yakub takut sekali bertemu Esau, kakak yang dulu ia tipu. Tapi di Kejadian 33:4, Esau berlari menyambutnya, memeluk, mencium, lalu mereka menangis bersama. Berdamai memang menakutkan, tapi bisa jauh lebih indah dari yang kita bayangkan.",tanya:"Ada nggak orang yang perlu kamu ajak berdamai?",aksi:"Kirim pesan atau ucapkan \"maaf\" ke orang itu minggu ini."},
+ pasangan:{r:"Sebelum bertemu Esau, Yakub berdoa jujur tentang rasa takutnya (Kejadian 32:9–12). Saat bertemu, ia sujud tujuh kali (33:3), datang dengan rendah hati, bukan dengan pembelaan diri. Rekonsiliasi dalam pernikahan juga dimulai dari kerendahan hati, bukan dari siapa yang benar.",tanya:"Saat berbaikan, apakah kita lebih sering datang dengan rendah hati atau dengan pembelaan diri?",aksi:"Kalau ada yang belum selesai, mulai percakapan dengan: \"Aku minta maaf untuk bagianku.\""}},
+12:{anak:{r:"Kejadian 34 adalah kisah yang berat: Dina diperlakukan dengan jahat, lalu saudara-saudaranya membalas dengan kekerasan yang jauh lebih besar (34:25). Balas dendam tidak menyelesaikan masalah, malah membuat lebih banyak orang terluka. Di pasal 35, Yakub mengajak keluarganya membuang dewa-dewa asing dan kembali kepada Tuhan (35:2).",tanya:"Kalau ada yang menyakitimu, kepada siapa sebaiknya kamu cerita?",aksi:"Kalau ada yang menyakitimu atau temanmu, jangan dipendam: cerita ke orang tua atau guru."},
+ pasangan:{r:"Di Kejadian 35:2–3, Yakub memimpin keluarganya untuk membuang dewa-dewa asing dan pergi ke Betel menyembah Tuhan. Hari ini \"dewa asing\" di rumah mungkin berupa gawai, pekerjaan, atau ambisi yang pelan-pelan menggeser Tuhan dari pusat keluarga. Pembaruan keluarga dimulai saat orang tua berani memimpin.",tanya:"Apa \"dewa asing\" di rumah kita yang perlu disingkirkan?",aksi:"Sepakati satu waktu per minggu tanpa gawai untuk keluarga, misalnya saat makan malam."}},
+13:{anak:{r:"Yusuf dijual saudara-saudaranya dan dibawa ke Mesir. Tapi Kejadian 39:2 mencatat Tuhan menyertai Yusuf. Lalu waktu digoda untuk berbuat salah, Yusuf menolak: bagaimana mungkin ia berbuat dosa terhadap Allah (39:9)? Penyertaan Tuhan memberinya keberanian untuk bilang \"tidak\".",tanya:"Pernah diajak teman melakukan hal yang kamu tahu salah? Apa yang kamu lakukan?",aksi:"Siapkan satu kalimat untuk menolak ajakan yang salah, misalnya: \"Nggak ah, aku nggak mau.\""},
+ pasangan:{r:"Kejadian 37:3–4 memperlihatkan pilih kasih Yakub kepada Yusuf yang membuat saudara-saudaranya membencinya. Lalu di pasal 39, Yusuf menjaga kesetiaan: menolak dan bahkan menghindari berada di dekat istri Potifar (39:10). Kesetiaan dijaga bukan hanya dengan menolak, tapi juga dengan menjaga jarak dari situasi yang berbahaya.",tanya:"Batas apa yang kita sepakati untuk menjaga kesetiaan, misalnya soal chat, pertemanan, atau media sosial?",aksi:"Bicarakan dan sepakati satu batas yang membuat kalian berdua merasa aman."}},
+14:{anak:{r:"Waktu Firaun bilang Yusuf bisa mengartikan mimpi, Yusuf menjawab bahwa itu bukan karena dirinya, tapi Allah (Kejadian 41:16). Padahal sebelumnya ia sempat dilupakan juru minuman selama dua tahun (40:23; 41:1). Yusuf tetap rendah hati dan tetap percaya.",tanya:"Kalau kamu berhasil dalam sesuatu, siapa saja yang ikut berperan?",aksi:"Ucapkan terima kasih ke Tuhan dan ke satu orang yang membantumu berhasil."},
+ pasangan:{r:"Bertahun-tahun setelah menjual Yusuf, saudara-saudaranya masih dihantui rasa bersalah (Kejadian 42:21). Kesalahan yang tidak pernah diakui tidak hilang begitu saja; ia muncul lagi di saat tak terduga. Pernikahan yang sehat memberi ruang untuk mengaku dan diampuni.",tanya:"Apakah ada sesuatu yang belum pernah kita bicarakan tapi masih mengganjal?",aksi:"Ciptakan suasana aman minggu ini: berjanji untuk mendengar tanpa langsung menghakimi."}},
+15:{anak:{r:"Yehuda dulu yang mengusulkan menjual Yusuf (Kejadian 37:26–27). Tapi di 44:33, Yehuda menawarkan diri menjadi budak supaya Benyamin bisa pulang. Orang bisa berubah! Lalu Yusuf, yang paling disakiti, malah menangis dan memeluk saudara-saudaranya (45:14–15).",tanya:"Menurutmu, kenapa Yusuf bisa memaafkan saudara-saudaranya?",aksi:"Berikan kesempatan kedua untuk seseorang yang pernah mengecewakanmu."},
+ pasangan:{r:"Di Kejadian 45:5, Yusuf melihat masa lalunya yang menyakitkan dari sudut pandang baru: Allah menyuruhnya mendahului mereka untuk memelihara kehidupan. Pengampunan tidak menghapus luka, tetapi memberi makna baru. Setiap pasangan punya masa lalu yang perlu dilihat dengan kacamata ini.",tanya:"Luka apa di perjalanan pernikahan kita yang ternyata membentuk kita jadi lebih kuat?",aksi:"Ceritakan satu masa sulit yang sudah lewat, lalu syukuri bersama apa yang Tuhan kerjakan di sana."}},
+16:{anak:{r:"Yakub sudah tua dan harus pindah ke negeri asing. Tapi di Kejadian 46:3–4, Allah bilang jangan takut, karena Ia sendiri akan menyertai. Pindah rumah, pindah sekolah, atau masuk kelas baru memang bikin deg-degan. Tapi kamu tidak pergi sendirian.",tanya:"Perubahan apa yang sedang atau akan kamu hadapi?",aksi:"Doakan perubahan itu malam ini, dan ceritakan ke orang tuamu apa yang kamu rasakan."},
+ pasangan:{r:"Di Kejadian 48:15–16, Yakub yang sudah tua memberkati cucu-cucunya dengan meletakkan tangan dan mengingat bagaimana Allah menuntunnya seumur hidup. Memberkati anak bukan hanya urusan imam; orang tua pun bisa mendoakan anak-anaknya secara langsung.",tanya:"Berkat atau doa apa yang ingin kita ucapkan untuk setiap anak kita?",aksi:"Malam ini, doakan anak-anak dengan meletakkan tangan di kepala mereka sebelum tidur."}},
+17:{anak:{r:"Di akhir Kitab Kejadian, Yusuf berkata kepada saudara-saudaranya: kalian merencanakan yang jahat, tetapi Allah mengubahnya menjadi kebaikan (Kejadian 50:20). Hal buruk yang kamu alami tidak pernah lebih besar dari Allah.",tanya:"Pernah mengalami hal buruk yang ternyata berujung baik?",aksi:"Tulis satu hal sulit yang sedang kamu alami, lalu serahkan ke Tuhan dalam doa."},
+ pasangan:{r:"Setelah Yakub wafat, saudara-saudara Yusuf takut ia akan membalas (Kejadian 50:15). Yusuf malah menenangkan dan berbicara lembut kepada mereka (50:21). Pengampunan sejati tidak diungkit lagi saat ada kesempatan membalas.",tanya:"Apakah ada kesalahan lama yang masih sering kita ungkit saat bertengkar?",aksi:"Sepakati: kesalahan yang sudah dimaafkan tidak dibawa lagi ke pertengkaran berikutnya."}}
 };
 
 /* ===== Pembaca ayat ===== */
@@ -410,6 +449,14 @@ function todayIndex(){
 let current = S.view || todayIndex();
 const $=s=>document.querySelector(s);
 
+function renHTML(d){
+  const r=RENUNGAN[d];
+  if(!r) return `<div class="card sec"><div class="h2">🙏 Renungan</div><p class="empty">Renungan untuk hari ini belum disiapkan.</p></div>`;
+  const blk=(x)=>`<p>${esc(x.r)}</p><p><b>💬 Ngobrol:</b> ${esc(x.tanya)}</p><p><b>✅ Tindakan:</b> ${esc(x.aksi)}</p>`;
+  return `<div class="card sec ren"><div class="h2">🙏 Renungan Anak <span class="empty" style="font-size:13px">(10–15 tahun)</span></div>${blk(r.anak)}
+    <details class="couple"><summary>💑 Renungan Suami-Istri <span class="empty">(ketuk untuk buka)</span></summary>${blk(r.pasangan)}</details>
+    <p class="rnote">Renungan ditulis oleh kami berdasarkan ayat yang dirujuk. Cek ayatnya lewat tombol "Baca ayat".</p></div>`;
+}
 function renderDay(d){
   const p=PLAN[d-1], sec=SECTIONS[p.sec], doneSet=S.done[d]||[];
   const chapters = p.units.map((u,i)=>{
@@ -435,6 +482,7 @@ function renderDay(d){
     <label class="f">Sudah baca hari ini (ketuk nama):</label>
     <div class="members">${mems}</div>
   </div>
+  ${renHTML(d)}
   <div class="card sec">
     <div class="h2">Penjelasan 5W 1H</div>
     ${expl || `<p class="empty">Penjelasan bersumber untuk pasal-pasal ini belum disiapkan. Setiap penjelasan baru ditambahkan setelah diriset dan punya sumber.</p>`}
@@ -494,10 +542,11 @@ function renderAbout(){
     <li>Ketuk <b>"Baca ayat"</b> untuk membaca teks aslinya: Alkitab Terjemahan Baru LAI (dari situs Alkitab SABDA), bahasa asli Ibrani/Yunani, atau Inggris (dari bolls.life).</li></ul></div>
   <div class="card sec"><div class="h2">Aturan konten</div>
     <ul><li><b>Ringkasan pasal</b> adalah kata-kata kami untuk membantu mengikuti alur cerita. Itu <b>bukan ayat</b>; pegangannya tetap teks Alkitab.</li>
+    <li><b>Sumber utama:</b> penjelasan berlabel ⛪ Gereja diambil dari catatan kaki dan pengantar <b>NABRE</b> (<i>New American Bible, Revised Edition</i>, Alkitab Katolik terbitan Konferensi Waligereja Amerika Serikat/USCCB), kecuali bila disebut sumber lain seperti Katekismus (KGK), Dei Verbum, atau New Catholic Bible.</li>
     <li><b>Penjelasan 5W 1H</b> harus punya sumber yang bisa diklik. ${T_G} = ajaran atau catatan resmi Gereja. ${T_R} = museum, universitas, jurnal, atau ensiklopedia terpercaya.</li>
     <li><b>Tidak ada data, tidak ditulis.</b> Kalau sumber berbeda pendapat, perbedaannya ditampilkan.</li></ul></div>
   <div class="card sec"><div class="h2">Yang sudah tersedia</div>
-    <ul><li>Ringkasan pasal: ${nSum} pasal (Kejadian). Kitab lain menyusul.</li><li>Penjelasan 5W 1H: ${nEx} pasal.</li>
+    <ul><li>Ringkasan pasal: ${nSum} pasal (Kejadian). Kitab lain menyusul.</li><li>Penjelasan 5W 1H: ${nEx} pasal.</li><li>Renungan anak & suami-istri: ${Object.keys(RENUNGAN).length} hari.</li>
     <li>Tambahan Ester dan Tambahan Daniel memakai penomoran pasal Alkitab Deuterokanonika LAI; di tab Bahasa asli/English penomorannya bisa berbeda.</li></ul>
     <p class="srcs">📚 Urutan kitab Deuterokanonika LAI–LBI: <a href="https://www.gramedia.com/products/alkitab-deuterokanonika-tb-062-ti-dc-sl" target="_blank" rel="noopener">deskripsi Alkitab Deuterokanonika (Gramedia)</a></p></div>`;
 }
