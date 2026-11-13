@@ -8,9 +8,9 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Alkitab Keluarga">
-<title>Alkitab Keluarga – Baca Kronologis 365 Hari</title>
+<title>Alkitab Keluarga</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f7f3ec; --card:#fffdf9; --ink:#2b2622; --muted:#7a6f66; --line:#e6ddd0;
@@ -21,9 +21,9 @@
   :root{--bg:#1c1917;--card:#26221f;--ink:#efe8df;--muted:#a8998b;--line:#3a332d;--accent:#e0a37c;--accent-soft:#3a2b22;--ok:#6fc49a;--warn:#e7b26b;--warn-soft:#3a2f1f;--g1:#3d2340;--g2:#123049;}
 }
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(150deg,var(--g1) 0%,var(--g2) 100%) fixed;min-height:100vh;color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-size:16px;line-height:1.55}
+body{margin:0;background:linear-gradient(150deg,var(--g1) 0%,var(--g2) 100%) fixed;min-height:100vh;color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.6}
 header{padding:20px 16px 8px;max-width:760px;margin:0 auto}
-h1{font-family:Fraunces,serif;font-size:26px;margin:0 0 4px}
+h1{font-family:"Source Serif 4",Georgia,serif;font-size:26px;margin:0 0 4px}
 .sub{color:var(--muted);font-size:14px;margin:0}
 main{max-width:760px;margin:0 auto;padding:8px 16px 60px}
 nav.tabs{display:flex;gap:6px;margin:12px 0 16px;overflow-x:auto}
@@ -31,7 +31,7 @@ nav.tabs button{border:1px solid var(--line);background:var(--card);color:var(--
 nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .card{background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(60,40,30,.08);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
 .period{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;color:#fff;margin-bottom:6px}
-.daytitle{font-family:Fraunces,serif;font-size:22px;margin:2px 0 8px}
+.daytitle{font-family:"Source Serif 4",Georgia,serif;font-size:22px;margin:2px 0 8px}
 .reads{list-style:none;padding:0;margin:0 0 6px}
 .reads li{padding:6px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .reads li:last-child{border-bottom:0}
@@ -43,7 +43,7 @@ nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#ff
 .mem{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;user-select:none;font-weight:600;font-size:14px}
 .mem.done{background:var(--ok);border-color:var(--ok);color:#fff}
 .mem .box{width:16px;height:16px;border-radius:4px;border:2px solid currentColor;display:inline-flex;align-items:center;justify-content:center;font-size:11px}
-.sec h3{font-family:Fraunces,serif;font-size:17px;margin:16px 0 4px}
+.sec h3{font-family:"Source Serif 4",Georgia,serif;font-size:17px;margin:16px 0 4px}
 .sec p,.sec li{margin:4px 0}
 .sec ul{padding-left:20px;margin:4px 0}
 .tag{font-size:12px;font-weight:700;padding:1px 6px;border-radius:6px;margin-right:4px;white-space:nowrap}
@@ -81,12 +81,19 @@ input.t,input[type=date]{padding:9px 10px;border-radius:10px;border:1px solid va
 .rtext.rtl{direction:rtl;text-align:right;font-size:20px}
 .rch{font-weight:700;margin:10px 0 4px;color:var(--muted);font-size:13px}
 .rnote{font-size:12px;color:var(--muted);margin-top:8px}
+.chap{padding:10px 0;border-bottom:1px dashed var(--line);list-style:none}
+.chead{font-size:15px}.ctitle{color:var(--accent);font-weight:700}
+.csum{margin:4px 0 8px;font-size:15px}
+.h2{font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:700}
+.xblock{border-top:1px solid var(--line);margin-top:12px;padding-top:6px}.xhead{font-weight:700;color:var(--accent);font-size:14px}
+.sechead{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:17px;margin:14px 0 4px}
+nav.tabs button,.btn,.rtabs button,.mem,.period,.tag,.dk,label.f,.has,.ticks,.dnum,.rnote,.srcs{font-family:Inter,system-ui,sans-serif}
 </style>
 </head>
 <body>
 <header>
   <h1>📖 Alkitab Keluarga</h1>
-  <p class="sub">Baca seluruh Alkitab Katolik secara kronologis dalam 365 hari, dengan penjelasan 5W 1H yang semuanya bersumber.</p>
+  <p class="sub">Menyusuri Alkitab urut kitab demi kitab, 3 pasal sehari, dengan ringkasan pasal dan penjelasan 5W 1H bersumber.</p>
 </header>
 <main>
   <nav class="tabs">
@@ -103,631 +110,239 @@ input.t,input[type=date]{padding:9px 10px;border-radius:10px;border:1px solid va
 </main>
 
 <script>
-/* ===== Rencana baca: Ascension "The Bible in a Year" (Fr. Mike Schmitz, feat. Jeff Cavins) ===== */
-const RAW = `Genesis 1–2; Psalm 19
-Genesis 3–4; Psalm 104
-Genesis 5–6; Psalm 136
-Genesis 7–9; Psalm 1
-Genesis 10–11; Psalm 2
-Genesis 12–13; Job 1–2; Proverbs 1:1-7
-Genesis 14–15; Job 3–4; Proverbs 1:8-19
-Genesis 16–17; Job 5–6; Proverbs 1:20-33
-Genesis 18–19; Job 7–8; Proverbs 2:1-5
-Genesis 20–21; Job 9–10; Proverbs 2:6-8
-Genesis 22–23; Job 11–12; Proverbs 2:9-15
-Genesis 24; Job 13–14; Proverbs 2:16-19
-Genesis 25–26; Job 15–16; Proverbs 2:20-22
-Genesis 27–28; Job 17–18; Proverbs 3:1-4
-Genesis 29–30; Job 19–20; Proverbs 3:5-8
-Genesis 31–32; Job 21–22; Proverbs 3:9-12
-Genesis 33–34; Job 23–24; Proverbs 3:13-18
-Genesis 35–36; Job 25–26; Proverbs 3:19-24
-Genesis 37; Job 27–28; Proverbs 3:25-27
-Genesis 38; Job 29–30; Proverbs 3:28-32
-Genesis 39–40; Job 31–32; Proverbs 3:33-35
-Genesis 41–42; Job 33–34; Proverbs 4:1-9
-Genesis 43–44; Job 35–36; Proverbs 4:10-19
-Genesis 45–46; Job 37–38; Proverbs 4:20-27
-Genesis 47–48; Job 39–40; Psalm 16
-Genesis 49–50; Job 41–42; Psalm 17
-Exodus 1–2; Leviticus 1; Psalm 44
-Exodus 3; Leviticus 2–3; Psalm 45
-Exodus 4–5; Leviticus 4; Psalm 46
-Exodus 6–7; Leviticus 5; Psalm 47
-Exodus 8; Leviticus 6; Psalm 48
-Exodus 9; Leviticus 7; Psalm 49
-Exodus 10–11; Leviticus 8; Psalm 50
-Exodus 12; Leviticus 9; Psalm 114
-Exodus 13–14; Leviticus 10; Psalm 53
-Exodus 15–16; Leviticus 11; Psalm 71
-Exodus 17–18; Leviticus 12; Psalm 73
-Exodus 19–20; Leviticus 13; Psalm 74
-Exodus 21; Leviticus 14; Psalm 75
-Exodus 22; Leviticus 15; Psalm 76
-Exodus 23; Leviticus 16; Psalm 77
-Exodus 24; Leviticus 17–18; Psalm 78
-Exodus 25–26; Leviticus 19; Psalm 119:1-56
-Exodus 27–28; Leviticus 20; Psalm 119:57-120
-Exodus 29; Leviticus 21; Psalm 119:121-176
-Exodus 30–31; Leviticus 22; Psalm 115
-Exodus 32; Leviticus 23; Psalm 79
-Exodus 33–34; Leviticus 24; Psalm 80
-Exodus 35–36; Leviticus 25; Psalm 81
-Exodus 37–38; Leviticus 26; Psalm 82
-Exodus 39–40; Leviticus 27; Psalm 83
-Numbers 1; Deuteronomy 1; Psalm 84
-Numbers 2; Deuteronomy 2; Psalm 85
-Numbers 3; Deuteronomy 3; Psalm 87
-Numbers 4; Deuteronomy 4; Psalm 88
-Numbers 5; Deuteronomy 5; Psalm 90
-Numbers 6; Deuteronomy 6; Psalm 91
-Numbers 7; Deuteronomy 7; Psalm 92
-Numbers 8–9; Deuteronomy 8; Psalm 93
-Numbers 10; Deuteronomy 9; Psalm 10
-Numbers 11; Deuteronomy 10; Psalm 33
-Numbers 12–13; Deuteronomy 11; Psalm 94
-Numbers 14; Deuteronomy 12; Psalm 95
-Numbers 15; Deuteronomy 13–14; Psalm 96
-Numbers 16; Deuteronomy 15–16; Psalm 97
-Numbers 17; Deuteronomy 17–18; Psalm 98
-Numbers 18; Deuteronomy 19–20; Psalm 99
-Numbers 19–20; Deuteronomy 21; Psalm 100
-Numbers 21; Deuteronomy 22; Psalm 102
-Numbers 22; Deuteronomy 23; Psalm 105
-Numbers 23; Deuteronomy 24–25; Psalm 106
-Numbers 24–25; Deuteronomy 26; Psalm 107
-Numbers 26; Deuteronomy 27; Psalm 111
-Numbers 27–28; Deuteronomy 28; Psalm 112
-Numbers 29–30; Deuteronomy 29; Psalm 113
-Numbers 31; Deuteronomy 30; Psalm 116
-Numbers 32; Deuteronomy 31; Psalm 117
-Numbers 33; Deuteronomy 32; Psalm 118
-Numbers 34; Deuteronomy 33; Psalm 120
-Numbers 35–36; Deuteronomy 34; Psalm 121
-Joshua 1–4; Psalm 123
-Joshua 5–7; Psalm 125
-Joshua 8–9; Psalm 126
-Joshua 10–11; Psalm 128
-Joshua 12–14; Psalm 129
-Joshua 15–18; Psalm 130
-Joshua 19–21; Psalm 131
-Joshua 22–24; Psalm 132
-Judges 1–3; Ruth 1; Psalm 133
-Judges 4–5; Ruth 2; Psalm 134
-Judges 6–8; Ruth 3; Psalm 135
-Judges 9–11; Ruth 4; Psalm 137
-Judges 12–15; Psalm 146
-Judges 16–18; Psalm 147
-Judges 19–21; Psalm 148
-1 Samuel 1–2; Psalm 149
-1 Samuel 3–5; Psalm 150
-1 Samuel 6–8; Psalm 86
-John 1–3; Proverbs 5:1-6
-John 4–6; Proverbs 5:7-14
-John 7–9; Proverbs 5:15-23
-John 10–12; Proverbs 6:1-5
-John 13–15; Proverbs 6:6-11
-John 16–18; Proverbs 6:12-15
-John 19–21; Proverbs 6:16-22
-1 Samuel 9–10; Proverbs 6:23-35
-1 Samuel 11–12; Psalm 55
-1 Samuel 13–14; Psalm 58
-1 Samuel 15–16; Psalm 61
-1 Samuel 17; Psalm 12
-1 Samuel 18–19; Psalm 59
-1 Samuel 20; Psalm 142
-1 Samuel 21–22; Psalm 52
-1 Samuel 23; Psalm 54
-1 Samuel 24; Psalm 57
-1 Samuel 25; Psalm 63
-1 Samuel 26; Psalm 56
-1 Samuel 27–28; Psalm 34
-1 Samuel 29–31; Psalm 18
-2 Samuel 1; 1 Chronicles 1; Psalm 13
-2 Samuel 2; 1 Chronicles 2; Psalm 24
-2 Samuel 3; 1 Chronicles 3–4; Psalm 25
-2 Samuel 4; 1 Chronicles 5–6; Psalm 26
-2 Samuel 5; 1 Chronicles 7–8; Psalm 27
-2 Samuel 6–7; 1 Chronicles 9; Psalm 89
-2 Samuel 8; 1 Chronicles 10–11; Psalm 60
-2 Samuel 9; 1 Chronicles 12; Psalm 28
-2 Samuel 10; 1 Chronicles 13; Psalm 31
-2 Samuel 11; 1 Chronicles 14–15; Psalm 32
-2 Samuel 12; 1 Chronicles 16; Psalm 51
-2 Samuel 13; 1 Chronicles 17; Psalm 35
-2 Samuel 14; 1 Chronicles 18; Psalm 14
-2 Samuel 15; 1 Chronicles 19–20; Psalm 3
-2 Samuel 16; 1 Chronicles 21; Psalm 15
-2 Samuel 17; 1 Chronicles 22; Psalm 36
-2 Samuel 18; 1 Chronicles 23; Psalm 37
-2 Samuel 19; 1 Chronicles 24; Psalm 38
-2 Samuel 20; 1 Chronicles 25; Psalm 39
-2 Samuel 21; 1 Chronicles 26; Psalm 40
-2 Samuel 22; 1 Chronicles 27; Psalm 41
-2 Samuel 23; 1 Chronicles 28; Psalm 42
-2 Samuel 24; 1 Chronicles 29; Psalm 30
-1 Kings 1; 2 Chronicles 1; Psalm 43
-1 Kings 2; 2 Chronicles 2–3; Psalm 62
-1 Kings 3; 2 Chronicles 4–5; Psalm 64
-1 Kings 4; 2 Chronicles 6; Psalm 65
-1 Kings 5; 2 Chronicles 7–8; Psalm 66
-1 Kings 6; 2 Chronicles 9; Psalm 4
-1 Kings 7; Ecclesiastes 1–2; Psalm 5
-1 Kings 8; Ecclesiastes 3–5; Psalm 6
-1 Kings 9; Ecclesiastes 6–7; Psalm 7
-1 Kings 10; Ecclesiastes 8–9; Psalm 8
-1 Kings 11; Ecclesiastes 10–12; Psalm 9
-Mark 1–2; Psalm 11
-Mark 3–4; Psalm 20
-Mark 5–6; Psalm 21
-Mark 7–8; Psalm 23
-Mark 9–10; Psalm 29
-Mark 11–12; Psalm 67
-Mark 13–14; Psalm 68
-Mark 15–16; Psalm 22
-1 Kings 12; 2 Chronicles 10–11; Song of Solomon 1
-1 Kings 13; 2 Chronicles 12–13; Song of Solomon 2
-1 Kings 14; 2 Chronicles 14–15; Song of Solomon 3
-1 Kings 15–16; 2 Chronicles 16–17; Song of Solomon 4
-1 Kings 17–18; 2 Chronicles 18–19; Song of Solomon 5
-1 Kings 19–20; 2 Chronicles 20; Song of Solomon 6
-1 Kings 21; 2 Chronicles 21–22; Song of Solomon 7
-1 Kings 22; 2 Chronicles 23; Song of Solomon 8
-2 Kings 1; 2 Chronicles 24; Psalm 69
-2 Kings 2; 2 Chronicles 25; Psalm 70
-2 Kings 3; 2 Chronicles 26–27; Psalm 72
-2 Kings 4; 2 Chronicles 28; Psalm 127
-2 Kings 5; Hosea 1–3; Psalm 101
-2 Kings 6–7; Hosea 4–7; Psalm 103
-2 Kings 8; Hosea 8–10; Psalm 108
-2 Kings 9; Hosea 11–14; Psalm 109
-2 Kings 10; Amos 1–3; Psalm 110
-2 Kings 11–12; Amos 4–6; Psalm 122
-2 Kings 13–14; Amos 7–9; Psalm 124
-2 Kings 15; Jonah 1–4; Psalm 138
-2 Kings 16; Micah 1–4; Psalm 139
-2 Kings 17; Micah 5–7; Psalm 140
-2 Kings 18; 2 Chronicles 29; Psalm 141
-2 Kings 19; 2 Chronicles 30; Psalm 143
-2 Kings 20; 2 Chronicles 31; Psalm 144
-2 Kings 21; 2 Chronicles 32; Psalm 145
-2 Kings 22; 2 Chronicles 33; Proverbs 7
-2 Kings 23; 2 Chronicles 34; Proverbs 8:1-21
-2 Kings 24; 2 Chronicles 35; Proverbs 8:22-36
-2 Kings 25; 2 Chronicles 36; Proverbs 9:1-6
-Isaiah 1–2; Tobit 1–2; Proverbs 9:7-12
-Isaiah 3–4; Tobit 3–4; Proverbs 9:13-18
-Isaiah 5–6; Tobit 5–6; Proverbs 10:1-4
-Isaiah 7–8; Tobit 7–9; Proverbs 10:5-8
-Isaiah 9–10; Tobit 10–12; Proverbs 10:9-12
-Isaiah 11–13; Tobit 13–14; Proverbs 10:13-16
-Isaiah 14–15; Joel 1–2; Proverbs 10:17-20
-Isaiah 16–17; Joel 3; Proverbs 10:21-24
-Isaiah 18–20; Nahum 1–2; Proverbs 10:25-28
-Isaiah 21–22; Nahum 3; Proverbs 10:29-32
-Isaiah 23–24; Habakkuk 1–2; Proverbs 11:1-4
-Isaiah 25–27; Habakkuk 3; Proverbs 11:5-8
-Isaiah 28–29; Zephaniah 1–2; Proverbs 11:9-12
-Isaiah 30–31; Zephaniah 3; Proverbs 11:13-16
-Isaiah 32–33; Baruch 1–2; Proverbs 11:17-20
-Isaiah 34–36; Baruch 3–4; Proverbs 11:21-24
-Isaiah 37–38; Baruch 5–6; Proverbs 11:25-28
-Isaiah 39–40; Ezekiel 1; Proverbs 11:29-31
-Isaiah 41–42; Ezekiel 2–3; Proverbs 12:1-4
-Isaiah 43–44; Ezekiel 4–5; Proverbs 12:5-8
-Isaiah 45–46; Ezekiel 6–7; Proverbs 12:9-12
-Isaiah 47–48; Ezekiel 8–9; Proverbs 12:13-16
-Isaiah 49–50; Ezekiel 10–11; Proverbs 12:17-20
-Isaiah 51–52; Ezekiel 12–13; Proverbs 12:21-24
-Isaiah 53–54; Ezekiel 14–15; Proverbs 12:25-28
-Isaiah 55–56; Ezekiel 16; Proverbs 13:1-4
-Isaiah 57–58; Ezekiel 17–18; Proverbs 13:5-8
-Isaiah 59–60; Ezekiel 19; Proverbs 13:9-12
-Isaiah 61–62; Ezekiel 20; Proverbs 13:13-16
-Isaiah 63–64; Ezekiel 21–22; Proverbs 13:17-20
-Isaiah 65; Ezekiel 23–24; Proverbs 13:21-25
-Isaiah 66; Ezekiel 25–26; Proverbs 14:1-4
-Jeremiah 1; Ezekiel 27; Proverbs 14:5-8
-Jeremiah 2; Ezekiel 28; Proverbs 14:9-12
-Jeremiah 3; Ezekiel 29–30; Proverbs 14:13-16
-Jeremiah 4; Ezekiel 31–32; Proverbs 14:17-20
-Jeremiah 5; Ezekiel 33; Proverbs 14:21-24
-Jeremiah 6; Ezekiel 34–35; Proverbs 14:25-28
-Jeremiah 7; Ezekiel 36; Proverbs 14:29-32
-Jeremiah 8; Ezekiel 37–38; Proverbs 14:33-35
-Jeremiah 9; Ezekiel 39; Proverbs 15:1-4
-Jeremiah 10–11; Ezekiel 40; Proverbs 15:5-8
-Jeremiah 12–13; Ezekiel 41–42; Proverbs 15:9-12
-Jeremiah 14–15; Ezekiel 43–44; Proverbs 15:13-16
-Jeremiah 16–17; Ezekiel 45–46; Proverbs 15:17-20
-Jeremiah 18–19; Ezekiel 47–48; Proverbs 15:21-24
-Jeremiah 20–21; Daniel 1–2; Proverbs 15:25-28
-Jeremiah 22; Daniel 3; Proverbs 15:29-33
-Jeremiah 23; Daniel 4–5; Proverbs 16:1-4
-Jeremiah 24–25; Daniel 6–7; Proverbs 16:5-8
-Jeremiah 26–27; Daniel 8–9; Proverbs 16:9-12
-Jeremiah 28–29; Daniel 10–11; Proverbs 16:13-16
-Jeremiah 30; Daniel 12–13; Proverbs 16:17-20
-Jeremiah 31; Daniel 14; Proverbs 16:21-24
-Jeremiah 32; Judith 1–2; Proverbs 16:25-28
-Jeremiah 33–34; Judith 3–5; Proverbs 16:29-33
-Jeremiah 35–36; Judith 6–7; Proverbs 17:1-4
-Jeremiah 37–38; Judith 8–9; Proverbs 17:5-8
-Jeremiah 39–40; Judith 10–11; Proverbs 17:9-12
-Jeremiah 41–42; Judith 12–14; Proverbs 17:13-16
-Jeremiah 43–44; Judith 15–16; Proverbs 17:17-20
-Jeremiah 45–46; Lamentations 1; Proverbs 17:21-28
-Jeremiah 47–48; Lamentations 2; Proverbs 18:1-4
-Jeremiah 49–50; Lamentations 3; Proverbs 18:5-8
-Jeremiah 51; Lamentations 4–5; Proverbs 18:9-12
-Jeremiah 52; Obadiah; Proverbs 18:13-16
-Matthew 1–4; Proverbs 18:17-20
-Matthew 5–7; Proverbs 18:21-24
-Matthew 8–10; Proverbs 19:1-4
-Matthew 11–13; Proverbs 19:5-8
-Matthew 14–17; Proverbs 19:9-12
-Matthew 18–21; Proverbs 19:13-16
-Matthew 22–24; Proverbs 19:17-20
-Matthew 25–26; Proverbs 19:21-24
-Matthew 27–28; Proverbs 19:25-29
-Ezra 1–2; Haggai 1–2; Proverbs 20:1-3
-Ezra 3–4; Zechariah 1–3; Proverbs 20:4-7
-Ezra 5–6; Zechariah 4–6; Proverbs 20:8-11
-Ezra 7–8; Zechariah 7–8; Proverbs 20:12-15
-Ezra 9–10; Zechariah 9–11; Proverbs 20:16-19
-Nehemiah 1–2; Zechariah 12–13; Proverbs 20:20-22
-Nehemiah 3; Zechariah 14; Proverbs 20:23-26
-Nehemiah 4–5; Esther 11–12; Proverbs 20:27-30
-Nehemiah 6–7; Esther 1–2; Proverbs 21:1-4
-Nehemiah 8; Esther 3, 13; Proverbs 21:5-8
-Nehemiah 9; Esther 4, 14; Proverbs 21:9-12
-Nehemiah 10; Esther 15, 6–7; Proverbs 21:13-16
-Nehemiah 11; Esther 8, 16; Proverbs 21:17-20
-Nehemiah 12; Esther 9–11; Proverbs 21:21-24
-Nehemiah 13; Malachi 1–4; Proverbs 21:25-28
-1 Maccabees 1; Sirach 1–3; Proverbs 21:29-31
-1 Maccabees 2; Sirach 4–6; Proverbs 22:1-4
-1 Maccabees 3; Sirach 7–9; Proverbs 22:5-8
-1 Maccabees 4; Sirach 10–12; Proverbs 22:9-12
-1 Maccabees 5; Sirach 13–15; Proverbs 22:13-16
-1 Maccabees 6; Sirach 16–18; Proverbs 22:17-21
-1 Maccabees 7; Sirach 19–21; Proverbs 22:22-25
-1 Maccabees 8; Sirach 22–23; Proverbs 22:26-29
-1 Maccabees 9; Sirach 24–25; Proverbs 23:1-4
-1 Maccabees 10; Sirach 26–27; Proverbs 23:5-8
-1 Maccabees 11; Sirach 28–29; Proverbs 23:9-12
-1 Maccabees 12; Sirach 30–31; Proverbs 23:13-16
-1 Maccabees 13; Sirach 32–33; Proverbs 23:17-21
-1 Maccabees 14; Sirach 34–35; Proverbs 23:22-25
-1 Maccabees 15; Sirach 36–37; Proverbs 23:26-28
-1 Maccabees 16; Sirach 38–39; Proverbs 23:29-35
-2 Maccabees 1; Sirach 40–41; Proverbs 24:1-7
-2 Maccabees 2; Sirach 42–44; Proverbs 24:8-9
-2 Maccabees 3; Sirach 45–46; Proverbs 24:10-12
-2 Maccabees 4; Sirach 47–49; Proverbs 24:13-16
-2 Maccabees 5; Sirach 50–51; Proverbs 24:17-20
-2 Maccabees 6; Wisdom 1–2; Proverbs 24:21-26
-2 Maccabees 7; Wisdom 3–4; Proverbs 24:27-29
-2 Maccabees 8; Wisdom 5–6; Proverbs 24:30-34
-2 Maccabees 9; Wisdom 7–8; Proverbs 25:1-3
-2 Maccabees 10; Wisdom 9–10; Proverbs 25:4-7
-2 Maccabees 11; Wisdom 11–12; Proverbs 25:8-10
-2 Maccabees 12; Wisdom 13–14; Proverbs 25:11-14
-2 Maccabees 13; Wisdom 15–16; Proverbs 25:15-17
-2 Maccabees 14; Wisdom 17–18; Proverbs 25:18-20
-2 Maccabees 15; Wisdom 19; Proverbs 25:21-23
-Luke 1–2; Proverbs 25:24-26
-Luke 3–5; Proverbs 25:27-28
-Luke 6–8; Proverbs 26:1-3
-Luke 9–10; Proverbs 26:4-6
-Luke 11–12; Proverbs 26:7-9
-Luke 13–16; Proverbs 26:10-12
-Luke 17–19; Proverbs 26:13-16
-Luke 20–22:38; Proverbs 26:17-19
-Luke 22:39–24:50; Proverbs 26:20-23
-Acts 1; Romans 1; Proverbs 26:24-26
-Acts 2; Romans 2–3; Proverbs 26:27-28
-Acts 3; Romans 4–5; Proverbs 27:1-3
-Acts 4; Romans 6–7; Proverbs 27:4-6
-Acts 5; Romans 8; Proverbs 27:7-9
-Acts 6; Romans 9–10; Proverbs 27:10-12
-Acts 7; Romans 11–12; Proverbs 27:13-14
-Acts 8; Romans 13–14; Proverbs 27:15-17
-Acts 9; Romans 15–16; Proverbs 27:18-20
-Acts 10; 1 Corinthians 1–2; Proverbs 27:21-22
-Acts 11; 1 Corinthians 3–4; Proverbs 27:23-27
-Acts 12; 1 Corinthians 5–6; Proverbs 28:1-3
-Acts 13; 1 Corinthians 7–8; Proverbs 28:4-6
-Acts 14; 1 Corinthians 9–10; Proverbs 28:7-9
-Acts 15; 1 Corinthians 11–12; Proverbs 28:10-12
-Acts 16; 1 Corinthians 13–14; Proverbs 28:13-15
-Acts 17; 1 Corinthians 15; Proverbs 28:16-18
-Acts 18; 1 Corinthians 16; Proverbs 28:19-21
-Acts 19; 2 Corinthians 1–2; Proverbs 28:22-24
-Acts 20; 2 Corinthians 3–5; Proverbs 28:25-28
-Acts 21; 2 Corinthians 6–8; Proverbs 29:1-4
-Acts 22; 2 Corinthians 9–11; Proverbs 29:5-7
-Acts 23; 2 Corinthians 12–13; Proverbs 29:8-11
-Acts 24; Galatians 1–3; Proverbs 29:12-14
-Acts 25; Galatians 4–6; Proverbs 29:15-17
-Acts 26; Ephesians 1–3; Proverbs 29:18-21
-Acts 27; Ephesians 4–6; Proverbs 29:22-24
-Acts 28; Philippians 1–2; Proverbs 29:25-27
-James 1–2; Philippians 3–4; Proverbs 30:1-6
-James 3–5; Colossians 1–2; Proverbs 30:7-9
-1 Peter 1–2; Colossians 3–4; Proverbs 30:10-14
-1 Peter 3–5; 1 Thessalonians 1–3; Proverbs 30:15-16
-2 Peter 1–3; 1 Thessalonians 4–5; Proverbs 30:17-19
-1 John 1–3; 2 Thessalonians 1–3; Proverbs 30:20-23
-1 John 4–5; 1 Timothy 1–3; Proverbs 30:24-28
-2 John, 3 John; 1 Timothy 4–6; Proverbs 30:29-33
-Jude; 2 Timothy 1–2; Proverbs 31:1-7
-Revelation 1–3; 2 Timothy 3–4; Proverbs 31:8-9
-Revelation 4–7; Titus 1–3; Proverbs 31:10-15
-Revelation 8–11; Philemon; Proverbs 31:16-18
-Revelation 12–14; Hebrews 1–4; Proverbs 31:19-22
-Revelation 15–17; Hebrews 5–8; Proverbs 31:23-25
-Revelation 18–20; Hebrews 9–10; Proverbs 31:26-29
-Revelation 21–22; Hebrews 11–13; Proverbs 31:30-31`;
-
-const PERIODS = [
-  [1,"Dunia Awal","#3a8f9a"],[6,"Para Bapa Bangsa","#8a3b4a"],[27,"Mesir & Keluaran","#b8432f"],
-  [52,"Pengembaraan di Padang Gurun","#a5845a"],[81,"Penaklukan & Hakim-hakim","#4f8a3c"],
-  [99,"Titik Mesianik: Injil Yohanes","#c09a2c"],[106,"Kerajaan Bersatu","#6d4a9a"],
-  [154,"Titik Mesianik: Injil Markus","#c09a2c"],[162,"Kerajaan Terpecah","#4a4a4a"],
-  [184,"Pembuangan","#4c86b8"],[258,"Titik Mesianik: Injil Matius","#c09a2c"],
-  [267,"Kembali dari Pembuangan","#b39a1e"],[282,"Pemberontakan Makabe","#cc7a2a"],
-  [313,"Pemenuhan Mesianik","#c09a2c"],[322,"Gereja","#7a8796"]
+/* ===== Daftar kitab: urutan Alkitab Deuterokanonika LAI ===== */
+// [nama, nama Inggris (untuk teks asli/Inggris), jumlah pasal atau daftar unit, singkatan SABDA, bagian]
+const BOOKLIST = [
+ ["Kejadian","Genesis",50,"Kej","PL"],["Keluaran","Exodus",40,"Kel","PL"],["Imamat","Leviticus",27,"Im","PL"],["Bilangan","Numbers",36,"Bil","PL"],["Ulangan","Deuteronomy",34,"Ul","PL"],
+ ["Yosua","Joshua",24,"Yos","PL"],["Hakim-hakim","Judges",21,"Hak","PL"],["Rut","Ruth",4,"Rut","PL"],["1 Samuel","1 Samuel",31,"1Sam","PL"],["2 Samuel","2 Samuel",24,"2Sam","PL"],
+ ["1 Raja-raja","1 Kings",22,"1Raj","PL"],["2 Raja-raja","2 Kings",25,"2Raj","PL"],["1 Tawarikh","1 Chronicles",29,"1Taw","PL"],["2 Tawarikh","2 Chronicles",36,"2Taw","PL"],
+ ["Ezra","Ezra",10,"Ezr","PL"],["Nehemia","Nehemiah",13,"Neh","PL"],["Ester","Esther",10,"Est","PL"],["Ayub","Job",42,"Ayb","PL"],["Mazmur","Psalm",150,"Mzm","PL"],
+ ["Amsal","Proverbs",31,"Ams","PL"],["Pengkhotbah","Ecclesiastes",12,"Pkh","PL"],["Kidung Agung","Song of Solomon",8,"Kid","PL"],["Yesaya","Isaiah",66,"Yes","PL"],
+ ["Yeremia","Jeremiah",52,"Yer","PL"],["Ratapan","Lamentations",5,"Rat","PL"],["Yehezkiel","Ezekiel",48,"Yeh","PL"],["Daniel","Daniel",12,"Dan","PL"],["Hosea","Hosea",14,"Hos","PL"],
+ ["Yoel","Joel",3,"Yl","PL"],["Amos","Amos",9,"Am","PL"],["Obaja","Obadiah",1,"Ob","PL"],["Yunus","Jonah",4,"Yun","PL"],["Mikha","Micah",7,"Mi","PL"],["Nahum","Nahum",3,"Nah","PL"],
+ ["Habakuk","Habakkuk",3,"Hab","PL"],["Zefanya","Zephaniah",3,"Zef","PL"],["Hagai","Haggai",2,"Hag","PL"],["Zakharia","Zechariah",14,"Za","PL"],["Maleakhi","Malachi",4,"Mal","PL"],
+ ["Tobit","Tobit",14,null,"DK"],["Yudit","Judith",16,null,"DK"],["Tambahan Ester","Esther",["10:4-13","11","12","13","14","15","16"],null,"DK"],
+ ["Kebijaksanaan Salomo","Wisdom",19,null,"DK"],["Sirakh","Sirach",51,null,"DK"],["Barukh","Baruch",6,null,"DK"],["Tambahan Daniel","Daniel",["3:24-90","13","14"],null,"DK"],
+ ["1 Makabe","1 Maccabees",16,null,"DK"],["2 Makabe","2 Maccabees",15,null,"DK"],
+ ["Matius","Matthew",28,"Mat","PB"],["Markus","Mark",16,"Mrk","PB"],["Lukas","Luke",24,"Luk","PB"],["Yohanes","John",21,"Yoh","PB"],["Kisah Para Rasul","Acts",28,"Kis","PB"],
+ ["Roma","Romans",16,"Rm","PB"],["1 Korintus","1 Corinthians",16,"1Kor","PB"],["2 Korintus","2 Corinthians",13,"2Kor","PB"],["Galatia","Galatians",6,"Gal","PB"],["Efesus","Ephesians",6,"Ef","PB"],
+ ["Filipi","Philippians",4,"Flp","PB"],["Kolose","Colossians",4,"Kol","PB"],["1 Tesalonika","1 Thessalonians",5,"1Tes","PB"],["2 Tesalonika","2 Thessalonians",3,"2Tes","PB"],
+ ["1 Timotius","1 Timothy",6,"1Tim","PB"],["2 Timotius","2 Timothy",4,"2Tim","PB"],["Titus","Titus",3,"Tit","PB"],["Filemon","Philemon",1,"Flm","PB"],["Ibrani","Hebrews",13,"Ibr","PB"],
+ ["Yakobus","James",5,"Yak","PB"],["1 Petrus","1 Peter",5,"1Ptr","PB"],["2 Petrus","2 Peter",3,"2Ptr","PB"],["1 Yohanes","1 John",5,"1Yoh","PB"],["2 Yohanes","2 John",1,"2Yoh","PB"],
+ ["3 Yohanes","3 John",1,"3Yoh","PB"],["Yudas","Jude",1,"Yud","PB"],["Wahyu","Revelation",22,"Why","PB"]
 ];
+const SECTIONS = {PL:["Perjanjian Lama","#8a5a2b"], DK:["Deuterokanonika","#b0702a"], PB:["Perjanjian Baru","#3f6fa8"]};
+const PER_DAY = 3;
 
-const BOOKS = {
- "Genesis":"Kejadian","Exodus":"Keluaran","Leviticus":"Imamat","Numbers":"Bilangan","Deuteronomy":"Ulangan",
- "Joshua":"Yosua","Judges":"Hakim-hakim","Ruth":"Rut","1 Samuel":"1 Samuel","2 Samuel":"2 Samuel",
- "1 Kings":"1 Raja-raja","2 Kings":"2 Raja-raja","1 Chronicles":"1 Tawarikh","2 Chronicles":"2 Tawarikh",
- "Ezra":"Ezra","Nehemiah":"Nehemia","Tobit":"Tobit","Judith":"Yudit","Esther":"Ester",
- "1 Maccabees":"1 Makabe","2 Maccabees":"2 Makabe","Job":"Ayub","Psalm":"Mazmur","Proverbs":"Amsal",
- "Ecclesiastes":"Pengkhotbah","Song of Solomon":"Kidung Agung","Wisdom":"Kebijaksanaan","Sirach":"Sirakh",
- "Isaiah":"Yesaya","Jeremiah":"Yeremia","Lamentations":"Ratapan","Baruch":"Barukh","Ezekiel":"Yehezkiel",
- "Daniel":"Daniel","Hosea":"Hosea","Joel":"Yoel","Amos":"Amos","Obadiah":"Obaja","Jonah":"Yunus",
- "Micah":"Mikha","Nahum":"Nahum","Habakkuk":"Habakuk","Zephaniah":"Zefanya","Haggai":"Hagai",
- "Zechariah":"Zakharia","Malachi":"Maleakhi","Matthew":"Matius","Mark":"Markus","Luke":"Lukas","John":"Yohanes",
- "Acts":"Kisah Para Rasul","Romans":"Roma","1 Corinthians":"1 Korintus","2 Corinthians":"2 Korintus",
- "Galatians":"Galatia","Ephesians":"Efesus","Philippians":"Filipi","Colossians":"Kolose",
- "1 Thessalonians":"1 Tesalonika","2 Thessalonians":"2 Tesalonika","1 Timothy":"1 Timotius","2 Timothy":"2 Timotius",
- "Titus":"Titus","Philemon":"Filemon","Hebrews":"Ibrani","James":"Yakobus","1 Peter":"1 Petrus","2 Peter":"2 Petrus",
- "1 John":"1 Yohanes","2 John":"2 Yohanes","3 John":"3 Yohanes","Jude":"Yudas","Revelation":"Wahyu"
+/* Susun rencana: 3 pasal per hari, tidak melompati batas kitab */
+const PLAN = [];
+for(const [name,en,chs,sab,sec] of BOOKLIST){
+  const units = Array.isArray(chs) ? chs : Array.from({length:chs},(_,i)=>String(i+1));
+  for(let i=0;i<units.length;i+=PER_DAY){
+    const part = units.slice(i,i+PER_DAY).map(u=>({book:name, en, ch:u, sab, sec, key:name+" "+u}));
+    PLAN.push({day:PLAN.length+1, book:name, sec, units:part});
+  }
+}
+const TOTAL = PLAN.length;
+function dayLabel(p){ const c=p.units.map(u=>u.ch); if(c.some(x=>/\D/.test(x))) return p.book+" "+c.join(", "); return p.book+" "+(c.length===1?c[0]:c[0]+"–"+c[c.length-1]); }
+
+/* ===== Ringkasan per pasal (kata-kata sendiri, BUKAN ayat) ===== */
+const SUMMARY = {
+"Kejadian 1":["Penciptaan dunia","Allah menciptakan langit, bumi, dan segala isinya dalam enam hari, termasuk manusia menurut gambar-Nya. Semuanya \"sungguh amat baik\"."],
+"Kejadian 2":["Hari ketujuh & Taman Eden","Allah berhenti pada hari ketujuh. Manusia dibentuk dari debu tanah, ditempatkan di taman Eden, lalu perempuan diciptakan sebagai penolong yang sepadan."],
+"Kejadian 3":["Manusia jatuh ke dalam dosa","Ular membujuk perempuan; ia dan suaminya makan buah yang dilarang, lalu bersembunyi. Mereka menerima hukuman dan diusir dari taman Eden."],
+"Kejadian 4":["Kain dan Habel","Anak-anak Adam dan Hawa: Kain membunuh adiknya, Habel. Lalu silsilah keturunan Kain sampai Lamekh, dan kelahiran Set."],
+"Kejadian 5":["Silsilah Adam sampai Nuh","Daftar keturunan Adam melalui Set sampai Nuh, termasuk Henokh yang \"bergaul dengan Allah\" dan Metusalah."],
+"Kejadian 6":["Kejahatan manusia & perintah membuat bahtera","Kejahatan manusia makin besar. Nuh mendapat kasih karunia di mata Tuhan dan disuruh membuat bahtera."],
+"Kejadian 7":["Air bah datang","Nuh, keluarganya, dan binatang-binatang masuk ke bahtera. Air bah menutupi bumi."],
+"Kejadian 8":["Air surut","Bahtera kandas di pegunungan Ararat. Nuh melepas burung gagak dan merpati, lalu keluar dan mempersembahkan korban kepada Tuhan."],
+"Kejadian 9":["Perjanjian dengan Nuh","Allah memberkati Nuh dan membuat perjanjian dengan pelangi sebagai tandanya. Lalu kisah Nuh mabuk dan Ham."],
+"Kejadian 10":["Daftar bangsa-bangsa","Keturunan anak-anak Nuh, yaitu Sem, Ham, dan Yafet, yang menjadi bangsa-bangsa di bumi."],
+"Kejadian 11":["Menara Babel","Manusia membangun menara di Babel, lalu Tuhan mengacaukan bahasa mereka. Silsilah Sem sampai Abram, dan keluarga Terah pindah dari Ur ke Haran."],
+"Kejadian 12":["Panggilan Abram","Tuhan memanggil Abram pergi ke negeri yang akan ditunjukkan-Nya dan menjanjikan berkat. Abram ke Kanaan, lalu ke Mesir karena kelaparan."],
+"Kejadian 13":["Abram dan Lot berpisah","Abram dan Lot berpisah karena ternak mereka terlalu banyak. Lot memilih lembah Yordan dekat Sodom; Tuhan menjanjikan negeri itu kepada keturunan Abram."],
+"Kejadian 14":["Abram menyelamatkan Lot","Lot ditawan dalam perang raja-raja, lalu diselamatkan Abram. Melkisedek, raja Salem, memberkati Abram."],
+"Kejadian 15":["Perjanjian Allah dengan Abram","Allah berjanji keturunan Abram akan sebanyak bintang. Abram percaya, dan Allah mengikat perjanjian dengannya."],
+"Kejadian 16":["Hagar dan Ismael","Sarai memberikan Hagar kepada Abram. Hagar mengandung, melarikan diri, ditemui malaikat Tuhan, lalu melahirkan Ismael."],
+"Kejadian 17":["Perjanjian sunat","Allah meneguhkan perjanjian-Nya, mengganti nama Abram menjadi Abraham dan Sarai menjadi Sara, menetapkan sunat, dan menjanjikan Ishak."],
+"Kejadian 18":["Tiga tamu di Mamre","Abraham menjamu tiga tamu; Sara tertawa mendengar janji akan punya anak. Abraham memohon bagi Sodom."],
+"Kejadian 19":["Sodom dan Gomora","Lot dan anak-anaknya diselamatkan, sementara Sodom dan Gomora dimusnahkan. Istri Lot menoleh ke belakang."],
+"Kejadian 20":["Abraham dan Abimelekh","Di Gerar, Abraham kembali mengaku Sara sebagai adiknya. Allah memperingatkan Raja Abimelekh dalam mimpi."],
+"Kejadian 21":["Ishak lahir","Ishak lahir sesuai janji. Hagar dan Ismael disuruh pergi, tetapi Allah memelihara mereka. Abraham membuat perjanjian dengan Abimelekh di Bersyeba."],
+"Kejadian 22":["Ujian bagi Abraham","Allah menguji Abraham untuk mempersembahkan Ishak; pada saat terakhir Tuhan menyediakan seekor domba jantan sebagai gantinya."],
+"Kejadian 23":["Sara wafat","Sara meninggal. Abraham membeli gua Makhpela sebagai tempat pemakaman."],
+"Kejadian 24":["Istri untuk Ishak","Hamba Abraham pergi mencari istri bagi Ishak dan bertemu Ribka."],
+"Kejadian 25":["Abraham wafat; Esau dan Yakub lahir","Abraham meninggal. Ribka melahirkan anak kembar, Esau dan Yakub; Esau menjual hak kesulungannya demi semangkuk makanan."],
+"Kejadian 26":["Ishak dan Abimelekh","Ishak tinggal di Gerar, berselisih soal sumur-sumur, lalu berdamai dengan Abimelekh. Tuhan meneguhkan janji-Nya kepada Ishak."],
+"Kejadian 27":["Yakub merebut berkat","Dengan bantuan Ribka, Yakub menyamar dan menerima berkat Ishak yang semestinya untuk Esau. Esau sangat marah."],
+"Kejadian 28":["Mimpi Yakub di Betel","Yakub pergi ke Haran. Dalam perjalanan ia bermimpi melihat tangga ke langit dan menerima janji Tuhan."],
+"Kejadian 29":["Yakub menikah","Yakub bekerja bagi Laban demi Rahel, tetapi diberi Lea lebih dulu. Lea melahirkan anak-anak bagi Yakub."],
+"Kejadian 30":["Anak-anak Yakub","Lahir lagi anak-anak Yakub, termasuk Yusuf dari Rahel. Ternak Yakub bertambah banyak."],
+"Kejadian 31":["Yakub meninggalkan Laban","Yakub pergi diam-diam dari Laban. Laban mengejarnya, lalu mereka membuat perjanjian."],
+"Kejadian 32":["Yakub bergulat","Yakub bersiap bertemu Esau. Di Peniel ia bergulat semalaman, dan namanya diganti menjadi Israel."],
+"Kejadian 33":["Yakub dan Esau berdamai","Yakub bertemu Esau dan mereka berdamai. Yakub lalu menetap dekat Sikhem."],
+"Kejadian 34":["Dina dan orang Sikhem","Dina diperkosa oleh Sikhem; saudara-saudaranya, Simeon dan Lewi, membalas dengan kekerasan."],
+"Kejadian 35":["Kembali ke Betel","Yakub kembali ke Betel. Rahel meninggal saat melahirkan Benyamin, dan Ishak wafat."],
+"Kejadian 36":["Keturunan Esau","Silsilah keturunan Esau, yaitu bangsa Edom."],
+"Kejadian 37":["Yusuf dijual","Yusuf menceritakan mimpinya, saudara-saudaranya iri, lalu menjualnya. Ia dibawa ke Mesir."],
+"Kejadian 38":["Yehuda dan Tamar","Kisah Yehuda dan menantunya, Tamar."],
+"Kejadian 39":["Yusuf di rumah Potifar","Yusuf berhasil di rumah Potifar, tetapi difitnah istri Potifar dan dimasukkan ke penjara. Tuhan tetap menyertainya."],
+"Kejadian 40":["Mimpi di penjara","Yusuf mengartikan mimpi juru minuman dan juru roti raja."],
+"Kejadian 41":["Yusuf menjadi penguasa Mesir","Yusuf mengartikan mimpi Firaun tentang tujuh tahun kelimpahan dan tujuh tahun kelaparan, lalu diangkat menjadi penguasa atas Mesir."],
+"Kejadian 42":["Saudara-saudara Yusuf ke Mesir","Saudara-saudara Yusuf datang membeli gandum tanpa mengenalinya. Simeon ditahan."],
+"Kejadian 43":["Perjalanan kedua","Mereka kembali ke Mesir bersama Benyamin dan dijamu di rumah Yusuf."],
+"Kejadian 44":["Piala perak","Piala Yusuf ditemukan di karung Benyamin. Yehuda menawarkan diri menjadi budak menggantikan Benyamin."],
+"Kejadian 45":["Yusuf membuka jati dirinya","Yusuf memberi tahu saudara-saudaranya siapa dirinya dan meminta mereka membawa Yakub ke Mesir."],
+"Kejadian 46":["Yakub pindah ke Mesir","Allah berbicara kepada Yakub, lalu seluruh keluarganya pindah ke Mesir."],
+"Kejadian 47":["Di tanah Gosyen","Keluarga Yakub menetap di Gosyen. Yusuf mengatur Mesir selama masa kelaparan."],
+"Kejadian 48":["Berkat untuk Efraim dan Manasye","Yakub memberkati kedua anak Yusuf, Efraim dan Manasye."],
+"Kejadian 49":["Berkat Yakub bagi anak-anaknya","Yakub memberkati kedua belas anaknya, lalu meninggal."],
+"Kejadian 50":["Yakub dikuburkan; Yusuf wafat","Yakub dikuburkan di Kanaan. Yusuf mengampuni saudara-saudaranya, lalu meninggal di Mesir."]
 };
-const DK = ["Tobit","Judith","1 Maccabees","2 Maccabees","Wisdom","Sirach","Baruch"];
 
-function toID(seg){
-  seg = seg.trim();
-  const names = Object.keys(BOOKS).sort((a,b)=>b.length-a.length);
-  for(const n of names){ if(seg.startsWith(n)) return {id: BOOKS[n] + seg.slice(n.length), en:n, rest:seg.slice(n.length).trim()}; }
-  return {id:seg,en:"",rest:""};
-}
-function isDK(r){
-  if(DK.includes(r.en)) return true;
-  if(r.en==="Esther" && /1[1-6]/.test(r.rest)) return true;
-  if(r.en==="Daniel" && /1[34]/.test(r.rest)) return true;
-  return false;
-}
-const PLAN = RAW.split("\n").map((line,i)=>{
-  const parts = line.split(";").flatMap(p=> p.includes("2 John, 3 John") ? ["2 John","3 John"] : [p]);
-  return {day:i+1, reads: parts.map(toID)};
-});
-function periodOf(d){ let p=PERIODS[0]; for(const x of PERIODS){ if(d>=x[0]) p=x; } return p; }
-
-/* ===== Konten 5W 1H (hanya yang sudah diriset & bersumber) ===== */
+/* ===== Penjelasan 5W 1H bersumber, per pasal ===== */
 const T_G = '<span class="tag g">⛪ Gereja</span>';
 const T_R = '<span class="tag r">🔬 Penelitian</span>';
-const CONTENT = {
-1:{ covers:"Kejadian 1–2 dan Mazmur 19", html:`
-<h3>🔧 BAGAIMANA caranya?</h3>
-<p>${T_G} Di Kejadian 1, menurut catatan Alkitab resmi para uskup (NABRE), Allah menghadirkan alam semesta yang teratur dari kekacauan awal hanya dengan bersabda. Di Kejadian 2, Allah digambarkan seperti tukang periuk yang membentuk tubuh manusia dari tanah, lalu mengembuskan napas ke hidungnya.</p>
+const SRC = (links)=>`<div class="srcs">📚 ${links.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</div>`;
+const EXPL = {
+"Kejadian 1":`
+<h3>🔧 BAGAIMANA Allah menciptakan?</h3>
+<p>${T_G} Menurut catatan Alkitab resmi para uskup (NABRE), Allah menghadirkan alam semesta yang teratur dari kekacauan awal hanya dengan bersabda.</p>
 <h3>👤 SIAPA manusia itu?</h3>
-<ul>
-<li>${T_G} Kata "gambar" dan "rupa" Allah menunjukkan bahwa manusia berharga, punya nilai dalam dirinya sendiri (NABRE Kej 1).</li>
-<li>${T_G} "Adam" artinya "manusia". Dalam bahasa Ibrani ada permainan kata antara <i>'adam</i> (manusia) dan <i>'adama</i> (tanah). Jadi manusia itu "si dari tanah" (NABRE Kej 2).</li>
-<li>${T_G} Perempuan disebut "penolong yang sepadan". Menurut NABRE, kata "penolong" tidak berarti lebih rendah, karena Allah sendiri juga disebut penolong. Perempuan dibuat "dari dirinya sendiri", menunjukkan kedekatan yang sangat dalam antara laki-laki dan perempuan.</li>
-</ul>
-<h3>📍 DI MANA taman Eden?</h3>
-<p>${T_G} Menurut NABRE, Eden mungkin nama sebuah wilayah di Mesopotamia selatan (Irak sekarang), dari kata Sumeria yang artinya "dataran subur". Dua dari empat sungainya, Tigris dan Efrat, sama-sama bermuara ke Teluk Persia. Sungai Pison tidak diketahui letaknya.</p>
-<h3>💭 MENGAPA ada dua cerita penciptaan?</h3>
-<p>${T_G} Menurut NABRE, Kejadian 1 berfungsi sebagai pembuka, seperti cerita-cerita kuno tentang asal-usul dunia. Kejadian 2 berasal dari tradisi yang lebih tua (disebut tradisi "Yahwis", karena memakai nama Allah "YHWH"), lalu disusun dalam bingkai baru. Gereja mengajarkan bahwa kita perlu memperhatikan gaya bahasa yang dipakai penulis suci sesuai zamannya (Dei Verbum 12).</p>
+<p>${T_G} Kata "gambar" dan "rupa" Allah menunjukkan bahwa manusia berharga, punya nilai dalam dirinya sendiri (NABRE).</p>
+<h3>💭 MENGAPA ceritanya ditulis begini?</h3>
+<p>${T_G} Menurut NABRE, Kejadian 1 berfungsi sebagai pembuka, seperti cerita-cerita kuno tentang asal-usul dunia. Gereja mengajarkan bahwa kita perlu memperhatikan gaya bahasa yang dipakai penulis suci sesuai budaya zamannya (Dei Verbum 12).</p>
 <p>${T_R} Bangsa Babel punya cerita penciptaan sendiri, <i>Enuma Elish</i>. Salinan lempeng tanah liatnya ada di British Museum, dari zaman Neo-Babilonia (sekitar 626–539 SM). Di cerita itu manusia dibuat untuk melayani para dewa. Di Kejadian, manusia justru diciptakan menurut gambar Allah.</p>
-<h3>📅 KAPAN?</h3>
-<p>Kejadian 1–2 tidak menyebut tahun. Kapan kitab ini ditulis belum dicantumkan karena datanya belum diriset.</p>
-<h3>🎵 Mazmur 19</h3>
-<p>${T_G} Menurut NABRE, bagian pertama mazmur ini memuji langit yang tersusun indah sebagai tanda kuasa dan hikmat Penciptanya. Bagian kedua memuji hukum Tuhan, tempat manusia menemukan hikmat Sang Pencipta. Dalam sastra kuno lain, matahari dianggap hakim dan pemberi hukum karena "melihat segalanya" setiap hari. Di mazmur ini, matahari hanyalah ciptaan.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Dewa-dewa Babel bikin manusia jadi pelayan, Allah bikin manusia menurut gambar-Nya. Apa bedanya buat caramu memandang dirimu sendiri?</li>
-<li>Kenapa ya Allah bilang "tidak baik kalau manusia sendirian"?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/1">NABRE Kej 1</a> · <a href="https://bible.usccb.org/bible/genesis/2">NABRE Kej 2</a> · <a href="https://www.intratext.com/IXT/ENG0037/_P4.HTM">Dei Verbum 12</a> · <a href="https://cdli.earth/artifacts/479340">Lempeng Enuma Elish (CDLI)</a> · <a href="https://www.worldhistory.org/article/225/enuma-elish%E2%80%94the-babylonian-epic-of-creation%E2%80%94fu/">Teks Enuma Elish</a> · <a href="https://bible.usccb.org/bible/ps/19">NABRE Mzm 19</a></div>`},
-2:{ covers:"Kejadian 3–4 dan Mazmur 104", html:`
-<h3>💭 MENGAPA kisah kejatuhan terasa seperti gambaran?</h3>
-<p>${T_G} Katekismus no. 390: kisah kejatuhan di Kejadian 3 memakai bahasa kiasan, tetapi menegaskan sebuah peristiwa purba, perbuatan yang terjadi di awal sejarah manusia.</p>
+<h3>📅 KAPAN?</h3><p class="empty">Kejadian 1 tidak menyebut tahun. Kapan kitab ini ditulis belum diriset.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Dewa-dewa Babel bikin manusia jadi pelayan, Allah bikin manusia menurut gambar-Nya. Apa bedanya buat caramu memandang dirimu sendiri?</li></ul>
+${SRC([["NABRE Kej 1","https://bible.usccb.org/bible/genesis/1"],["Dei Verbum 12","https://www.intratext.com/IXT/ENG0037/_P4.HTM"],["Lempeng Enuma Elish (CDLI)","https://cdli.earth/artifacts/479340"],["Teks Enuma Elish","https://www.worldhistory.org/article/225/enuma-elish%E2%80%94the-babylonian-epic-of-creation%E2%80%94fu/"]])}`,
+"Kejadian 2":`
+<h3>👤 SIAPA Adam dan perempuan itu?</h3>
+<ul><li>${T_G} "Adam" artinya "manusia". Dalam bahasa Ibrani ada permainan kata antara <i>'adam</i> (manusia) dan <i>'adama</i> (tanah). Jadi manusia itu "si dari tanah" (NABRE).</li>
+<li>${T_G} Perempuan disebut "penolong yang sepadan". Menurut NABRE, kata "penolong" tidak berarti lebih rendah, karena Allah sendiri juga disebut penolong.</li></ul>
+<h3>📍 DI MANA taman Eden?</h3>
+<p>${T_G} Menurut NABRE, Eden mungkin nama wilayah di Mesopotamia selatan (Irak sekarang), dari kata Sumeria yang artinya "dataran subur". Tigris dan Efrat sama-sama bermuara ke Teluk Persia; letak Sungai Pison tidak diketahui.</p>
+<h3>💭 MENGAPA ada dua cerita penciptaan?</h3>
+<p>${T_G} Menurut NABRE, Kejadian 2 berasal dari tradisi yang lebih tua (disebut tradisi "Yahwis", karena memakai nama Allah "YHWH"), lalu disusun dalam bingkai baru bersama Kejadian 1.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Kenapa ya Allah bilang "tidak baik kalau manusia sendirian"?</li></ul>
+${SRC([["NABRE Kej 2","https://bible.usccb.org/bible/genesis/2"]])}`,
+"Kejadian 3":`
+<h3>💭 MENGAPA kisahnya terasa seperti gambaran?</h3>
+<p>${T_G} Katekismus no. 390: kisah kejatuhan di Kejadian 3 memakai bahasa kiasan, tetapi menegaskan sebuah peristiwa purba yang terjadi di awal sejarah manusia.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Setelah salah, Adam dan Hawa malah sembunyi. Kamu pernah begitu juga?</li></ul>
+${SRC([["KGK 390","https://www.vatican.va/archive/ENG0015/__P1C.HTM"]])}`,
+"Kejadian 4":`
 <h3>💭 MENGAPA persembahan Habel diterima?</h3>
-<p>${T_G} Menurut NABRE, intinya bukan karena persembahan Habel lebih mahal. Allah menerima persembahan Habel dan menolak persembahan Kain dengan alasan yang <b>tidak disebutkan</b> dalam teks. Kisah ini juga tidak merendahkan pekerjaan bertani, karena Adam sendiri diciptakan untuk mengolah tanah.</p>
+<p>${T_G} Menurut NABRE, Allah menerima persembahan Habel dan menolak persembahan Kain dengan alasan yang <b>tidak disebutkan</b> dalam teks. Kisah ini juga tidak merendahkan pekerjaan bertani.</p>
 <h3>🔧 BAGAIMANA tanda Kain?</h3>
-<p>${T_G} Menurut NABRE, tanda itu kemungkinan semacam tato yang menandai Kain sebagai orang yang dilindungi Allah. Tato sebagai tanda suku sudah lama umum di kalangan suku Badui di Timur Dekat.</p>
+<p>${T_G} Menurut NABRE, tanda itu kemungkinan semacam tato yang menandai Kain sebagai orang yang dilindungi Allah; tato sebagai tanda suku sudah lama umum di kalangan suku Badui di Timur Dekat.</p>
 <h3>👤 SIAPA Lamekh?</h3>
-<p>${T_G} Menurut NABRE, sesumbar Lamekh (4:23–24) menunjukkan kekerasan Kain berlanjut ke keturunannya, bahkan makin parah.</p>
-<h3>📍 DI MANA · 📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>🎵 Mazmur 104</h3>
-<p>${T_R} Menurut <i>Oxford Handbook of the Psalms</i>, Mazmur 104 sering dibandingkan dengan "Himne Agung untuk Aten" dari Mesir, yang ditemukan dalam penggalian tahun 1884 di sebuah makam di Tell el-Amarna. Para ahli masih membahas apakah ada hubungan langsung antara keduanya.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Setelah salah, Adam dan Hawa malah sembunyi. Kamu pernah begitu juga?</li>
-<li>Kain iri dan marah. Apa yang bisa kita lakukan kalau merasa iri sama saudara sendiri?</li></ul>
-<div class="srcs">📚 <a href="https://www.vatican.va/archive/ENG0015/__P1C.HTM">KGK 390</a> · <a href="https://bible.usccb.org/bible/genesis/4">NABRE Kej 4</a> · <a href="https://academic.oup.com/edited-volume/35006/chapter/298739466">Oxford Handbook of the Psalms</a></div>`},
-3:{ covers:"Kejadian 5–6 dan Mazmur 136", html:`
+<p>${T_G} Lamekh adalah keturunan Kain (Kej 4:17–18). Menurut NABRE, sesumbar Lamekh (4:23–24) menunjukkan kekerasan Kain berlanjut ke keturunannya, bahkan makin parah.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Kain iri dan marah. Apa yang bisa kita lakukan kalau merasa iri sama saudara sendiri?</li></ul>
+${SRC([["NABRE Kej 4","https://bible.usccb.org/bible/genesis/4"]])}`,
+"Kejadian 5":`
 <h3>💭 MENGAPA umurnya panjang sekali?</h3>
-<p>${T_G} Menurut NABRE, silsilah ini menunjukkan pengaruh sastra Mesopotamia kuno, yang punya daftar raja sebelum dan sesudah air bah. Dalam daftar itu, umur raja-raja sebelum air bah antara 18.600 sampai 36.000 tahun. Angka di Alkitab jauh lebih kecil. Angka-angka itu juga sedikit berbeda antara naskah Ibrani dan naskah Yunani.</p>
+<p>${T_G} Menurut NABRE, silsilah ini menunjukkan pengaruh sastra Mesopotamia kuno yang punya daftar raja sebelum dan sesudah air bah. Dalam daftar itu umur raja-raja sebelum air bah antara 18.600 sampai 36.000 tahun. Angka di Alkitab jauh lebih kecil.</p>
 <h3>👤 SIAPA Henokh?</h3>
-<p>${T_G} Biasanya silsilah ditutup dengan "lalu ia mati". Untuk Henokh tertulis "ia hidup bergaul dengan Allah". Menurut NABRE, ini menyiratkan Henokh diangkat hidup-hidup kepada Allah, seperti Elia.</p>
-<h3>👤 SIAPA "anak-anak Allah" dan Nefilim? (Kej 6:1–4)</h3>
+<p>${T_G} Biasanya silsilah ditutup dengan "lalu ia mati". Untuk Henokh tertulis ia "hidup bergaul dengan Allah". Menurut NABRE, ini menyiratkan Henokh diangkat hidup-hidup kepada Allah, seperti Elia.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Henokh "bergaul dengan Allah". Gimana caranya kamu bergaul dengan Allah setiap hari?</li></ul>
+${SRC([["NABRE Kej 5","https://bible.usccb.org/bible/genesis/5"]])}`,
+"Kejadian 6":`
+<h3>👤 SIAPA "anak-anak Allah" dan Nefilim? (6:1–4)</h3>
 <p>${T_G} Menurut NABRE, bagian ini memang sulit dipahami. "Anak-anak Allah" artinya makhluk-makhluk surgawi lain, dan bagian ini tampaknya merujuk pada sebuah legenda kuno. Nefilim adalah sebutan orang Israel untuk raksasa-raksasa zaman purba.</p>
 <h3>🔧 BAGAIMANA bahteranya?</h3>
-<p>${T_G} Menurut NABRE, ukuran bahtera sekitar 134 × 22 × 13 meter (440 × 73 × 44 kaki), dengan satu hasta kira-kira 45 cm. Kayu "gofir" tidak diketahui jenisnya, mungkin kayu sipres.</p>
-<h3>📍 DI MANA · 📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>🎵 Mazmur 136</h3>
-<p>${T_G} Menurut NABRE, himne ini memuji Allah Israel ("Allah segala allah") yang menciptakan dunia tempat Israel hidup. Setiap ayatnya diulang dengan kalimat yang sama: "kasih setia-Nya untuk selama-lamanya."</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Henokh "bergaul dengan Allah". Kalau kamu, gimana caranya bergaul dengan Allah setiap hari?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/5">NABRE Kej 5</a> · <a href="https://bible.usccb.org/bible/genesis/6">NABRE Kej 6</a> · <a href="https://coursebible.com/new-american-bible-revised-edition-nabre/psalm-136">NABRE Mzm 136</a></div>`},
-4:{ covers:"Kejadian 7–9 dan Mazmur 1", html:`
+<p>${T_G} Menurut NABRE, ukurannya sekitar 134 × 22 × 13 meter (satu hasta kira-kira 45 cm). Kayu "gofir" tidak diketahui jenisnya, mungkin kayu sipres.</p>
+${SRC([["NABRE Kej 6","https://bible.usccb.org/bible/genesis/6"]])}`,
+"Kejadian 7":`
 <h3>💭 MENGAPA ada detail yang terasa berbeda?</h3>
-<p>${T_G} Menurut NABRE, kisah air bah umumnya dipandang sebagai gabungan dua sumber yang dijalin jadi satu. Contohnya: di satu bagian ada sepasang dari setiap binatang, di bagian lain tujuh pasang binatang yang tahir. Di satu bagian air datang dari bawah dan atas bumi, di bagian lain dari hujan 40 hari 40 malam. Meski begitu, NABRE menganjurkan kisah ini dibaca sebagai satu cerita yang utuh.</p>
-<h3>👤 SIAPA saja yang termasuk perjanjian?</h3>
-<p>${T_G} Menurut NABRE, Allah membuat perjanjian dengan Nuh dan keturunannya, dan, yang luar biasa, juga dengan semua binatang yang keluar dari bahtera: dunia tidak akan lagi dihancurkan oleh air bah. Pelangi adalah tanda janji itu.</p>
-<p>${T_G} Soal Nuh mabuk (9:18–27), NABRE menulis bahwa kesalahannya bukan pada Nuh, karena ia tidak mungkin tahu efek anggur. Kesalahannya pada Ham, yang mempermalukan ayahnya.</p>
+<p>${T_G} Menurut NABRE, kisah air bah (6:5–8:22) umumnya dipandang sebagai gabungan dua sumber. Contohnya: sepasang dari setiap binatang di satu bagian, tujuh pasang binatang yang tahir di bagian lain. NABRE menganjurkan kisah ini dibaca sebagai satu cerita yang utuh.</p>
 <h3>🏺 Cerita air bah bangsa lain</h3>
-<p>${T_G} NABRE sendiri menyebut bahwa kisah di Alkitab pada akhirnya bersumber dari tradisi Mesopotamia kuno tentang air bah besar, yang dikenal lewat kisah air bah Sumeria, lempeng ke-11 Epos Gilgamesh, dan Epos Atrahasis. Bahtera dalam kisah Babel berbentuk kubus sempurna, 120 hasta di setiap sisinya. Bahtera Nuh berbentuk persegi panjang.</p>
-<p>${T_R} "Lempeng Air Bah" dari Epos Gilgamesh kini ada di British Museum. Lempeng ini berasal dari sekitar 700–600 SM dan dikenali sebagai kisah air bah pada tahun 1872 oleh George Smith, asisten di British Museum. Lempeng itu dulu milik perpustakaan Raja Asyur Ashurbanipal (memerintah 668–627 SM).</p>
-<h3>📍 DI MANA · 📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>🎵 Mazmur 1</h3>
-<p>${T_G} Menurut catatan New Catholic Bible, Mazmur 1 dan 2 dipandang sebagai kata pengantar untuk seluruh Kitab Mazmur. Orang benar diibaratkan pohon yang tidak layu, karena seperti pohon yang ditanam di tanah subur, mereka sanggup bertahan menghadapi beratnya hidup.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Allah juga membuat perjanjian dengan binatang. Menurutmu, apa artinya buat cara kita memperlakukan hewan peliharaan?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/6">NABRE Kej 6 (catatan air bah 6:5–8:22)</a> · <a href="https://bible.usccb.org/bible/genesis/9">NABRE Kej 9</a> · <a href="https://artsandculture.google.com/asset/the-flood-tablet-relating-part-of-the-epic-of-gilgamesh/wQGL1dmyVmXRYA">Lempeng Air Bah, British Museum</a> · <a href="https://archaeology.org/issues/online/collection/cuneiform-religion">Archaeology Magazine</a> · <a href="https://coursebible.com/new-catholic-bible-ncb/psalm-1">New Catholic Bible, Mzm 1</a></div>`},
-5:{ covers:"Kejadian 10–11 dan Mazmur 2", html:`
+<p>${T_G} NABRE menyebut kisah di Alkitab pada akhirnya bersumber dari tradisi Mesopotamia kuno tentang air bah besar, yang dikenal lewat kisah air bah Sumeria, lempeng ke-11 Epos Gilgamesh, dan Epos Atrahasis.</p>
+<p>${T_R} "Lempeng Air Bah" Epos Gilgamesh kini ada di British Museum. Lempeng ini berasal dari sekitar 700–600 SM, dikenali sebagai kisah air bah pada 1872 oleh George Smith, dan dulu milik perpustakaan Raja Asyur Ashurbanipal (memerintah 668–627 SM).</p>
+${SRC([["NABRE Kej 6 (catatan air bah)","https://bible.usccb.org/bible/genesis/6"],["Lempeng Air Bah, British Museum","https://artsandculture.google.com/asset/the-flood-tablet-relating-part-of-the-epic-of-gilgamesh/wQGL1dmyVmXRYA"],["Archaeology Magazine","https://archaeology.org/issues/online/collection/cuneiform-religion"]])}`,
+"Kejadian 9":`
+<h3>👤 SIAPA saja yang termasuk perjanjian?</h3>
+<p>${T_G} Menurut NABRE, Allah membuat perjanjian dengan Nuh dan keturunannya, dan juga dengan semua binatang: dunia tidak akan lagi dihancurkan oleh air bah. Pelangi adalah tandanya.</p>
+<p>${T_G} Soal Nuh mabuk (9:18–27), NABRE menulis bahwa kesalahannya bukan pada Nuh, karena ia tidak mungkin tahu efek anggur, melainkan pada Ham yang mempermalukan ayahnya.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Allah juga membuat perjanjian dengan binatang. Apa artinya buat cara kita memperlakukan hewan peliharaan?</li></ul>
+${SRC([["NABRE Kej 9","https://bible.usccb.org/bible/genesis/9"]])}`,
+"Kejadian 10":`
 <h3>💭 MENGAPA ada daftar bangsa-bangsa?</h3>
-<p>${T_G} Menurut NABRE, Kejadian 10 penting karena menekankan bahwa <b>semua bangsa di bumi adalah satu keluarga</b>. Setiap bangsa juga diberi tanahnya oleh Allah.</p>
+<p>${T_G} Menurut NABRE, Kejadian 10 menekankan bahwa <b>semua bangsa di bumi adalah satu keluarga</b>, dan setiap bangsa diberi tanahnya oleh Allah.</p>
+<h3>📍 DI MANA Sinear?</h3><p>${T_G} Sinear adalah tanah Babilonia kuno, meliputi Sumer dan Akkad, kini Irak selatan (NABRE).</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Semua bangsa itu satu keluarga. Gimana kita memperlakukan teman yang beda suku atau bahasa?</li></ul>
+${SRC([["NABRE Kej 10","https://bible.usccb.org/bible/genesis/10"]])}`,
+"Kejadian 11":`
 <h3>📍 DI MANA menara Babel?</h3>
-<ul>
-<li>${T_G} Sinear adalah tanah Babilonia kuno, meliputi Sumer dan Akkad, kini Irak selatan (NABRE Kej 10).</li>
-<li>${T_G} "Babel" adalah bentuk Ibrani dari nama "Babilon". Orang Babel sendiri mengartikan nama kotanya, <i>Bab-ili</i>, sebagai "gerbang dewa". Kata Ibrani <i>balal</i> ("Ia mengacaukan") bunyinya mirip (NABRE Kej 11).</li>
-<li>${T_G} Menara yang puncaknya sampai ke langit <b>mungkin</b> merujuk pada zigurat (menara kuil bertingkat) utama di Babel, <i>E-sag-ila</i>, yang artinya "rumah yang mengangkat tinggi kepalanya".</li>
-</ul>
+<ul><li>${T_G} "Babel" adalah bentuk Ibrani dari "Babilon". Orang Babel mengartikan nama kotanya, <i>Bab-ili</i>, sebagai "gerbang dewa"; kata Ibrani <i>balal</i> ("Ia mengacaukan") bunyinya mirip (NABRE).</li>
+<li>${T_G} Menara itu <b>mungkin</b> merujuk pada zigurat (menara kuil bertingkat) utama di Babel, <i>E-sag-ila</i>, "rumah yang mengangkat tinggi kepalanya".</li></ul>
 <h3>👤 SIAPA Abram dan dari mana asalnya?</h3>
-<ul>
-<li>${T_G} Abram adalah variasi dialek dari nama Abraham (NABRE).</li>
-<li>${T_G} Ur adalah kota Sumeria yang sangat kuno di Mesopotamia selatan. NABRE mencatat bahwa tempat asal Abraham sebenarnya Haran, bukan Ur.</li>
-<li>${T_R} Menurut Britannica, situs Ur terletak sekitar 225 km di tenggara Babel. Ur digali oleh ekspedisi gabungan British Museum dan University of Pennsylvania di bawah pimpinan Leonard Woolley, dari 1922 sampai 1934.</li>
-</ul>
-<h3>📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>🎵 Mazmur 2</h3>
-<p>${T_G} Menurut NABRE, ini mazmur untuk penobatan raja. Kata "yang diurapi" dalam bahasa Ibrani adalah <i>mashiah</i>, dan dalam bahasa Yunani <i>christos</i>. Dari sinilah kata Mesias dan Kristus berasal. Gereja membaca mazmur ini secara mesianis, dan Perjanjian Baru memahaminya tentang Kristus.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Semua bangsa itu satu keluarga. Gimana caranya kita memperlakukan teman yang beda suku atau beda bahasa?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/10">NABRE Kej 10</a> · <a href="https://bible.usccb.org/bible/genesis/11">NABRE Kej 11</a> · <a href="https://www.britannica.com/place/Ur">Ur (Britannica)</a> · <a href="https://www.britannica.com/contributor/Leonard-Woolley/3265">Leonard Woolley (Britannica)</a> · <a href="https://bible.usccb.org/bible/psalms/2">NABRE Mzm 2</a></div>`},
-6:{ covers:"Kejadian 12, Ayub 1–2, Amsal 1:1–7 (Kejadian 13 belum dibahas)", html:`
+<ul><li>${T_G} Ur adalah kota Sumeria yang sangat kuno di Mesopotamia selatan. NABRE mencatat tempat asal Abraham sebenarnya Haran, bukan Ur.</li>
+<li>${T_R} Menurut Britannica, situs Ur terletak sekitar 225 km di tenggara Babel, dan digali oleh ekspedisi British Museum dan University of Pennsylvania di bawah Leonard Woolley (1922–1934).</li></ul>
+${SRC([["NABRE Kej 11","https://bible.usccb.org/bible/genesis/11"],["Ur (Britannica)","https://www.britannica.com/place/Ur"],["Leonard Woolley (Britannica)","https://www.britannica.com/contributor/Leonard-Woolley/3265"]])}`,
+"Kejadian 12":`
 <h3>💭 MENGAPA panggilan Abram penting?</h3>
-<p>${T_G} Menurut NABRE, panggilan Abraham memulai sejarah berkat yang baru. Kisah ini kebalikan dari kisah menara Babel: kalau orang Babel ingin menetap, Abraham justru pergi. NABRE juga mencatat bahwa susunan kalimat Ibraninya menunjukkan berkat itu bergantung pada kesediaan Abraham untuk pergi ke Kanaan.</p>
-<h3>📍 DI MANA?</h3>
-<p>${T_G} Menurut NABRE, perjalanan Abraham melewati Sikhem, Betel, dan Negeb adalah semacam "penaklukan simbolis" atas tanah yang dijanjikan. Mezbah-mezbah yang ia dirikan menunjukkan bahwa ia mengakui Allahnya sebagai Tuhan atas negeri itu.</p>
-<h3>👤 SIAPA · ⚠️ Catatan jujur</h3>
-<p>${T_G} Di Mesir, Abram mengaku Sarai sebagai adiknya. NABRE menulis bahwa <b>teks ini tidak berusaha membenarkan tipu daya Abraham</b>.</p>
-<h3>📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>📜 Ayub 1–2</h3>
-<ul>
-<li>${T_G} Menurut NABRE, Kitab Ayub adalah karya drama yang membahas penderitaan orang yang tidak bersalah. Penulisnya tidak diketahui, dan kitab ini kemungkinan disusun antara abad ke-7 dan ke-5 SM.</li>
-<li>${T_G} NABRE juga menulis bahwa Kitab Ayub tidak memberikan jawaban pasti soal penderitaan orang yang tidak bersalah, tetapi menantang pembacanya untuk sampai pada pemahamannya sendiri.</li>
-<li>${T_G} Negeri Us letaknya di suatu tempat di Edom atau Arab (catatan NAB).</li>
-</ul>
-<h3>📜 Amsal 1:1–7</h3>
-<p>${T_G} Menurut pengantar NAB, seluruh ajaran Kitab Amsal berdasar pada prinsip "takut akan Tuhan adalah permulaan pengetahuan" (1:7). Menurut NABRE, "takut akan Tuhan" terutama berarti sikap hati, bukan perasaan takut: rasa hormat yang mendalam kepada Allah, disertai ketaatan pada kehendak-Nya.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Abram berani pergi ke tempat yang belum ia kenal karena percaya Tuhan. Pernah nggak kamu harus berani mencoba hal baru?</li>
-<li>"Takut akan Tuhan" itu artinya hormat, bukan takut. Apa bedanya?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/12">NABRE Kej 12</a> · <a href="https://biblehub.com/nabre/job/intro.htm">Pengantar Ayub, NABRE</a> · <a href="https://www.vatican.va/archive/ENG0839/_PEM.HTM">Catatan Ayub 1, NAB (vatican.va)</a> · <a href="https://press.vatican.va/archive/ENG0839/_PJZ.HTM">Pengantar Amsal, NAB (vatican.va)</a> · <a href="https://mail.biblehub.com/nabre/proverbs/footnotes.htm">Catatan Amsal, NABRE</a></div>`},
-7:{ covers:"Kejadian 14–15, Ayub 3–4, Amsal 1:8–19", html:`
+<p>${T_G} Menurut NABRE, panggilan Abraham memulai sejarah berkat yang baru, kebalikan dari kisah menara Babel: kalau orang Babel ingin menetap, Abraham justru pergi.</p>
+<h3>📍 DI MANA?</h3><p>${T_G} Menurut NABRE, perjalanan Abraham melewati Sikhem, Betel, dan Negeb adalah semacam "penaklukan simbolis" atas tanah yang dijanjikan.</p>
+<p>${T_G} ⚠️ Di Mesir Abram mengaku Sarai sebagai adiknya. NABRE menulis bahwa teks ini <b>tidak berusaha membenarkan tipu daya Abraham</b>.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Abram berani pergi ke tempat yang belum ia kenal karena percaya Tuhan. Pernah nggak kamu harus berani mencoba hal baru?</li></ul>
+${SRC([["NABRE Kej 12","https://bible.usccb.org/bible/genesis/12"]])}`,
+"Kejadian 14":`
 <h3>👤 SIAPA raja-raja itu?</h3>
-<p>${T_G} Menurut NABRE, kebenaran sejarah peristiwa ini masih diperdebatkan. Selain Sinear (Babel), Tidal (nama raja Het, Tudhaliya), dan Elam, nama-nama dan tempat-tempatnya belum bisa dipastikan. Ceritanya mirip laporan perang dalam catatan kerajaan Babel dan Asyur.</p>
+<p>${T_G} Menurut NABRE, kebenaran sejarah peristiwa ini masih diperdebatkan; selain Sinear, Tidal (nama raja Het), dan Elam, nama-nama dan tempat-tempatnya belum bisa dipastikan.</p>
 <h3>👤 SIAPA Melkisedek?</h3>
-<ul>
-<li>${T_G} Menurut NABRE, Salem adalah Yerusalem (bdk. Mzm 76:3).</li>
-<li>${T_G} Ibrani 7 memahami Melkisedek sebagai gambaran awal Kristus.</li>
-<li>${T_G} Abraham memberi sepersepuluh dari rampasan perang sebagai tanda menerima berkat itu.</li>
-</ul>
-<h3>🔧 BAGAIMANA perjanjian dibuat? (Kej 15)</h3>
-<p>${T_G} Menurut NABRE, memotong binatang menjadi dua adalah cara yang umum untuk membuat perjanjian di zaman kuno. Artinya: siapa yang melanggar janji rela bernasib seperti binatang itu. Ada contohnya dalam perjanjian Siria abad ke-8 SM: "Seperti anak lembu ini dipotong, demikianlah Mati'el akan dipotong." Di Kejadian 15, perapian berasap dan suluh berapi yang lewat di antara potongan itu melambangkan Allah sendiri. Jadi Allah yang ikut "menandatangani" janji itu.</p>
+<ul><li>${T_G} Salem adalah Yerusalem (NABRE).</li><li>${T_G} Ibrani 7 memahami Melkisedek sebagai gambaran awal Kristus.</li></ul>
+${SRC([["NABRE Kej 14","https://bible.usccb.org/bible/genesis/14"]])}`,
+"Kejadian 15":`
+<h3>🔧 BAGAIMANA perjanjian dibuat?</h3>
+<p>${T_G} Menurut NABRE, memotong binatang menjadi dua adalah cara umum membuat perjanjian di zaman kuno: siapa yang melanggar janji rela bernasib seperti binatang itu. Perapian berasap dan suluh berapi yang lewat di antara potongan itu melambangkan Allah sendiri.</p>
 <h3>💭 MENGAPA iman Abram penting?</h3>
-<p>${T_G} Menurut NABRE, iman Abraham dipandang sebagai tindakan benar, yang sepenuhnya menyatakan hubungannya dengan Allah. Santo Paulus memakai iman Abraham sebagai teladan bagi orang Kristen (Roma dan Galatia).</p>
-<h3>📅 KAPAN</h3>
-<p class="empty">Belum ada data yang diriset.</p>
-<h3>📜 Ayub 3–4</h3>
-<p>${T_G} Di bab 3, Ayub mulai mengeluh. Di bab 4, sahabatnya Elifas menjawab. Menurut NABRE, bagian 4:12–21 menggambarkan secara dramatis betapa kecilnya manusia dibandingkan kebesaran Allah.</p>
-<h3>📜 Amsal 1:8–19</h3>
-<p>${T_G} NABRE memberi judul bagian ini "Jalan Orang Fasik: Keserakahan dan Kekerasan". Isinya nasihat orang tua kepada anaknya agar tidak ikut ajakan orang jahat.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Kalau ada teman yang ngajak berbuat jahat, gimana caranya bilang "tidak"?</li>
-<li>Allah sendiri yang menjamin janji-Nya pada Abram. Apa artinya buat kita kalau Allah berjanji?</li></ul>
-<div class="srcs">📚 <a href="https://bible.usccb.org/bible/genesis/14">NABRE Kej 14</a> · <a href="https://bible.usccb.org/bible/genesis/15">NABRE Kej 15</a> · <a href="https://mail.biblehub.com/nabre/job/footnotes.htm">Catatan Ayub, NABRE</a> · <a href="https://coursebible.com/new-american-bible-revised-edition-nabre/proverbs-1">NABRE Amsal 1</a></div>`},
-313:{ covers:"Lukas 2:1–20 (Lukas 1, Lukas 2:21–52, dan Amsal belum dibahas)", html:`
+<p>${T_G} Menurut NABRE, iman Abraham dipandang sebagai tindakan benar yang menyatakan hubungannya dengan Allah. Santo Paulus memakai iman Abraham sebagai teladan (Roma dan Galatia).</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Allah sendiri yang menjamin janji-Nya pada Abram. Apa artinya buat kita kalau Allah berjanji?</li></ul>
+${SRC([["NABRE Kej 15","https://bible.usccb.org/bible/genesis/15"]])}`,
+"Ayub 1":`
+<h3>📜 Tentang Kitab Ayub</h3>
+<ul><li>${T_G} Menurut NABRE, Kitab Ayub adalah karya drama yang membahas penderitaan orang yang tidak bersalah. Penulisnya tidak diketahui, kemungkinan disusun antara abad ke-7 dan ke-5 SM.</li>
+<li>${T_G} Kitab ini tidak memberi jawaban pasti soal penderitaan orang yang tidak bersalah, tetapi menantang pembaca untuk sampai pada pemahamannya sendiri (NABRE).</li>
+<li>${T_G} Negeri Us letaknya di suatu tempat di Edom atau Arab (catatan NAB).</li></ul>
+${SRC([["Pengantar Ayub, NABRE","https://biblehub.com/nabre/job/intro.htm"],["Catatan Ayub 1, NAB","https://www.vatican.va/archive/ENG0839/_PEM.HTM"]])}`,
+"Ayub 4":`<p>${T_G} Menurut NABRE, bagian 4:12–21 menggambarkan secara dramatis betapa kecilnya manusia dibandingkan kebesaran Allah.</p>${SRC([["Catatan Ayub, NABRE","https://mail.biblehub.com/nabre/job/footnotes.htm"]])}`,
+"Mazmur 1":`<p>${T_G} Menurut catatan New Catholic Bible, Mazmur 1 dan 2 dipandang sebagai kata pengantar seluruh Kitab Mazmur. Orang benar diibaratkan pohon yang tidak layu: seperti pohon di tanah subur, mereka sanggup bertahan menghadapi beratnya hidup.</p>${SRC([["New Catholic Bible, Mzm 1","https://coursebible.com/new-catholic-bible-ncb/psalm-1"]])}`,
+"Mazmur 2":`<p>${T_G} Menurut NABRE, ini mazmur penobatan raja. "Yang diurapi" dalam bahasa Ibrani adalah <i>mashiah</i>, dalam bahasa Yunani <i>christos</i>; dari sinilah kata Mesias dan Kristus. Perjanjian Baru memahaminya tentang Kristus.</p>${SRC([["NABRE Mzm 2","https://bible.usccb.org/bible/psalms/2"]])}`,
+"Mazmur 19":`<p>${T_G} Menurut NABRE, bagian pertama mazmur ini memuji langit sebagai tanda kuasa dan hikmat Penciptanya; bagian kedua memuji hukum Tuhan. Dalam sastra kuno lain matahari dianggap hakim dan pemberi hukum; di mazmur ini matahari hanyalah ciptaan.</p>${SRC([["NABRE Mzm 19","https://bible.usccb.org/bible/ps/19"]])}`,
+"Mazmur 104":`<p>${T_R} Menurut <i>Oxford Handbook of the Psalms</i>, Mazmur 104 sering dibandingkan dengan "Himne Agung untuk Aten" dari Mesir, yang ditemukan pada 1884 di sebuah makam di Tell el-Amarna. Para ahli masih membahas hubungan keduanya.</p>${SRC([["Oxford Handbook of the Psalms","https://academic.oup.com/edited-volume/35006/chapter/298739466"]])}`,
+"Mazmur 136":`<p>${T_G} Menurut NABRE, himne ini memuji Allah Israel ("Allah segala allah") yang menciptakan dunia tempat Israel hidup. Setiap ayatnya diulang: "kasih setia-Nya untuk selama-lamanya".</p>${SRC([["NABRE Mzm 136","https://coursebible.com/new-american-bible-revised-edition-nabre/psalm-136"]])}`,
+"Amsal 1":`<p>${T_G} Menurut pengantar NAB, seluruh ajaran Amsal berdasar pada prinsip "takut akan Tuhan adalah permulaan pengetahuan" (1:7). Menurut NABRE, "takut akan Tuhan" terutama berarti sikap hati, bukan perasaan takut: rasa hormat yang mendalam kepada Allah disertai ketaatan.</p>${SRC([["Pengantar Amsal, NAB","https://press.vatican.va/archive/ENG0839/_PJZ.HTM"],["Catatan Amsal, NABRE","https://mail.biblehub.com/nabre/proverbs/footnotes.htm"]])}`,
+"Lukas 2":`
 <h3>👤 SIAPA saja?</h3>
-<ul>
-<li>Yusuf, Maria, bayi Yesus, para gembala, dan malaikat <i>(dari ayat)</i>.</li>
-<li>${T_R} <b>Kaisar Agustus</b>: kaisar Romawi pertama, lahir 23 September 63 SM, wafat 19 Agustus 14 M (Britannica).</li>
-<li>${T_G} <b>Kirenius</b>: menurut catatan NABRE, Sulpicius Quirinius menjadi gubernur Siria pada tahun 6–7 M, saat Yudea digabungkan ke provinsi Siria, dan saat itu diadakan sensus di Yudea.</li>
-</ul>
+<ul><li>${T_R} <b>Kaisar Agustus</b>: kaisar Romawi pertama, lahir 23 September 63 SM, wafat 19 Agustus 14 M (Britannica).</li>
+<li>${T_G} <b>Kirenius</b>: menurut NABRE, Sulpicius Quirinius menjadi gubernur Siria pada tahun 6–7 M, saat Yudea digabungkan ke provinsi Siria, dan saat itu diadakan sensus di Yudea.</li></ul>
 <h3>📅 KAPAN?</h3>
-<ul>
-<li>${T_G} Di zaman Agustus. Menurut catatan NABRE, pemerintahannya biasanya dihitung dari 27 SM sampai wafatnya pada 14 M.</li>
-<li>Tahun pastinya tidak diketahui. Gereja tidak mengajarkan bahwa Kristus lahir pada tahun tertentu (Catholic Answers, mengutip Benediktus XVI, <i>Yesus dari Nazaret</i>, jilid 3).</li>
-</ul>
-<div class="note">⚠️ <b>Catatan jujur:</b> catatan NABRE sendiri mengakui ada persoalan sejarah yang terkenal soal tanggal sensus di masa Kirenius, dan berbagai upaya untuk menyelesaikannya belum berhasil. Yesus lahir di zaman Raja Herodes (Luk 1:5), padahal sensus Kirenius yang tercatat dalam sejarah terjadi tahun 6–7 M.</div>
-<h3>📍 DI MANA?</h3>
-<p>Di Betlehem, Yudea. Yusuf dan Maria datang dari Nazaret, Galilea <i>(dari ayat)</i>.</p>
+<ul><li>${T_G} Di zaman Agustus, yang pemerintahannya biasanya dihitung 27 SM–14 M (NABRE).</li><li>Gereja tidak mengajarkan bahwa Kristus lahir pada tahun tertentu (Catholic Answers, mengutip Benediktus XVI).</li></ul>
+<div class="note">⚠️ NABRE sendiri mengakui ada persoalan sejarah soal tanggal sensus di masa Kirenius, dan upaya menyelesaikannya belum berhasil.</div>
 <h3>💭 MENGAPA Lukas menyebut Kaisar Agustus?</h3>
-<p>${T_G} Menurut catatan NABRE, bukan kebetulan Lukas mengaitkan kelahiran Yesus dengan zaman Agustus: juru selamat dan pembawa damai yang sejati adalah anak yang lahir di Betlehem.</p>
-<h3>🔧 BAGAIMANA keadaannya?</h3>
-<p>${T_G} Yesus dibaringkan di palungan, yaitu tempat makan hewan (catatan NABRE).</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Kaisar Agustus punya istana dan tentara, sedangkan Yesus lahir di tempat makan hewan. Kenapa ya Tuhan memilih cara seperti itu?</li></ul>
-<div class="srcs">📚 Sumber: <a href="https://bible.usccb.org/bible/lk/2">Catatan NABRE Lukas 2 (USCCB)</a> · <a href="https://www.britannica.com/biography/Augustus-Roman-emperor">Augustus (Britannica)</a> · <a href="https://www.catholic.com/audio/ddp/the-year-jesus-was-born">The Year Jesus Was Born (Catholic Answers)</a> · <a href="https://stpatricksjaffrey.com/hrf_faq/the-birth-of-jesus-christ-in-bethlehem/">Catatan NABRE soal palungan</a></div>`},
-359:{ covers:"Pengantar Kitab Wahyu & Wahyu 1 (Wahyu 2–3, 2 Timotius, dan Amsal belum dibahas)", html:`
+<p>${T_G} Menurut NABRE, bukan kebetulan: juru selamat dan pembawa damai yang sejati adalah anak yang lahir di Betlehem.</p>
+<h3>🗣️ Ngobrol yuk</h3><ul><li>Kaisar Agustus punya istana dan tentara, Yesus lahir di tempat makan hewan. Kenapa ya Tuhan memilih cara seperti itu?</li></ul>
+${SRC([["NABRE Lukas 2","https://bible.usccb.org/bible/lk/2"],["Augustus (Britannica)","https://www.britannica.com/biography/Augustus-Roman-emperor"],["Catholic Answers","https://www.catholic.com/audio/ddp/the-year-jesus-was-born"]])}`,
+"Wahyu 1":`
 <h3>👤 SIAPA penulisnya?</h3>
-<p>${T_G} Menurut pengantar NABRE yang dimuat di situs Vatikan, penulisnya menyebut diri Yohanes dan dibuang ke Pulau Patmos karena imannya. Beberapa Bapa Gereja (Yustinus, Ireneus, Klemens dari Aleksandria, Tertulianus, Siprianus, Hipolitus) menyebutnya Rasul Yohanes, tetapi Bapa Gereja lain (Dionisius dari Aleksandria, Eusebius, Sirilus dari Yerusalem, Gregorius dari Nazianze, Yohanes Krisostomus) tidak setuju.</p>
-<h3>📍 DI MANA?</h3>
-<p>${T_R} Patmos adalah pulau kecil berbatu di Yunani. Menurut Britannica, di bawah kekuasaan Romawi pulau ini menjadi tempat pembuangan, dan menurut tradisi Yohanes dikirim ke sana sekitar tahun 95 M. Gua tempat Yohanes dikatakan menulis Kitab Wahyu kini termasuk Situs Warisan Dunia UNESCO (sejak 1999).</p>
-<h3>📅 KAPAN?</h3>
-<p>${T_G} Menurut pengantar NABRE, kitab ini dalam bentuknya sekarang kemungkinan ditulis menjelang akhir pemerintahan Kaisar Domitianus (81–96 M), seorang penganiaya orang Kristen yang kejam.</p>
-<h3>💭 MENGAPA isinya penuh simbol?</h3>
-<p>${T_G} Wahyu ditulis dengan gaya apokaliptik, yang populer di kalangan Yahudi dan Kristen sekitar 200 SM–200 M. Gambaran simbolisnya tidak boleh dibaca harfiah. Angka pun punya arti: empat = dunia, enam = ketidaksempurnaan, tujuh = keutuhan/kesempurnaan, dua belas = suku-suku Israel. Pesannya adalah harapan, penghiburan, dan tantangan bagi semua yang berani percaya.</p>
-<h3>🔧 BAGAIMANA</h3>
-<p class="empty">Belum ada data tambahan yang diriset.</p>
-<h3>🗣️ Ngobrol yuk</h3>
-<ul><li>Yohanes dibuang ke pulau sepi karena imannya, tapi justru di sana dia bertemu Yesus. Pernah nggak kamu merasa Tuhan dekat waktu lagi susah?</li></ul>
-<div class="srcs">📚 Sumber: <a href="https://www.vatican.va/archive/ENG0839/_P12J.HTM">Pengantar Kitab Wahyu, NABRE (vatican.va)</a> · <a href="https://www.britannica.com/place/Patmos">Patmos (Britannica)</a></div>`}
+<p>${T_G} Menurut pengantar NABRE di situs Vatikan, penulisnya menyebut diri Yohanes dan dibuang ke Pulau Patmos karena imannya. Sebagian Bapa Gereja menyebutnya Rasul Yohanes, sebagian lain tidak setuju.</p>
+<h3>📍 DI MANA?</h3><p>${T_R} Menurut Britannica, di bawah Romawi Patmos menjadi tempat pembuangan, dan menurut tradisi Yohanes dikirim ke sana sekitar tahun 95 M.</p>
+<h3>📅 KAPAN?</h3><p>${T_G} Kemungkinan ditulis menjelang akhir pemerintahan Kaisar Domitianus (81–96 M), seorang penganiaya orang Kristen (NABRE).</p>
+<h3>💭 MENGAPA penuh simbol?</h3><p>${T_G} Wahyu ditulis dengan gaya apokaliptik; simbolnya tidak boleh dibaca harfiah. Empat = dunia, enam = ketidaksempurnaan, tujuh = keutuhan, dua belas = suku-suku Israel. Pesannya: harapan dan penghiburan.</p>
+${SRC([["Pengantar Wahyu, NABRE (vatican.va)","https://www.vatican.va/archive/ENG0839/_P12J.HTM"],["Patmos (Britannica)","https://www.britannica.com/place/Patmos"]])}`
 };
 
 /* ===== Pembaca ayat ===== */
 const BOLLS="https://bolls.life";
-const SABDA_ABBR={"Kejadian":"Kej","Keluaran":"Kel","Imamat":"Im","Bilangan":"Bil","Ulangan":"Ul","Yosua":"Yos","Hakim-hakim":"Hak","Rut":"Rut","1 Samuel":"1Sam","2 Samuel":"2Sam","1 Raja-raja":"1Raj","2 Raja-raja":"2Raj","1 Tawarikh":"1Taw","2 Tawarikh":"2Taw","Ezra":"Ezr","Nehemia":"Neh","Ester":"Est","Ayub":"Ayb","Mazmur":"Mzm","Amsal":"Ams","Pengkhotbah":"Pkh","Kidung Agung":"Kid","Yesaya":"Yes","Yeremia":"Yer","Ratapan":"Rat","Yehezkiel":"Yeh","Daniel":"Dan","Hosea":"Hos","Yoel":"Yl","Amos":"Am","Obaja":"Ob","Yunus":"Yun","Mikha":"Mi","Nahum":"Nah","Habakuk":"Hab","Zefanya":"Zef","Hagai":"Hag","Zakharia":"Za","Maleakhi":"Mal","Matius":"Mat","Markus":"Mrk","Lukas":"Luk","Yohanes":"Yoh","Kisah Para Rasul":"Kis","Roma":"Rm","1 Korintus":"1Kor","2 Korintus":"2Kor","Galatia":"Gal","Efesus":"Ef","Filipi":"Flp","Kolose":"Kol","1 Tesalonika":"1Tes","2 Tesalonika":"2Tes","1 Timotius":"1Tim","2 Timotius":"2Tim","Titus":"Tit","Filemon":"Flm","Ibrani":"Ibr","Yakobus":"Yak","1 Petrus":"1Ptr","2 Petrus":"2Ptr","1 Yohanes":"1Yoh","2 Yohanes":"2Yoh","3 Yohanes":"3Yoh","Yudas":"Yud","Wahyu":"Why"};
 const NT_EN=["Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"];
 const ALIASES={"Psalm":["psalms","psalm"],"Song of Solomon":["songofsolomon","songofsongs","canticles","song"],"Wisdom":["wisdom","wisdomofsolomon"],"Sirach":["sirach","ecclesiasticus","sira","bensira"],"Revelation":["revelation","revelationofjohn","apocalypse"]};
-function norm(s){return s.toLowerCase().replace(/^i\s/,"1 ").replace(/^ii\s/,"2 ").replace(/^iii\s/,"3 ").replace(/first\s/,"1 ").replace(/second\s/,"2 ").replace(/third\s/,"3 ").replace(/[^a-z0-9]/g,"");}
-
-/* "Kejadian 1–2" / "Amsal 1:1-7" / "Lukas 22:39–24:50" / "Ester 3, 13" / "Obaja" -> [{ch, from, to}] */
-function parseRest(rest){
-  rest=(rest||"").replace(/–/g,"-").trim();
-  if(!rest) return [{ch:1}];
-  const out=[];
-  for(let part of rest.split(",")){
-    part=part.trim(); if(!part) continue;
-    let m;
-    if((m=part.match(/^(\d+):(\d+)-(\d+):(\d+)$/))){
-      const c1=+m[1],v1=+m[2],c2=+m[3],v2=+m[4];
-      for(let c=c1;c<=c2;c++) out.push({ch:c,from:c===c1?v1:null,to:c===c2?v2:null});
-    } else if((m=part.match(/^(\d+)-(\d+):(\d+)$/))){
-      for(let c=+m[1];c<=+m[2];c++) out.push({ch:c,from:null,to:c===+m[2]?+m[3]:null});
-    } else if((m=part.match(/^(\d+):(\d+)-(\d+)$/))){ out.push({ch:+m[1],from:+m[2],to:+m[3]}); }
-    else if((m=part.match(/^(\d+)-(\d+)$/))){ for(let c=+m[1];c<=+m[2];c++) out.push({ch:c}); }
-    else if((m=part.match(/^(\d+)$/))){ out.push({ch:+m[1]}); }
-  }
-  return out;
+function norm(s){return String(s).toLowerCase().replace(/^i\s/,"1 ").replace(/^ii\s/,"2 ").replace(/^iii\s/,"3 ").replace(/[^a-z0-9]/g,"");}
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));}
+function parseCh(s){ // "5" | "3:24-90" | "10:4-13"
+  const m=String(s).match(/^(\d+)(?::(\d+)-(\d+))?$/); if(!m) return {ch:+s};
+  return {ch:+m[1], from:m[2]?+m[2]:null, to:m[3]?+m[3]:null};
 }
-function sabdaRef(r){
-  const idBook=r.id.slice(0, r.id.length - r.rest.length).trim();
-  const ab=SABDA_ABBR[idBook]; if(!ab) return null;
-  return (ab+" "+(r.rest||"1")).replace(/–/g,"-").replace(/\s+/g," ").trim();
-}
-
 let LANGS=null; const BOOKS_CACHE={};
 async function getJSON(u){ const r=await fetch(u); if(!r.ok) throw new Error(r.status); return r.json(); }
 async function pickTranslations(){
@@ -750,167 +365,142 @@ async function bookId(tr, enBook){
   return hit?hit.bookid:null;
 }
 function clean(t){ return String(t||"").replace(/<S>\d+<\/S>/gi,"").replace(/<sup>.*?<\/sup>/gi,"").replace(/<[^>]+>/g,"").replace(/\s+/g," ").trim(); }
-async function loadText(kind, r){
+async function loadText(kind, u){
   const L=await pickTranslations();
-  let tr;
-  if(kind==="eng") tr=L.eng;
-  else tr = NT_EN.includes(r.en) ? L.gnt : (isDK(r) ? L.lxx : L.heb);
-  if(!tr) throw new Error("Terjemahan tidak ditemukan");
-  const bid=await bookId(tr.code, r.en);
+  const tr = kind==="eng" ? L.eng : (NT_EN.includes(u.en) ? L.gnt : (u.sec==="DK" ? L.lxx : L.heb));
+  if(!tr) throw new Error("no translation");
+  const bid=await bookId(tr.code, u.en);
   if(!bid) return {tr, html:`<p class="empty">Kitab ini tidak tersedia dalam ${esc(tr.name)}.</p>`};
-  const parts=parseRest(r.rest); let html="";
-  for(const p of parts){
-    let vs; try{ vs=await getJSON(`${BOLLS}/get-text/${tr.code}/${bid}/${p.ch}/`); }catch(e){ vs=[]; }
-    vs=vs.filter(v=>(p.from==null||v.verse>=p.from)&&(p.to==null||v.verse<=p.to));
-    html+=`<div class="rch">Pasal ${p.ch}</div>`;
-    html+= vs.length ? vs.map(v=>`<p class="rv"><sup>${v.verse}</sup> ${esc(clean(v.text))}</p>`).join("") : `<p class="empty">Pasal ini tidak tersedia (penomoran bisa berbeda).</p>`;
-  }
-  return {tr, html};
+  const p=parseCh(u.ch); let vs=[];
+  try{ vs=await getJSON(`${BOLLS}/get-text/${tr.code}/${bid}/${p.ch}/`); }catch(e){}
+  vs=vs.filter(v=>(p.from==null||v.verse>=p.from)&&(p.to==null||v.verse<=p.to));
+  return {tr, html: vs.length ? vs.map(v=>`<p class="rv"><sup>${v.verse}</sup> ${esc(clean(v.text))}</p>`).join("") : `<p class="empty">Pasal ini tidak tersedia di sumber ini (penomoran bisa berbeda).</p>`};
 }
-function readerHTML(i){
-  return `<div class="reader" id="rd${i}">
-    <div class="rtabs"><button data-k="id" class="on">🇮🇩 Indonesia (LAI)</button><button data-k="orig">Bahasa asli</button><button data-k="eng">English</button></div>
-    <div class="rbody"></div></div>`;
+function readerHTML(){
+  return `<div class="reader"><div class="rtabs"><button data-k="id" class="on">🇮🇩 Indonesia (LAI)</button><button data-k="orig">Bahasa asli</button><button data-k="eng">English</button></div><div class="rbody"></div></div>`;
 }
-async function showReader(box, r, kind){
+async function showReader(box, u, kind){
   const body=box.querySelector(".rbody");
   box.querySelectorAll(".rtabs button").forEach(b=>b.classList.toggle("on",b.dataset.k===kind));
   if(kind==="id"){
-    if(isDK(r)){ body.innerHTML=`<p class="empty">Kitab Deuterokanonika tidak tersedia di Alkitab SABDA. Silakan baca dari Alkitab Deuterokanonika LAI cetak, atau pilih tab "Bahasa asli" / "English".</p>`; return; }
-    const ref=sabdaRef(r); const url=`https://alkitab.sabda.org/passage.php?passage=${encodeURIComponent(ref)}`;
+    if(!u.sab){ body.innerHTML=`<p class="empty">Kitab Deuterokanonika tidak tersedia di Alkitab SABDA. Silakan baca dari Alkitab Deuterokanonika LAI cetak, atau pilih tab "Bahasa asli" / "English".</p>`; return; }
+    const url=`https://alkitab.sabda.org/passage.php?passage=${encodeURIComponent(u.sab+" "+u.ch)}`;
     body.innerHTML=`<iframe class="rframe" src="${url}" loading="lazy" title="Alkitab SABDA"></iframe>
       <p class="rnote">Teks: Alkitab Terjemahan Baru © LAI, ditampilkan dari situs Alkitab SABDA. Kalau tidak tampil, <a href="${url}" target="_blank" rel="noopener">buka di sini</a>.</p>`;
     return;
   }
   body.innerHTML=`<p class="empty">Memuat…</p>`;
   try{
-    const {tr, html}=await loadText(kind==="eng"?"eng":"orig", r);
-    const rtl = kind==="orig" && tr.code===(LANGS.heb&&LANGS.heb.code);
+    const {tr, html}=await loadText(kind==="eng"?"eng":"orig", u);
+    const rtl = kind==="orig" && LANGS.heb && tr.code===LANGS.heb.code;
     body.innerHTML=`<div class="rtext ${rtl?'rtl':''}">${html}</div><p class="rnote">Teks: ${esc(tr.name)} (${esc(tr.code)}), dari bolls.life.</p>`;
-  }catch(e){
-    body.innerHTML=`<p class="empty">Gagal memuat teks. Pastikan HP terhubung internet, lalu coba lagi.</p>`;
-  }
+  }catch(e){ body.innerHTML=`<p class="empty">Gagal memuat teks. Pastikan HP terhubung internet, lalu coba lagi.</p>`; }
 }
 
 /* ===== Penyimpanan (per perangkat) ===== */
-const KEY="alkitab-keluarga-v1";
+const KEY="alkitab-keluarga-urut-v1";
 let S = {start:null, members:["Ayah","Ibu","Kakak","Adik"], done:{}, view:null};
 try{ const s=JSON.parse(localStorage.getItem(KEY)); if(s) S=Object.assign(S,s); }catch(e){}
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
-
 function todayIndex(){
   if(!S.start) return 1;
   const a=new Date(S.start+"T00:00:00"), b=new Date(); b.setHours(0,0,0,0);
-  const d=Math.floor((b-a)/86400000)+1;
-  return Math.min(Math.max(d,1),365);
+  return Math.min(Math.max(Math.floor((b-a)/86400000)+1,1),TOTAL);
 }
 let current = S.view || todayIndex();
-
-/* ===== Render ===== */
 const $=s=>document.querySelector(s);
-function esc(t){return t.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
 function renderDay(d){
-  const p=PLAN[d-1], per=periodOf(d), c=CONTENT[d];
-  const doneSet = S.done[d]||[];
-  const reads = p.reads.map((r,i)=>`<li><div class="row" style="width:100%;justify-content:space-between"><span>📖 <b>${esc(r.id)}</b>${isDK(r)?' <span class="dk">Deuterokanonika</span>':''}</span><button class="btn rbtn" data-i="${i}">Baca ayat ▾</button></div><div class="rslot" id="slot${i}"></div></li>`).join("");
+  const p=PLAN[d-1], sec=SECTIONS[p.sec], doneSet=S.done[d]||[];
+  const chapters = p.units.map((u,i)=>{
+    const sm=SUMMARY[u.key];
+    return `<li class="chap">
+      <div class="chead"><b>${esc(u.key)}</b>${sm?` · <span class="ctitle">${esc(sm[0])}</span>`:''}</div>
+      ${sm?`<p class="csum">${esc(sm[1])}</p>`:`<p class="csum empty">Ringkasan pasal ini belum disiapkan.</p>`}
+      <button class="btn rbtn" data-i="${i}">Baca ayat ▾</button><div class="rslot" id="slot${i}"></div></li>`;
+  }).join("");
+  const expl = p.units.filter(u=>EXPL[u.key]).map(u=>`<div class="xblock"><div class="xhead">${esc(u.key)}</div>${EXPL[u.key]}</div>`).join("");
   const mems = S.members.map((m,i)=>`<div class="mem ${doneSet.includes(i)?'done':''}" data-m="${i}"><span class="box">${doneSet.includes(i)?'✓':''}</span>${esc(m)}</div>`).join("");
   $("#v-today").innerHTML = `
   <div class="card">
-    <span class="period" style="background:${per[2]}">${per[1]}</span>
-    <div class="daytitle">Hari ${d} dari 365</div>
-    <ul class="reads">${reads}</ul>
-    <div class="row" style="margin-top:6px">
+    <span class="period" style="background:${sec[1]}">${sec[0]}</span>
+    <div class="daytitle">Hari ${d} · ${esc(dayLabel(p))}</div>
+    <p class="empty" style="margin:0 0 8px">dari ${TOTAL} hari · ringkasan di bawah ini kata-kata kami, <b>bukan ayat</b></p>
+    <ul class="reads">${chapters}</ul>
+    <div class="row" style="margin-top:10px">
       <button class="btn" id="prev" ${d<=1?'disabled':''}>← Sebelumnya</button>
       <button class="btn" id="tday">Hari ini</button>
-      <button class="btn" id="next" ${d>=365?'disabled':''}>Berikutnya →</button>
+      <button class="btn" id="next" ${d>=TOTAL?'disabled':''}>Berikutnya →</button>
     </div>
     <label class="f">Sudah baca hari ini (ketuk nama):</label>
     <div class="members">${mems}</div>
   </div>
   <div class="card sec">
-    <div style="font-family:Fraunces,serif;font-size:19px;font-weight:700">Penjelasan 5W 1H</div>
-    ${c ? `<p class="empty">Mencakup: ${esc(c.covers)}</p>${c.html}` :
-      `<p class="empty">Penjelasan untuk hari ini belum disiapkan. Setiap penjelasan baru ditambahkan setelah diriset dan punya sumber. Sementara itu, bacalah ayat-ayatnya di Alkitab Deuterokanonika kalian.</p>`}
+    <div class="h2">Penjelasan 5W 1H</div>
+    ${expl || `<p class="empty">Penjelasan bersumber untuk pasal-pasal ini belum disiapkan. Setiap penjelasan baru ditambahkan setelah diriset dan punya sumber.</p>`}
   </div>`;
+  $("#prev").onclick=()=>go(d-1); $("#next").onclick=()=>go(d+1); $("#tday").onclick=()=>go(todayIndex());
   document.querySelectorAll("#v-today .rbtn").forEach(b=>b.onclick=()=>{
     const i=+b.dataset.i, slot=$("#slot"+i);
     if(slot.innerHTML){ slot.innerHTML=""; b.textContent="Baca ayat ▾"; return; }
-    slot.innerHTML=readerHTML(i); b.textContent="Tutup ▴";
-    const box=slot.querySelector(".reader"), r=p.reads[i];
-    box.querySelectorAll(".rtabs button").forEach(t=>t.onclick=()=>showReader(box,r,t.dataset.k));
-    showReader(box,r,"id");
+    slot.innerHTML=readerHTML(); b.textContent="Tutup ▴";
+    const box=slot.querySelector(".reader"), u=p.units[i];
+    box.querySelectorAll(".rtabs button").forEach(t=>t.onclick=()=>showReader(box,u,t.dataset.k));
+    showReader(box,u,"id");
   });
-  $("#prev").onclick=()=>go(d-1); $("#next").onclick=()=>go(d+1); $("#tday").onclick=()=>go(todayIndex());
   document.querySelectorAll("#v-today .mem").forEach(el=>el.onclick=()=>{
-    const i=+el.dataset.m; const arr=S.done[d]||[];
+    const i=+el.dataset.m, arr=S.done[d]||[];
     S.done[d] = arr.includes(i) ? arr.filter(x=>x!==i) : [...arr,i];
     save(); renderDay(d);
   });
 }
-function go(d){ current=Math.min(Math.max(d,1),365); S.view=current; save(); renderDay(current); window.scrollTo(0,0); }
+function go(d){ current=Math.min(Math.max(d,1),TOTAL); S.view=current; save(); renderDay(current); window.scrollTo(0,0); }
 
 function renderAll(){
-  const q=($("#q")&&$("#q").value||"").toLowerCase();
-  const rows = PLAN.filter(p=> !q || ("hari "+p.day+" "+p.reads.map(r=>r.id).join(" ")).toLowerCase().includes(q))
-    .map(p=>{ const per=periodOf(p.day); const n=(S.done[p.day]||[]).length;
-      return `<div class="dayrow" data-d="${p.day}"><span class="dot" style="background:${per[2]}"></span><span class="dnum">${p.day}</span><span class="dtext">${p.reads.map(r=>esc(r.id)).join(" · ")}${CONTENT[p.day]?'<span class="has">● ada penjelasan</span>':''}</span><span class="ticks">${n?("✓ "+n+"/"+S.members.length):""}</span></div>`; }).join("");
   const box=$("#v-all");
   if(!$("#q")){ box.innerHTML=`<input id="q" placeholder="Cari kitab atau nomor hari… (mis. Lukas, Hari 100)"><div id="rows"></div>`; $("#q").oninput=renderAll; }
-  $("#rows").innerHTML=rows || '<p class="empty">Tidak ditemukan.</p>';
+  const q=$("#q").value.toLowerCase();
+  let last=null, html="";
+  for(const p of PLAN){
+    const label=dayLabel(p);
+    if(q && !("hari "+p.day+" "+label).toLowerCase().includes(q)) continue;
+    if(!q && p.sec!==last){ html+=`<div class="sechead" style="color:${SECTIONS[p.sec][1]}">${SECTIONS[p.sec][0]}</div>`; last=p.sec; }
+    const n=(S.done[p.day]||[]).length, has=p.units.some(u=>EXPL[u.key]||SUMMARY[u.key]);
+    html+=`<div class="dayrow" data-d="${p.day}"><span class="dot" style="background:${SECTIONS[p.sec][1]}"></span><span class="dnum">${p.day}</span><span class="dtext">${esc(label)}${has?'<span class="has">● ada ringkasan</span>':''}</span><span class="ticks">${n?("✓ "+n+"/"+S.members.length):""}</span></div>`;
+  }
+  $("#rows").innerHTML=html||'<p class="empty">Tidak ditemukan.</p>';
   document.querySelectorAll(".dayrow").forEach(el=>el.onclick=()=>{ show("today"); go(+el.dataset.d); });
 }
-
 function renderFamily(){
-  const prog = S.members.map((m,i)=>{ let n=0; for(const k in S.done) if(S.done[k].includes(i)) n++;
-    const pct=Math.round(n/365*100);
-    return `<div style="margin-bottom:8px"><div class="row" style="justify-content:space-between"><b>${esc(m)}</b><span class="empty">${n} / 365 hari (${pct}%)</span></div><div class="prog"><div style="width:${pct}%"></div></div></div>`; }).join("");
+  const prog=S.members.map((m,i)=>{ let n=0; for(const k in S.done) if(S.done[k].includes(i)) n++;
+    const pct=Math.round(n/TOTAL*100);
+    return `<div style="margin-bottom:8px"><div class="row" style="justify-content:space-between"><b>${esc(m)}</b><span class="empty">${n} / ${TOTAL} hari (${pct}%)</span></div><div class="prog"><div style="width:${pct}%"></div></div></div>`; }).join("");
   $("#v-family").innerHTML=`
-  <div class="card"><div style="font-family:Fraunces,serif;font-size:19px;font-weight:700;margin-bottom:8px">Progres keluarga</div>${prog}</div>
+  <div class="card"><div class="h2" style="margin-bottom:8px">Progres keluarga</div>${prog}</div>
   <div class="card">
-    <label class="f">Tanggal mulai Hari 1</label>
-    <input type="date" id="start" value="${S.start||''}">
-    <label class="f">Anggota keluarga (pisahkan dengan koma)</label>
-    <input class="t" id="mems" style="width:100%" value="${esc(S.members.join(', '))}">
+    <label class="f">Tanggal mulai Hari 1</label><input type="date" id="start" value="${S.start||''}">
+    <label class="f">Anggota keluarga (pisahkan dengan koma)</label><input class="t" id="mems" style="width:100%" value="${esc(S.members.join(', '))}">
     <div class="row" style="margin-top:12px"><button class="btn primary" id="saveF">Simpan</button><span id="saved" class="empty"></span></div>
-    <p class="empty" style="margin-top:12px">Catatan: progres tersimpan di perangkat ini saja. Kalau dibuka di HP lain, centangnya tidak ikut. Paling mudah, pakai satu HP bersama.</p>
+    <p class="empty" style="margin-top:12px">Progres tersimpan di HP ini saja.</p>
   </div>`;
-  $("#saveF").onclick=()=>{ S.start=$("#start").value||null; const m=$("#mems").value.split(",").map(x=>x.trim()).filter(Boolean); if(m.length) S.members=m; save(); $("#saved").textContent="Tersimpan ✓"; current=todayIndex(); S.view=current; renderFamily(); };
+  $("#saveF").onclick=()=>{ S.start=$("#start").value||null; const m=$("#mems").value.split(",").map(x=>x.trim()).filter(Boolean); if(m.length) S.members=m; save(); current=todayIndex(); S.view=current; renderFamily(); $("#saved").textContent="Tersimpan ✓"; };
 }
-
 function renderAbout(){
+  const nSum=Object.keys(SUMMARY).length, nEx=Object.keys(EXPL).length;
   $("#v-about").innerHTML=`
-  <div class="card sec">
-    <div style="font-family:Fraunces,serif;font-size:19px;font-weight:700">Aturan konten</div>
-    <ul>
-      <li><b>Ayat tidak diubah dan tidak ditambah.</b> Teks ayat ditampilkan langsung dari sumbernya lewat tombol "Baca ayat": Alkitab Terjemahan Baru LAI (dari situs Alkitab SABDA), teks bahasa asli Ibrani/Yunani, dan terjemahan Inggris (dari bolls.life).</li>
-      <li><b>Setiap penjelasan harus punya sumber</b> yang bisa diklik.</li>
-      <li>${T_G} = ajaran atau catatan resmi Gereja: Katekismus, Dei Verbum, catatan Alkitab NABRE yang disetujui para uskup.</li>
-      <li>${T_R} = hasil penelitian dari museum, universitas, jurnal, atau ensiklopedia terpercaya. Bukan blog dan bukan opini pribadi.</li>
-      <li><b>Tidak ada data, tidak ditulis.</b> Bagian yang belum diriset dikosongkan. Kalau sumber-sumber berbeda pendapat, perbedaannya ditampilkan apa adanya.</li>
-      <li>Bagian "sementara itu di dunia" hanya muncul kalau berkaitan langsung dengan bacaan.</li>
-    </ul>
-  </div>
-  <div class="card sec">
-    <div style="font-family:Fraunces,serif;font-size:19px;font-weight:700">Tentang rencana baca</div>
-    <p>Urutan 365 hari mengikuti <b>The Bible in a Year</b> dari Ascension Press (Fr. Mike Schmitz bersama Jeff Cavins), yang terinspirasi dari <i>The Great Adventure Bible Timeline</i>. Nama periode diterjemahkan ke bahasa Indonesia, dan warnanya hanya penanda di aplikasi ini, bukan warna resmi.</p>
-    <div class="note">Daftar hari ini disalin dari PDF rencana baca resmi. Sebelum dipakai, sebaiknya cocokkan dengan PDF aslinya. Podcast-nya berbahasa Inggris.</div>
-    <p><b>Penomoran pasal yang berbeda:</b></p>
-    <ul>
-      <li><b>Ester 11–16</b> adalah tambahan-tambahan Kitab Ester (Deuterokanonika). Di Alkitab Deuterokanonika LAI, bagian ini bisa saja diberi penomoran lain.</li>
-      <li><b>Daniel 13–14</b> (kisah Susana, Bel, dan naga) juga termasuk Deuterokanonika. Daniel 3 dalam Alkitab Katolik juga memuat tambahan Deuterokanonika (Doa Azarya dan Kidung Tiga Pemuda).</li>
-    </ul>
-    <p class="srcs">📚 <a href="https://ascensionpress.com/biy">Ascension: The Bible in a Year</a> · <a href="https://assumptionparish.ca/wp-content/uploads/2025/06/Official-365-day-reading-plan-for-The-Bible-in-a-Year.pdf">PDF rencana baca 365 hari</a></p>
-  </div>
-  <div class="card sec">
-    <div style="font-family:Fraunces,serif;font-size:19px;font-weight:700">Yang belum ada</div>
-    <ul>
-      <li>Penjelasan 5W 1H baru tersedia untuk Hari 1–7, 313, dan 359. Hari-hari lain menyusul satu per satu, setelah diriset.</li>
-      <li>Bacaan liturgi harian Gereja dan kiriman Telegram belum dibuat.</li>
-    </ul>
-  </div>`;
+  <div class="card sec"><div class="h2">Cara membaca</div>
+    <ul><li>Alkitab dibaca <b>urut kitab demi kitab</b>, ${PER_DAY} pasal per hari (sekitar 30 menit), total ${TOTAL} hari.</li>
+    <li>Urutan kitab mengikuti <b>Alkitab Deuterokanonika LAI</b>: Perjanjian Lama, lalu kitab-kitab Deuterokanonika (Tobit, Yudit, Tambahan Ester, Kebijaksanaan Salomo, Sirakh, Barukh, Tambahan Daniel, 1–2 Makabe), lalu Perjanjian Baru.</li>
+    <li>Ketuk <b>"Baca ayat"</b> untuk membaca teks aslinya: Alkitab Terjemahan Baru LAI (dari situs Alkitab SABDA), bahasa asli Ibrani/Yunani, atau Inggris (dari bolls.life).</li></ul></div>
+  <div class="card sec"><div class="h2">Aturan konten</div>
+    <ul><li><b>Ringkasan pasal</b> adalah kata-kata kami untuk membantu mengikuti alur cerita. Itu <b>bukan ayat</b>; pegangannya tetap teks Alkitab.</li>
+    <li><b>Penjelasan 5W 1H</b> harus punya sumber yang bisa diklik. ${T_G} = ajaran atau catatan resmi Gereja. ${T_R} = museum, universitas, jurnal, atau ensiklopedia terpercaya.</li>
+    <li><b>Tidak ada data, tidak ditulis.</b> Kalau sumber berbeda pendapat, perbedaannya ditampilkan.</li></ul></div>
+  <div class="card sec"><div class="h2">Yang sudah tersedia</div>
+    <ul><li>Ringkasan pasal: ${nSum} pasal (Kejadian). Kitab lain menyusul.</li><li>Penjelasan 5W 1H: ${nEx} pasal.</li>
+    <li>Tambahan Ester dan Tambahan Daniel memakai penomoran pasal Alkitab Deuterokanonika LAI; di tab Bahasa asli/English penomorannya bisa berbeda.</li></ul>
+    <p class="srcs">📚 Urutan kitab Deuterokanonika LAI–LBI: <a href="https://www.gramedia.com/products/alkitab-deuterokanonika-tb-062-ti-dc-sl" target="_blank" rel="noopener">deskripsi Alkitab Deuterokanonika (Gramedia)</a></p></div>`;
 }
-
 function show(v){
   ["today","all","family","about"].forEach(x=>$("#v-"+x).classList.toggle("hide",x!==v));
   document.querySelectorAll("nav.tabs button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
@@ -919,6 +509,7 @@ function show(v){
 document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(b.dataset.v));
 renderDay(current);
 if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(()=>{});});}
+
 </script>
 </body>
 </html>
